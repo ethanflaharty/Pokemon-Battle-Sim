@@ -7,12 +7,18 @@ type Pokemon struct {
 	HP        int
 	Attack    int
 	Defense   int
+	SpAttack  int
+	SpDefense int
+	Speed     int
 }
 
 type PokemonBaseStats struct {
-	HP      int
-	Attack  int
-	Defense int
+	HP        int
+	Attack    int
+	Defense   int
+	SpAttack  int
+	SpDefense int
+	Speed     int
 }
 
 type Type struct {
