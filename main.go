@@ -36,8 +36,37 @@ func main() {
 	trainerPokemon.CalculateStats()
 	fmt.Printf("A wild %v appeared!\n", wild.Name)
 	fmt.Printf("Go! %v!\n", trainerPokemon.Name)
-	damage1 := pokemondata.Damage(wild, trainerPokemon)
-	trainerPokemon.HP = trainerPokemon.HP - damage1
-	fmt.Printf("%v took %v damage\n", trainerPokemon.Name, damage1)
-	fmt.Printf("%v's HP is now %v\n", trainerPokemon.Name, trainerPokemon.HP)
+	for trainerPokemon.HP != 0 && wild.HP != 0 {
+		if wild.Speed > trainerPokemon.Speed {
+			trainerPokemon.HP = trainerPokemon.HP - pokemondata.Damage(wild, trainerPokemon)
+			if trainerPokemon.HP <= 0 {
+				trainerPokemon.HP = 0
+				fmt.Printf("%v has fainted!\n", trainerPokemon.Name)
+			} else if trainerPokemon.HP > 0 {
+				fmt.Printf("%v now has %v HP!\n", trainerPokemon.Name, trainerPokemon.HP)
+			}
+			wild.HP = wild.HP - pokemondata.Damage(trainerPokemon, wild)
+			if wild.HP <= 0 {
+				wild.HP = 0
+				fmt.Printf("%v has fainted!\n", wild.Name)
+			} else if wild.HP > 0 {
+				fmt.Printf("%v now has %v HP!\n", wild.Name, wild.HP)
+			}
+		} else {
+			wild.HP = wild.HP - pokemondata.Damage(trainerPokemon, wild)
+			if wild.HP <= 0 {
+				wild.HP = 0
+				fmt.Printf("%v has fainted!\n", wild.Name)
+			} else if wild.HP > 0 {
+				fmt.Printf("%v now has %v HP!\n", wild.Name, wild.HP)
+			}
+			trainerPokemon.HP = trainerPokemon.HP - pokemondata.Damage(wild, trainerPokemon)
+			if trainerPokemon.HP <= 0 {
+				trainerPokemon.HP = 0
+				fmt.Printf("%v has fainted!\n", trainerPokemon.Name)
+			} else if trainerPokemon.HP > 0 {
+				fmt.Printf("%v now has %v HP!\n", trainerPokemon.Name, trainerPokemon.HP)
+			}
+		}
+	}
 }
