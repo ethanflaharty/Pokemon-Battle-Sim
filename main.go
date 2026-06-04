@@ -36,5 +36,8 @@ func main() {
 	trainerPokemon.CalculateStats()
 	fmt.Printf("A wild %v appeared!\n", wild.Name)
 	fmt.Printf("Go! %v!\n", trainerPokemon.Name)
-
+	damage1 := pokemondata.Damage(wild, trainerPokemon)
+	trainerPokemon.HP = trainerPokemon.HP - damage1
+	fmt.Printf("%v took %v damage\n", trainerPokemon.Name, damage1)
+	fmt.Printf("%v's HP is now %v\n", trainerPokemon.Name, trainerPokemon.HP)
 }
