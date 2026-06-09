@@ -17,6 +17,11 @@ func main() {
 			Speed:     65,
 		},
 		Level: 50,
+		Moves: []pokemondata.Move{
+			{Name: "Scratch", Power: 40},
+			{Name: "Ember", Power: 40},
+			{Name: "Flamethrower", Power: 90},
+		},
 	}
 	wild.HP = pokemondata.HPForumla(wild)
 	wild.CalculateStats()
@@ -31,6 +36,11 @@ func main() {
 			Speed:     45,
 		},
 		Level: 50,
+		Moves: []pokemondata.Move{
+			{Name: "Tackle", Power: 40},
+			{Name: "Vine Whip", Power: 45},
+			{Name: "Seed Bomb", Power: 80},
+		},
 	}
 	ally.HP = pokemondata.HPForumla(ally)
 	ally.CalculateStats()

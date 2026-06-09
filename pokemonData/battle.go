@@ -10,8 +10,8 @@ type DamageResult struct {
 	Crit   bool
 }
 
-func calculateDamage(attacker, defender Pokemon) DamageResult {
-	damage := ((((((2 * attacker.Level) / 5) + 2) * 50 * attacker.Attack / defender.Defense) / 50) + 2)
+func calculateDamage(attacker, defender Pokemon, move Move) DamageResult {
+	damage := ((((((2 * attacker.Level) / 5) + 2) * move.Power * attacker.Attack / defender.Defense) / 50) + 2)
 
 	multiplier := float64(rand.IntN(16)+85) / 100.0
 
@@ -26,12 +26,16 @@ func calculateDamage(attacker, defender Pokemon) DamageResult {
 	return result
 }
 
-func applyDamage(attacker, defender *Pokemon) {
-	damageTaken := calculateDamage(*attacker, *defender)
+func applyDamage(attacker, defender *Pokemon, move Move) {
+	damageTaken := calculateDamage(*attacker, *defender, move)
 	defender.HP -= damageTaken.Damage
+
+	fmt.Printf("%v used %v!\n", attacker.Name, move.Name)
+
 	if damageTaken.Crit {
 		fmt.Print("A critical hit! ")
 	}
+
 	if defender.HP <= 0 {
 		defender.HP = 0
 		fmt.Printf("%v took %v damage! ", defender.Name, damageTaken.Damage)
@@ -59,6 +63,28 @@ func determineSpeedOrder(ally, foe *Pokemon) (*Pokemon, *Pokemon) {
 	return foe, ally
 }
 
+func selectPlayerMove(pokemon *Pokemon) Move {
+	fmt.Println("Choose a Move:")
+
+	for i, move := range pokemon.Moves {
+		fmt.Printf("%v. %v\n", i+1, move.Name)
+	}
+
+	var choice int
+	fmt.Scanln(&choice)
+
+	return pokemon.Moves[choice-1]
+}
+
+func selectAIMove(pokemon *Pokemon) Move {
+	return pokemon.Moves[rand.IntN(len(pokemon.Moves))]
+}
+
+type TurnAction struct {
+	User *Pokemon
+	Move Move
+}
+
 func BattleSequence(ally, foe *Pokemon) {
 	turn := 0
 	for ally.HP > 0 && foe.HP > 0 {
@@ -67,12 +93,32 @@ func BattleSequence(ally, foe *Pokemon) {
 		fmt.Printf("Turn %v\n", turn)
 		fmt.Println()
 
+		playerAction := TurnAction{
+			User: ally,
+			Move: selectPlayerMove(ally),
+		}
+		enemyAction := TurnAction{
+			User: foe,
+			Move: selectAIMove(foe),
+		}
+
 		first, second := determineSpeedOrder(ally, foe)
 
-		applyDamage(first, second)
+		var firstAction TurnAction
+		var secondAction TurnAction
+
+		if first == ally {
+			firstAction = playerAction
+			secondAction = enemyAction
+		} else {
+			firstAction = enemyAction
+			secondAction = playerAction
+		}
+
+		applyDamage(firstAction.User, secondAction.User, firstAction.Move)
 
 		if second.HP > 0 {
-			applyDamage(second, first)
+			applyDamage(secondAction.User, firstAction.User, secondAction.Move)
 		}
 	}
 }
