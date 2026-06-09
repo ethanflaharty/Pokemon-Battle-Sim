@@ -10,7 +10,7 @@ type DamageResult struct {
 	Crit   bool
 }
 
-func Damage(attacker, defender Pokemon) DamageResult {
+func calculateDamage(attacker, defender Pokemon) DamageResult {
 	damage := ((((((2 * attacker.Level) / 5) + 2) * 50 * attacker.Attack / defender.Defense) / 50) + 2)
 
 	multiplier := float64(rand.IntN(16)+85) / 100.0
@@ -26,8 +26,8 @@ func Damage(attacker, defender Pokemon) DamageResult {
 	return result
 }
 
-func ApplyDamage(attacker, defender *Pokemon) {
-	damageTaken := Damage(*attacker, *defender)
+func applyDamage(attacker, defender *Pokemon) {
+	damageTaken := calculateDamage(*attacker, *defender)
 	defender.HP -= damageTaken.Damage
 	if damageTaken.Crit {
 		fmt.Print("A critical hit! ")
@@ -43,39 +43,36 @@ func ApplyDamage(attacker, defender *Pokemon) {
 	}
 }
 
+func determineSpeedOrder(ally, foe *Pokemon) (*Pokemon, *Pokemon) {
+	if ally.Speed > foe.Speed {
+		return ally, foe
+	}
+
+	if foe.Speed > ally.Speed {
+		return foe, ally
+	}
+
+	if rand.IntN(2) == 0 {
+		return ally, foe
+	}
+
+	return foe, ally
+}
+
 func BattleSequence(ally, foe *Pokemon) {
 	turn := 0
 	for ally.HP > 0 && foe.HP > 0 {
-		turn += 1
+		turn++
 		fmt.Println()
 		fmt.Printf("Turn %v\n", turn)
 		fmt.Println()
-		if ally.Speed > foe.Speed {
-			ApplyDamage(ally, foe)
 
-			if foe.HP > 0 {
-				ApplyDamage(foe, ally)
-			}
-		} else if foe.Speed > ally.Speed {
-			ApplyDamage(foe, ally)
+		first, second := determineSpeedOrder(ally, foe)
 
-			if ally.HP > 0 {
-				ApplyDamage(ally, foe)
-			}
-		} else {
-			if rand.IntN(2) == 0 {
-				ApplyDamage(ally, foe)
+		applyDamage(first, second)
 
-				if foe.HP > 0 {
-					ApplyDamage(foe, ally)
-				}
-			} else {
-				ApplyDamage(foe, ally)
-
-				if ally.HP > 0 {
-					ApplyDamage(ally, foe)
-				}
-			}
+		if second.HP > 0 {
+			applyDamage(second, first)
 		}
 	}
 }
