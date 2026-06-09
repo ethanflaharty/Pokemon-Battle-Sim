@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	battledata "pokemonBattleSim/battleData"
 	pokemondata "pokemonBattleSim/pokemonData"
 )
 
@@ -46,5 +47,5 @@ func main() {
 	ally.CalculateStats()
 	fmt.Printf("A wild %v appeared!\n", wild.Name)
 	fmt.Printf("Go! %v!\n", ally.Name)
-	pokemondata.BattleSequence(&ally, &wild)
+	battledata.BattleSequence(&ally, &wild)
 }

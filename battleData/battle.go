@@ -1,8 +1,9 @@
-package pokemondata
+package battleData
 
 import (
 	"fmt"
 	"math/rand/v2"
+	pokemondata "pokemonBattleSim/pokemonData"
 )
 
 type DamageResult struct {
@@ -10,7 +11,7 @@ type DamageResult struct {
 	Crit   bool
 }
 
-func calculateDamage(attacker, defender Pokemon, move Move) DamageResult {
+func calculateDamage(attacker, defender pokemondata.Pokemon, move pokemondata.Move) DamageResult {
 	damage := ((((((2 * attacker.Level) / 5) + 2) * move.Power * attacker.Attack / defender.Defense) / 50) + 2)
 
 	multiplier := float64(rand.IntN(16)+85) / 100.0
@@ -26,7 +27,7 @@ func calculateDamage(attacker, defender Pokemon, move Move) DamageResult {
 	return result
 }
 
-func applyDamage(attacker, defender *Pokemon, move Move) {
+func applyDamage(attacker, defender *pokemondata.Pokemon, move pokemondata.Move) {
 	damageTaken := calculateDamage(*attacker, *defender, move)
 	defender.HP -= damageTaken.Damage
 
@@ -47,7 +48,7 @@ func applyDamage(attacker, defender *Pokemon, move Move) {
 	}
 }
 
-func determineSpeedOrder(ally, foe *Pokemon) (*Pokemon, *Pokemon) {
+func determineSpeedOrder(ally, foe *pokemondata.Pokemon) (*pokemondata.Pokemon, *pokemondata.Pokemon) {
 	if ally.Speed > foe.Speed {
 		return ally, foe
 	}
@@ -63,7 +64,7 @@ func determineSpeedOrder(ally, foe *Pokemon) (*Pokemon, *Pokemon) {
 	return foe, ally
 }
 
-func selectPlayerMove(pokemon *Pokemon) Move {
+func selectPlayerMove(pokemon *pokemondata.Pokemon) pokemondata.Move {
 	fmt.Println("Choose a Move:")
 
 	for i, move := range pokemon.Moves {
@@ -76,16 +77,16 @@ func selectPlayerMove(pokemon *Pokemon) Move {
 	return pokemon.Moves[choice-1]
 }
 
-func selectAIMove(pokemon *Pokemon) Move {
+func selectAIMove(pokemon *pokemondata.Pokemon) pokemondata.Move {
 	return pokemon.Moves[rand.IntN(len(pokemon.Moves))]
 }
 
 type TurnAction struct {
-	User *Pokemon
-	Move Move
+	User *pokemondata.Pokemon
+	Move pokemondata.Move
 }
 
-func BattleSequence(ally, foe *Pokemon) {
+func BattleSequence(ally, foe *pokemondata.Pokemon) {
 	turn := 0
 	for ally.HP > 0 && foe.HP > 0 {
 		turn++
