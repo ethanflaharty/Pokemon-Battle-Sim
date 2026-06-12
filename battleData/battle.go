@@ -22,26 +22,38 @@ func determineSpeedOrder(ally, foe *pokemondata.Pokemon) (*pokemondata.Pokemon, 
 	return foe, ally
 }
 
-func selectPlayerMove(pokemon *pokemondata.Pokemon) pokemondata.Move {
-	fmt.Println("Choose a Move:")
+func selectPlayerMove(pokemon *pokemondata.Pokemon) (*pokemondata.Move, int) {
+	for {
+		fmt.Println("Choose a Move:")
 
-	for i, move := range pokemon.Moves {
-		fmt.Printf("%v. %v\n", i+1, move.Name)
+		for i, move := range pokemon.Moves {
+			fmt.Printf("%v. %v  %v/%v\n", i+1, move.Name, move.PPLeft, move.TotalPP)
+		}
+
+		var choice int
+		fmt.Scanln(&choice)
+
+		move := pokemon.Moves[choice-1]
+
+		if move.PPLeft == 0 {
+			fmt.Printf("There's no PP left for this move!\n")
+			continue
+		}
+		// TODO: Force Struggle if there is no PP remaining at all
+		pokemon.Moves[choice-1].PPLeft--
+
+		return &pokemon.Moves[choice-1], choice - 1
 	}
-
-	var choice int
-	fmt.Scanln(&choice)
-
-	return pokemon.Moves[choice-1]
 }
 
-func selectAIMove(pokemon *pokemondata.Pokemon) pokemondata.Move {
-	return pokemon.Moves[rand.IntN(len(pokemon.Moves))]
+func selectAIMove(pokemon *pokemondata.Pokemon) *pokemondata.Move {
+	return &pokemon.Moves[rand.IntN(len(pokemon.Moves))]
 }
 
 type TurnAction struct {
-	User *pokemondata.Pokemon
-	Move pokemondata.Move
+	User      *pokemondata.Pokemon
+	Move      *pokemondata.Move
+	MoveIndex int
 }
 
 func BattleSequence(ally, foe *pokemondata.Pokemon) {
@@ -52,9 +64,12 @@ func BattleSequence(ally, foe *pokemondata.Pokemon) {
 		fmt.Printf("Turn %v\n", turn)
 		fmt.Println()
 
+		playerMove, playerMoveIndex := selectPlayerMove(ally)
+
 		playerAction := TurnAction{
-			User: ally,
-			Move: selectPlayerMove(ally),
+			User:      ally,
+			Move:      playerMove,
+			MoveIndex: playerMoveIndex,
 		}
 		enemyAction := TurnAction{
 			User: foe,
@@ -74,10 +89,10 @@ func BattleSequence(ally, foe *pokemondata.Pokemon) {
 			secondAction = playerAction
 		}
 
-		applyDamage(firstAction.User, secondAction.User, firstAction.Move)
+		applyDamage(firstAction.User, secondAction.User, *firstAction.Move)
 
 		if second.HP > 0 {
-			applyDamage(secondAction.User, firstAction.User, secondAction.Move)
+			applyDamage(secondAction.User, firstAction.User, *secondAction.Move)
 		}
 	}
 }

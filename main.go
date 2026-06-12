@@ -19,9 +19,9 @@ func main() {
 		},
 		Level: 50,
 		Moves: []pokemondata.Move{
-			{Name: "Scratch", Power: 40, Accuracy: 100},
-			{Name: "Ember", Power: 40, Accuracy: 100},
-			{Name: "Flamethrower", Power: 90, Accuracy: 100},
+			{Name: "Scratch", Power: 40, Accuracy: 100, TotalPP: 35, PPLeft: 35},
+			{Name: "Ember", Power: 40, Accuracy: 100, TotalPP: 25, PPLeft: 25},
+			{Name: "Flamethrower", Power: 90, Accuracy: 100, TotalPP: 15, PPLeft: 15},
 		},
 	}
 	wild.HP = pokemondata.HPForumla(wild)
@@ -38,10 +38,10 @@ func main() {
 		},
 		Level: 50,
 		Moves: []pokemondata.Move{
-			{Name: "Tackle", Power: 40, Accuracy: 100},
-			{Name: "Vine Whip", Power: 45, Accuracy: 100},
-			{Name: "Seed Bomb", Power: 80, Accuracy: 100},
-			{Name: "Razor Leaf", Power: 55, Accuracy: 95},
+			{Name: "Tackle", Power: 40, Accuracy: 100, TotalPP: 35, PPLeft: 35},
+			{Name: "Vine Whip", Power: 45, Accuracy: 100, TotalPP: 25, PPLeft: 25},
+			{Name: "Seed Bomb", Power: 80, Accuracy: 100, TotalPP: 15, PPLeft: 15},
+			{Name: "Razor Leaf", Power: 55, Accuracy: 95, TotalPP: 25, PPLeft: 25},
 		},
 	}
 	ally.HP = pokemondata.HPForumla(ally)

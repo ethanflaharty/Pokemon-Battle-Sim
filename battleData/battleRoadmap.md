@@ -1,7 +1,7 @@
 # Pokemon Battles Roadmap
 
 ## Next Session
-- [] Add Move Accuracy Functionality
+- [x] Add Move Accuracy Functionality
 - [] Add Move PP 
 - [] Add Move Types (Physical/Special Split)
 - [] Add Pokemon Types

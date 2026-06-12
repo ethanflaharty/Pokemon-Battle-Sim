@@ -8,6 +8,8 @@ type Move struct {
 	Name     string
 	Power    int
 	Accuracy int
+	TotalPP  int
+	PPLeft   int
 }
 
 func (p *Pokemon) AddMove(move Move) error {
