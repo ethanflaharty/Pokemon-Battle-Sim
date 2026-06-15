@@ -4,35 +4,63 @@ import (
 	"fmt"
 	"math/rand/v2"
 	pokemondata "pokemonBattleSim/pokemonData"
+	"strings"
 )
 
 type MoveResult struct {
 	Damage int
 	Crit   bool
 	Hit    bool
+	STAB   bool
 }
 
 func calculateMove(attacker, defender pokemondata.Pokemon, move pokemondata.Move) MoveResult {
 	result := MoveResult{}
+
 	// Check for a hit
-	result.Hit = rand.IntN(100) < move.Accuracy
-	if !result.Hit {
-		return result
+	if move.NeverMisses {
+		result.Hit = true
+	} else {
+		result.Hit = rand.IntN(100) < move.Accuracy
+		if !result.Hit {
+			return result
+		}
 	}
+
 	// Check for a Crit
 	if rand.Float64() < 0.0625 {
 		result.Crit = true
 	}
-	// Damage Calculation
-	result.Damage = ((((((2 * attacker.Level) / 5) + 2) * move.Power * attacker.Attack / defender.Defense) / 50) + 2)
 
+	// Check for STAB
+	if attacker.Type1 == move.Type || attacker.Type2 == move.Type {
+		result.STAB = true
+	}
+
+	// Calculate RNG Multiplier
 	multiplier := float64(rand.IntN(16)+85) / 100.0
 
-	if result.Crit {
-		result.Damage = int(float64(result.Damage) * multiplier * 1.5)
-	} else {
-		result.Damage = int(float64(result.Damage) * multiplier)
+	// Damage Calculation
+	loweredCategory := strings.ToLower(move.Category)
+	switch loweredCategory {
+	case pokemondata.Physical:
+		result.Damage = int(float64(((((((2 * attacker.Level) / 5) + 2) * move.Power * attacker.Attack / defender.Defense) / 50) + 2)) * multiplier)
+	case pokemondata.Special:
+		result.Damage = int(float64(((((((2 * attacker.Level) / 5) + 2) * move.Power * attacker.SpAttack / defender.SpDefense) / 50) + 2)) * multiplier)
+	default:
+		panic("unknown move category")
 	}
+
+	// Apply STAB
+	if result.STAB {
+		result.Damage = int(float64(result.Damage) * 1.5)
+	}
+
+	// Apply Crit
+	if result.Crit {
+		result.Damage = int(float64(result.Damage) * 1.5)
+	}
+
 	return result
 }
 

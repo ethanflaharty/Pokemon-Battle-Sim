@@ -1,11 +1,13 @@
 # Pokemon Battles Roadmap
 
-## Next Session
-- [x] Add Move Accuracy Functionality
-- [] Add Move PP 
-- [] Add Move Types (Physical/Special Split)
-- [] Add Pokemon Types
-- [] Add STAB
+## Next Session 
+- [x] Add Move Catergories (Physical/Special Split)
+- [x] Add Pokemon Types
+- [x] Add STAB
+- [] Add Type Effectiveness
+- [] Add Status Moves
+- [] Add Status Conditions
+- [] Add Stat Changes
 
 ### Core Battle Loop
 - [x] Turn order
@@ -15,17 +17,17 @@
 - [x] Move selection
 
 ### Move Mechanics
-- [] Accuracy
-- [] PP
-- [] Physical/Special split
+- [x] Accuracy
+- [x] PP
+- [x] Physical/Special split
 - [] Secondary Effects
 - [] Status moves
 
 
 ### Types
-- [] Type system
+- [x] Type system
 - [] Type effectiveness
-- [] STAB
+- [x] STAB
 
 ### Status Conditions
 - [] Burn

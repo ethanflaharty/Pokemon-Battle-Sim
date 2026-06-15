@@ -4,12 +4,23 @@ import (
 	"fmt"
 )
 
+const (
+	Physical = "physical"
+	Special  = "special"
+	Status   = "status"
+)
+
 type Move struct {
 	Name     string
 	Power    int
-	Accuracy int
-	TotalPP  int
-	PPLeft   int
+	Type     string
+	Category string
+
+	Accuracy    int
+	NeverMisses bool
+
+	TotalPP int
+	PPLeft  int
 }
 
 func (p *Pokemon) AddMove(move Move) error {

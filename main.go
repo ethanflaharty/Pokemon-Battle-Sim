@@ -19,10 +19,11 @@ func main() {
 		},
 		Level: 50,
 		Moves: []pokemondata.Move{
-			{Name: "Scratch", Power: 40, Accuracy: 100, TotalPP: 35, PPLeft: 35},
-			{Name: "Ember", Power: 40, Accuracy: 100, TotalPP: 25, PPLeft: 25},
-			{Name: "Flamethrower", Power: 90, Accuracy: 100, TotalPP: 15, PPLeft: 15},
+			{Name: "Scratch", Power: 40, Type: pokemondata.Normal, Accuracy: 100, NeverMisses: false, TotalPP: 35, PPLeft: 35, Category: pokemondata.Physical},
+			{Name: "Ember", Power: 40, Type: pokemondata.Fire, Accuracy: 100, NeverMisses: false, TotalPP: 25, PPLeft: 25, Category: pokemondata.Special},
+			{Name: "Flamethrower", Power: 90, Type: pokemondata.Fire, Accuracy: 100, NeverMisses: false, TotalPP: 15, PPLeft: 15, Category: pokemondata.Special},
 		},
+		Type1: pokemondata.Fire,
 	}
 	wild.HP = pokemondata.HPForumla(wild)
 	wild.CalculateStats()
@@ -38,11 +39,13 @@ func main() {
 		},
 		Level: 50,
 		Moves: []pokemondata.Move{
-			{Name: "Tackle", Power: 40, Accuracy: 100, TotalPP: 35, PPLeft: 35},
-			{Name: "Vine Whip", Power: 45, Accuracy: 100, TotalPP: 25, PPLeft: 25},
-			{Name: "Seed Bomb", Power: 80, Accuracy: 100, TotalPP: 15, PPLeft: 15},
-			{Name: "Razor Leaf", Power: 55, Accuracy: 95, TotalPP: 25, PPLeft: 25},
+			{Name: "Tackle", Power: 40, Type: pokemondata.Normal, Accuracy: 100, NeverMisses: false, TotalPP: 35, PPLeft: 35, Category: pokemondata.Physical},
+			{Name: "Venoshock", Power: 65, Type: pokemondata.Poison, Accuracy: 100, NeverMisses: false, TotalPP: 10, PPLeft: 10, Category: pokemondata.Special},
+			{Name: "Magical Leaf", Power: 60, Type: pokemondata.Grass, Accuracy: 100, NeverMisses: true, TotalPP: 20, PPLeft: 20, Category: pokemondata.Special},
+			{Name: "Razor Leaf", Power: 55, Type: pokemondata.Grass, Accuracy: 95, NeverMisses: false, TotalPP: 25, PPLeft: 25, Category: pokemondata.Physical},
 		},
+		Type1: pokemondata.Grass,
+		Type2: pokemondata.Poison,
 	}
 	ally.HP = pokemondata.HPForumla(ally)
 	ally.CalculateStats()
