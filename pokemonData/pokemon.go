@@ -6,8 +6,7 @@ type Pokemon struct {
 	Level     int
 	Moves     []Move
 
-	Type1 string
-	Type2 string
+	Types []Type
 
 	HP        int
 	Attack    int

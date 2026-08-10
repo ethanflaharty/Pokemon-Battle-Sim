@@ -4,17 +4,19 @@ import (
 	"fmt"
 )
 
+type MoveCategory int
+
 const (
-	Physical = "physical"
-	Special  = "special"
-	Status   = "status"
+	Physical MoveCategory = iota
+	Special
+	Status
 )
 
 type Move struct {
 	Name     string
 	Power    int
-	Type     string
-	Category string
+	Type     Type
+	Category MoveCategory
 
 	Accuracy    int
 	NeverMisses bool

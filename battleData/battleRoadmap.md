@@ -1,10 +1,6 @@
 # Pokemon Battles Roadmap
 
 ## Next Session 
-- [x] Add Move Catergories (Physical/Special Split)
-- [x] Add Pokemon Types
-- [x] Add STAB
-- [] Add Type Effectiveness
 - [] Add Status Moves
 - [] Add Status Conditions
 - [] Add Stat Changes
@@ -26,7 +22,7 @@
 
 ### Types
 - [x] Type system
-- [] Type effectiveness
+- [x] Type effectiveness
 - [x] STAB
 
 ### Status Conditions

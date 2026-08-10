@@ -23,7 +23,9 @@ func main() {
 			{Name: "Ember", Power: 40, Type: pokemondata.Fire, Accuracy: 100, NeverMisses: false, TotalPP: 25, PPLeft: 25, Category: pokemondata.Special},
 			{Name: "Flamethrower", Power: 90, Type: pokemondata.Fire, Accuracy: 100, NeverMisses: false, TotalPP: 15, PPLeft: 15, Category: pokemondata.Special},
 		},
-		Type1: pokemondata.Fire,
+		Types: []pokemondata.Type{
+			pokemondata.Fire,
+		},
 	}
 	wild.HP = pokemondata.HPForumla(wild)
 	wild.CalculateStats()
@@ -44,8 +46,10 @@ func main() {
 			{Name: "Magical Leaf", Power: 60, Type: pokemondata.Grass, Accuracy: 100, NeverMisses: true, TotalPP: 20, PPLeft: 20, Category: pokemondata.Special},
 			{Name: "Razor Leaf", Power: 55, Type: pokemondata.Grass, Accuracy: 95, NeverMisses: false, TotalPP: 25, PPLeft: 25, Category: pokemondata.Physical},
 		},
-		Type1: pokemondata.Grass,
-		Type2: pokemondata.Poison,
+		Types: []pokemondata.Type{
+			pokemondata.Grass,
+			pokemondata.Poison,
+		},
 	}
 	ally.HP = pokemondata.HPForumla(ally)
 	ally.CalculateStats()

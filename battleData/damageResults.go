@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"math/rand/v2"
 	pokemondata "pokemonBattleSim/pokemonData"
-	"strings"
 )
 
 type MoveResult struct {
@@ -33,20 +32,30 @@ func calculateMove(attacker, defender pokemondata.Pokemon, move pokemondata.Move
 	}
 
 	// Check for STAB
-	if attacker.Type1 == move.Type || attacker.Type2 == move.Type {
-		result.STAB = true
+	if len(attacker.Types) == 2 {
+		if attacker.Types[0] == move.Type || attacker.Types[1] == move.Type {
+			result.STAB = true
+		}
+	} else {
+		if attacker.Types[0] == move.Type {
+			result.STAB = true
+		}
 	}
+
+	// Calculate Type Effectiveness
+	effectiveness := pokemondata.EffectivenessCalc(defender.Types, move.Type)
 
 	// Calculate RNG Multiplier
 	multiplier := float64(rand.IntN(16)+85) / 100.0
 
 	// Damage Calculation
-	loweredCategory := strings.ToLower(move.Category)
-	switch loweredCategory {
+	switch move.Category {
 	case pokemondata.Physical:
-		result.Damage = int(float64(((((((2 * attacker.Level) / 5) + 2) * move.Power * attacker.Attack / defender.Defense) / 50) + 2)) * multiplier)
+		result.Damage = int(float64(((((((2 * attacker.Level) / 5) + 2) * move.Power * attacker.Attack / defender.Defense) / 50) + 2)) * multiplier * effectiveness)
 	case pokemondata.Special:
-		result.Damage = int(float64(((((((2 * attacker.Level) / 5) + 2) * move.Power * attacker.SpAttack / defender.SpDefense) / 50) + 2)) * multiplier)
+		result.Damage = int(float64(((((((2 * attacker.Level) / 5) + 2) * move.Power * attacker.SpAttack / defender.SpDefense) / 50) + 2)) * multiplier * effectiveness)
+	case pokemondata.Status:
+		fmt.Println("Status moves not implemented yet.")
 	default:
 		panic("unknown move category")
 	}
