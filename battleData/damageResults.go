@@ -13,7 +13,7 @@ type MoveResult struct {
 	STAB   bool
 }
 
-func calculateMove(attacker, defender pokemondata.Pokemon, move pokemondata.Move) MoveResult {
+func calculateMove(attacker, defender *pokemondata.Pokemon, move pokemondata.Move) MoveResult {
 	result := MoveResult{}
 
 	// Check for a hit
@@ -51,11 +51,11 @@ func calculateMove(attacker, defender pokemondata.Pokemon, move pokemondata.Move
 	// Damage Calculation
 	switch move.Category {
 	case pokemondata.Physical:
-		result.Damage = int(float64(((((((2 * attacker.Level) / 5) + 2) * move.Power * attacker.Attack / defender.Defense) / 50) + 2)) * multiplier * effectiveness)
+		result.Damage = int(float64(((((((2 * attacker.Level) / 5) + 2) * move.Power * attacker.BattleStats.Attack / defender.BattleStats.Defense) / 50) + 2)) * multiplier * effectiveness)
 	case pokemondata.Special:
-		result.Damage = int(float64(((((((2 * attacker.Level) / 5) + 2) * move.Power * attacker.SpAttack / defender.SpDefense) / 50) + 2)) * multiplier * effectiveness)
+		result.Damage = int(float64(((((((2 * attacker.Level) / 5) + 2) * move.Power * attacker.BattleStats.SpAttack / defender.BattleStats.SpDefense) / 50) + 2)) * multiplier * effectiveness)
 	case pokemondata.Status:
-		fmt.Println("Status moves not implemented yet.")
+		pokemondata.CalculateStatusMove(attacker, defender, move)
 	default:
 		panic("unknown move category")
 	}
@@ -76,7 +76,7 @@ func calculateMove(attacker, defender pokemondata.Pokemon, move pokemondata.Move
 func applyDamage(attacker, defender *pokemondata.Pokemon, move pokemondata.Move) {
 	fmt.Printf("%v used %v!\n", attacker.Name, move.Name)
 
-	result := calculateMove(*attacker, *defender, move)
+	result := calculateMove(attacker, defender, move)
 
 	if !result.Hit {
 		fmt.Printf("%v's attack missed!\n", attacker.Name)

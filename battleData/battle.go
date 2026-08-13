@@ -57,12 +57,18 @@ type TurnAction struct {
 }
 
 func BattleSequence(ally, foe *pokemondata.Pokemon) {
+	ally.StatStages = pokemondata.StatStages{}
+	foe.StatStages = pokemondata.StatStages{}
 	turn := 0
+
 	for ally.HP > 0 && foe.HP > 0 {
 		turn++
 		fmt.Println()
 		fmt.Printf("Turn %v\n", turn)
 		fmt.Println()
+
+		ally.UpdateBattleStats()
+		foe.UpdateBattleStats()
 
 		playerMove, playerMoveIndex := selectPlayerMove(ally)
 
@@ -90,9 +96,13 @@ func BattleSequence(ally, foe *pokemondata.Pokemon) {
 		}
 
 		applyDamage(firstAction.User, secondAction.User, *firstAction.Move)
+		ally.UpdateBattleStats()
+		foe.UpdateBattleStats()
 
 		if second.HP > 0 {
 			applyDamage(secondAction.User, firstAction.User, *secondAction.Move)
+			ally.UpdateBattleStats()
+			foe.UpdateBattleStats()
 		}
 	}
 }

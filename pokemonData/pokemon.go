@@ -6,17 +6,10 @@ type Pokemon struct {
 	Level     int
 	Moves     []Move
 
-	Types []Type
+	Types       []Type
+	StatStages  StatStages
+	BattleStats BattleStats
 
-	HP        int
-	Attack    int
-	Defense   int
-	SpAttack  int
-	SpDefense int
-	Speed     int
-}
-
-type PokemonBaseStats struct {
 	HP        int
 	Attack    int
 	Defense   int

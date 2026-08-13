@@ -2,8 +2,8 @@
 
 ## Next Session 
 - [] Add Status Moves
-- [] Add Status Conditions
-- [] Add Stat Changes
+
+
 
 ### Core Battle Loop
 - [x] Turn order
@@ -17,6 +17,44 @@
 - [x] PP
 - [x] Physical/Special split
 - [] Secondary Effects
+    - [x] Stat Stages
+        - [x] +1
+        - [x] +2
+        - [x] +3
+        - [x] +4
+        - [x] +5
+        - [x] +6
+        - [x] -1
+        - [x] -2
+        - [x] -3
+        - [x] -4
+        - [x] -5
+        - [x] -6
+            - [x] Growth Added 
+    - [] Status Conditions
+        - [] Burn
+        - [] Poison
+        - [] Paralysis
+        - [] Sleep
+        - [] Freeze
+    - [] Flinch
+    - [] Protect
+    - [] Other Temporary Battle States(like Protect)
+    - [] Weather
+        - [] Rain
+        - [] Sun
+        - [] Sandstorm
+        - [] Snow
+    - [] Terrain
+        - [] Electric
+        - [] Grassy
+        - [] Psychic
+        - [] Misty
+    - [] Entry Hazards
+        - [] Stealth Rock
+        - [] Spikes
+        - [] Toxic Spikes
+        - [] Sticky Web
 - [] Status moves
 
 
@@ -25,43 +63,14 @@
 - [x] Type effectiveness
 - [x] STAB
 
-### Status Conditions
-- [] Burn
-- [] Poison
-- [] Paralysis
-- [] Sleep
-- [] Freeze
-
-### Stat Stages
-- [] Stat Raise
-- [] Stat Lower
-
 ### Abilities
 - [] Implementation
 
-### Weather Effects
-- [] Rain
-- [] Sun
-- [] Sandstrom
-- [] Snow
-
-### Terrain
-- [] Electric
-- [] Grassy
-- [] Psychic
-- [] Misty
-
-### Entry Hazards
-- [] Stealth Rock
-- [] Spikes
-- [] Toxic Spikes
-- [] Sticky Wed
+### Switching
+- [] Be able to switch between a party of Pokemon
 
 ### Held Items
 - [] A Couple of Functional Items
-
-### Switching
-- [] Be able to switch between a party of Pokemon
 
 ### Terastallization
 - [] Make this functional
