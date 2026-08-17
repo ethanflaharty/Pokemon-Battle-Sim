@@ -17,13 +17,9 @@ func calculateMove(attacker, defender *pokemondata.Pokemon, move pokemondata.Mov
 	result := MoveResult{}
 
 	// Check for a hit
-	if move.NeverMisses {
-		result.Hit = true
-	} else {
-		result.Hit = rand.IntN(100) < move.Accuracy
-		if !result.Hit {
-			return result
-		}
+	result.Hit = CheckAccuracy(attacker, defender, move)
+	if !result.Hit {
+		return result
 	}
 
 	// Check for a Crit
@@ -56,6 +52,9 @@ func calculateMove(attacker, defender *pokemondata.Pokemon, move pokemondata.Mov
 		result.Damage = int(float64(((((((2 * attacker.Level) / 5) + 2) * move.Power * attacker.BattleStats.SpAttack / defender.BattleStats.SpDefense) / 50) + 2)) * multiplier * effectiveness)
 	case pokemondata.Status:
 		pokemondata.CalculateStatusMove(attacker, defender, move)
+		if result.Crit == true {
+			result.Crit = false
+		}
 	default:
 		panic("unknown move category")
 	}
@@ -70,6 +69,77 @@ func calculateMove(attacker, defender *pokemondata.Pokemon, move pokemondata.Mov
 		result.Damage = int(float64(result.Damage) * 1.5)
 	}
 
+	return result
+}
+
+func CheckAccuracy(attacker, defender *pokemondata.Pokemon, move pokemondata.Move) bool {
+	if move.NeverMisses {
+		return true
+	}
+
+	accStage := attacker.StatStages.Accuracy - defender.StatStages.Evasion
+	if accStage < -6 {
+		accStage = -6
+	} else if accStage > 6 {
+		accStage = 6
+	}
+
+	var effectiveAcc int
+	var result bool
+	switch accStage {
+	case -6:
+		effectiveAcc = move.Accuracy * 3 / 9
+		result = rand.IntN(100) < effectiveAcc
+		return result
+	case -5:
+		effectiveAcc = move.Accuracy * 3 / 8
+		result = rand.IntN(100) < effectiveAcc
+		return result
+	case -4:
+		effectiveAcc = move.Accuracy * 3 / 7
+		result = rand.IntN(100) < effectiveAcc
+		return result
+	case -3:
+		effectiveAcc = move.Accuracy * 3 / 6
+		result = rand.IntN(100) < effectiveAcc
+		return result
+	case -2:
+		effectiveAcc = move.Accuracy * 3 / 5
+		result = rand.IntN(100) < effectiveAcc
+		return result
+	case -1:
+		effectiveAcc = move.Accuracy * 3 / 4
+		result = rand.IntN(100) < effectiveAcc
+		return result
+	case 0:
+		effectiveAcc = move.Accuracy
+		result = rand.IntN(100) < effectiveAcc
+		return result
+	case 1:
+		effectiveAcc = move.Accuracy * 4 / 3
+		result = rand.IntN(100) < effectiveAcc
+		return result
+	case 2:
+		effectiveAcc = move.Accuracy * 5 / 3
+		result = rand.IntN(100) < effectiveAcc
+		return result
+	case 3:
+		effectiveAcc = move.Accuracy * 6 / 3
+		result = rand.IntN(100) < effectiveAcc
+		return result
+	case 4:
+		effectiveAcc = move.Accuracy * 7 / 3
+		result = rand.IntN(100) < effectiveAcc
+		return result
+	case 5:
+		effectiveAcc = move.Accuracy * 8 / 3
+		result = rand.IntN(100) < effectiveAcc
+		return result
+	case 6:
+		effectiveAcc = move.Accuracy * 9 / 3
+		result = rand.IntN(100) < effectiveAcc
+		return result
+	}
 	return result
 }
 

@@ -8,8 +8,147 @@ func CalculateStatusMove(user, target *Pokemon, move Move) {
 	switch move.Name {
 	case "Growth":
 		Growth(user)
+	case "Growl":
+		Growl(target)
+	case "Iron Defense":
+		IronDefense(user)
+	case "Tail Whip":
+		TailWhip(target)
+	case "Amnesia":
+		Amnesia(user)
+	case "Agility":
+		Agility(user)
+	case "Scary Face":
+		ScaryFace(target)
+	case "Hone Claws":
+		HoneClaws(user)
+	case "Sand Attack":
+		SandAttack(target)
+	case "Double Team":
+		DoubleTeam(user)
 	default:
 		fmt.Println("specified status move not implemented yet")
+	}
+}
+
+func DoubleTeam(p *Pokemon) {
+	if p.StatStages.Evasion == 6 {
+		fmt.Printf("%v Evasion won't go any higher!\n", p.Name)
+		return
+	} else {
+		p.ChangeStatStage(Evasion, 1)
+		fmt.Printf("%v Evasion rose!\n", p.Name)
+		return
+	}
+}
+
+func SandAttack(p *Pokemon) {
+	if p.StatStages.Accuracy == -6 {
+		fmt.Printf("%v Accuracy won't go any lower!\n", p.Name)
+		return
+	} else {
+		p.ChangeStatStage(Accuracy, -1)
+		fmt.Printf("%v Accuracy fell!\n", p.Name)
+		return
+	}
+}
+
+func HoneClaws(p *Pokemon) {
+	if p.StatStages.Attack == 6 && p.StatStages.Accuracy == 6 {
+		fmt.Printf("%v Attack won't go any higher!\n", p.Name)
+		fmt.Printf("%v Accuracy won't go any higher!\n", p.Name)
+		return
+	} else if p.StatStages.Attack == 6 && p.StatStages.Accuracy != 6 {
+		fmt.Printf("%v Attack won't go any higher!\n", p.Name)
+		p.ChangeStatStage(Accuracy, 1)
+		fmt.Printf("%v Accuracy rose!\n", p.Name)
+		return
+	} else if p.StatStages.Attack != 6 && p.StatStages.Accuracy == 6 {
+		p.ChangeStatStage(Attack, 1)
+		fmt.Printf("%v Attack rose!\n", p.Name)
+		fmt.Printf("%v Accuracy won't go any higher!\n", p.Name)
+		return
+	} else {
+		p.ChangeStatStage(Attack, 1)
+		p.ChangeStatStage(Accuracy, 1)
+		fmt.Printf("%v Attack rose!\n", p.Name)
+		fmt.Printf("%v Accuracy rose!\n", p.Name)
+		return
+	}
+}
+
+func ScaryFace(p *Pokemon) {
+	switch p.StatStages.Speed {
+	case -6:
+		fmt.Printf("%v Speed won't go any lower!\n", p.Name)
+		return
+	case -5:
+		p.ChangeStatStage(Speed, -1)
+		fmt.Printf("%v Speed harshly fell!\n", p.Name)
+		return
+	default:
+		p.ChangeStatStage(Speed, -2)
+		fmt.Printf("%v Speed harshly fell!\n", p.Name)
+		return
+	}
+}
+
+func Agility(p *Pokemon) {
+	switch p.StatStages.Speed {
+	case 6:
+		fmt.Printf("%v Speed won't go any higher!\n", p.Name)
+		return
+	case 5:
+		p.ChangeStatStage(Speed, 1)
+		fmt.Printf("%v Speed rose sharply!\n", p.Name)
+		return
+	default:
+		p.ChangeStatStage(Speed, 2)
+		fmt.Printf("%v Speed rose sharply!\n", p.Name)
+		return
+	}
+}
+
+func Amnesia(p *Pokemon) {
+	switch p.StatStages.SpDefense {
+	case 6:
+		fmt.Printf("%v Special Defense won't go any higher!\n", p.Name)
+		return
+	case 5:
+		p.ChangeStatStage(SpDefense, 1)
+		fmt.Printf("%v Special Defense rose sharply!\n", p.Name)
+		return
+	default:
+		p.ChangeStatStage(SpDefense, 2)
+		fmt.Printf("%v Special Defense rose sharply!\n", p.Name)
+		return
+	}
+}
+
+func TailWhip(p *Pokemon) {
+	if p.StatStages.Defense == -6 {
+		fmt.Printf("%v Defense won't go any lower!\n", p.Name)
+		return
+	} else {
+		p.ChangeStatStage(Defense, -1)
+		fmt.Printf("%v Defense fell!\n", p.Name)
+		return
+	}
+}
+
+func IronDefense(p *Pokemon) {
+	switch p.StatStages.Defense {
+	case 6:
+		fmt.Printf("%v Defense won't go any higher!\n", p.Name)
+		return
+	case 5:
+		p.ChangeStatStage(Defense, 1)
+		fmt.Printf("%v Defense rose sharply!\n", p.Name)
+		return
+	default:
+		p.ChangeStatStage(Defense, 2)
+		fmt.Printf("%v Defense rose sharply!\n", p.Name)
+		return
 	}
 }
 
@@ -33,6 +172,17 @@ func Growth(p *Pokemon) {
 		p.ChangeStatStage(SpAttack, 1)
 		fmt.Printf("%v Attack rose!\n", p.Name)
 		fmt.Printf("%v Special Attack rose!\n", p.Name)
+		return
+	}
+}
+
+func Growl(p *Pokemon) {
+	if p.StatStages.Attack == -6 {
+		fmt.Printf("%v Attack won't go any lower!\n", p.Name)
+		return
+	} else {
+		p.ChangeStatStage(Attack, -1)
+		fmt.Printf("%v Attack fell!\n", p.Name)
 		return
 	}
 }

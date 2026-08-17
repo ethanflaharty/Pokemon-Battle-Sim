@@ -42,7 +42,7 @@ func main() {
 		},
 		Level: 50,
 		Moves: []pokemondata.Move{
-			{Name: "Growth", Power: 0, Type: pokemondata.Normal, Accuracy: 100, NeverMisses: true, TotalPP: 20, PPLeft: 20, Category: pokemondata.Status},
+			{Name: "Double Team", Power: 0, Type: pokemondata.Normal, Accuracy: 100, NeverMisses: true, TotalPP: 20, PPLeft: 20, Category: pokemondata.Status},
 			{Name: "Venoshock", Power: 65, Type: pokemondata.Poison, Accuracy: 100, NeverMisses: false, TotalPP: 10, PPLeft: 10, Category: pokemondata.Special},
 			{Name: "Magical Leaf", Power: 60, Type: pokemondata.Grass, Accuracy: 100, NeverMisses: true, TotalPP: 20, PPLeft: 20, Category: pokemondata.Special},
 			{Name: "Razor Leaf", Power: 55, Type: pokemondata.Grass, Accuracy: 95, NeverMisses: false, TotalPP: 25, PPLeft: 25, Category: pokemondata.Physical},

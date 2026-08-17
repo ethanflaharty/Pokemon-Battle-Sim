@@ -7,11 +7,11 @@ import (
 )
 
 func determineSpeedOrder(ally, foe *pokemondata.Pokemon) (*pokemondata.Pokemon, *pokemondata.Pokemon) {
-	if ally.Speed > foe.Speed {
+	if ally.BattleStats.Speed > foe.BattleStats.Speed {
 		return ally, foe
 	}
 
-	if foe.Speed > ally.Speed {
+	if foe.BattleStats.Speed > ally.BattleStats.Speed {
 		return foe, ally
 	}
 
