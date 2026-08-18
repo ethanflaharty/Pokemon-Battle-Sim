@@ -103,6 +103,8 @@ func BattleSequence(ally, foe *pokemondata.Pokemon) {
 			applyDamage(secondAction.User, firstAction.User, *secondAction.Move)
 			ally.UpdateBattleStats()
 			foe.UpdateBattleStats()
+			pokemondata.ProcessStatus(ally)
+			pokemondata.ProcessStatus(foe)
 		}
 	}
 }

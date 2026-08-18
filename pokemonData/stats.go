@@ -126,9 +126,8 @@ type StatStages struct {
 	SpAttack  int
 	SpDefense int
 	Speed     int
-	// Implement Calculation For Accuracy and Evasion later on
-	Accuracy int
-	Evasion  int
+	Accuracy  int
+	Evasion   int
 }
 
 type Stat int

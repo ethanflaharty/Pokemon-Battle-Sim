@@ -9,7 +9,9 @@ type Pokemon struct {
 	Types       []Type
 	StatStages  StatStages
 	BattleStats BattleStats
+	Status      StatusCondition
 
+	MaxHP     int
 	HP        int
 	Attack    int
 	Defense   int

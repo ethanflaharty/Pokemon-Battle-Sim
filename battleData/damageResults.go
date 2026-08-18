@@ -7,10 +7,11 @@ import (
 )
 
 type MoveResult struct {
-	Damage int
-	Crit   bool
-	Hit    bool
-	STAB   bool
+	Damage        int
+	Effectiveness float64
+	Crit          bool
+	Hit           bool
+	STAB          bool
 }
 
 func calculateMove(attacker, defender *pokemondata.Pokemon, move pokemondata.Move) MoveResult {
@@ -39,7 +40,7 @@ func calculateMove(attacker, defender *pokemondata.Pokemon, move pokemondata.Mov
 	}
 
 	// Calculate Type Effectiveness
-	effectiveness := pokemondata.EffectivenessCalc(defender.Types, move.Type)
+	result.Effectiveness = pokemondata.EffectivenessCalc(defender.Types, move.Type)
 
 	// Calculate RNG Multiplier
 	multiplier := float64(rand.IntN(16)+85) / 100.0
@@ -47,9 +48,9 @@ func calculateMove(attacker, defender *pokemondata.Pokemon, move pokemondata.Mov
 	// Damage Calculation
 	switch move.Category {
 	case pokemondata.Physical:
-		result.Damage = int(float64(((((((2 * attacker.Level) / 5) + 2) * move.Power * attacker.BattleStats.Attack / defender.BattleStats.Defense) / 50) + 2)) * multiplier * effectiveness)
+		result.Damage = int(float64(((((((2 * attacker.Level) / 5) + 2) * move.Power * attacker.BattleStats.Attack / defender.BattleStats.Defense) / 50) + 2)) * multiplier * result.Effectiveness)
 	case pokemondata.Special:
-		result.Damage = int(float64(((((((2 * attacker.Level) / 5) + 2) * move.Power * attacker.BattleStats.SpAttack / defender.BattleStats.SpDefense) / 50) + 2)) * multiplier * effectiveness)
+		result.Damage = int(float64(((((((2 * attacker.Level) / 5) + 2) * move.Power * attacker.BattleStats.SpAttack / defender.BattleStats.SpDefense) / 50) + 2)) * multiplier * result.Effectiveness)
 	case pokemondata.Status:
 		pokemondata.CalculateStatusMove(attacker, defender, move)
 		if result.Crit == true {
@@ -150,21 +151,33 @@ func applyDamage(attacker, defender *pokemondata.Pokemon, move pokemondata.Move)
 
 	if !result.Hit {
 		fmt.Printf("%v's attack missed!\n", attacker.Name)
+		return
 	}
 
-	if result.Crit {
-		fmt.Println("A critical hit!")
-	}
+	if move.Category == pokemondata.Special || move.Category == pokemondata.Physical {
+		if result.Crit {
+			fmt.Println("A critical hit!")
+		}
+		if result.Effectiveness > 1 {
+			fmt.Println("It's super effective!")
+		} else if result.Effectiveness < 1 {
+			fmt.Println("It's not very effective!")
+		} else if result.Effectiveness == 0 {
+			fmt.Printf("It doesn't effect %v!\n", defender.Name)
+			return
+		}
 
-	defender.HP -= result.Damage
+		defender.HP -= result.Damage
 
-	if defender.HP <= 0 {
-		defender.HP = 0
-		fmt.Printf("%v took %v damage! ", defender.Name, result.Damage)
-		fmt.Printf("%v has fainted!\n", defender.Name)
-
-	} else {
-		fmt.Printf("%v took %v damage! ", defender.Name, result.Damage)
-		fmt.Printf("%v has %v HP left!\n", defender.Name, defender.HP)
+		if defender.HP <= 0 {
+			defender.HP = 0
+			fmt.Printf("%v took %v damage! ", defender.Name, result.Damage)
+			fmt.Printf("%v has fainted!\n", defender.Name)
+		} else {
+			if result.Damage != 0 {
+				fmt.Printf("%v took %v damage! ", defender.Name, result.Damage)
+			}
+			fmt.Printf("%v has %v HP left!\n", defender.Name, defender.HP)
+		}
 	}
 }

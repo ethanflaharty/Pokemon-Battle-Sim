@@ -32,7 +32,7 @@
         - [x] -6
             - [x] Growth Added 
     - [] Status Conditions
-        - [] Burn
+        - [x] Burn
         - [] Poison
         - [] Paralysis
         - [] Sleep

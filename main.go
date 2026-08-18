@@ -28,6 +28,7 @@ func main() {
 		},
 	}
 	wild.HP = pokemondata.HPForumla(wild)
+	wild.MaxHP = wild.HP
 	wild.CalculateBattleStats()
 
 	ally := pokemondata.Pokemon{
@@ -42,7 +43,7 @@ func main() {
 		},
 		Level: 50,
 		Moves: []pokemondata.Move{
-			{Name: "Double Team", Power: 0, Type: pokemondata.Normal, Accuracy: 100, NeverMisses: true, TotalPP: 20, PPLeft: 20, Category: pokemondata.Status},
+			{Name: "Will-O-Wisp", Power: 0, Type: pokemondata.Fire, Accuracy: 85, NeverMisses: true, TotalPP: 15, PPLeft: 15, Category: pokemondata.Status},
 			{Name: "Venoshock", Power: 65, Type: pokemondata.Poison, Accuracy: 100, NeverMisses: false, TotalPP: 10, PPLeft: 10, Category: pokemondata.Special},
 			{Name: "Magical Leaf", Power: 60, Type: pokemondata.Grass, Accuracy: 100, NeverMisses: true, TotalPP: 20, PPLeft: 20, Category: pokemondata.Special},
 			{Name: "Razor Leaf", Power: 55, Type: pokemondata.Grass, Accuracy: 95, NeverMisses: false, TotalPP: 25, PPLeft: 25, Category: pokemondata.Physical},
@@ -53,6 +54,7 @@ func main() {
 		},
 	}
 	ally.HP = pokemondata.HPForumla(ally)
+	ally.MaxHP = ally.HP
 	ally.CalculateBattleStats()
 
 	fmt.Printf("A wild %v appeared!\n", wild.Name)

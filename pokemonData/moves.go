@@ -26,8 +26,17 @@ func CalculateStatusMove(user, target *Pokemon, move Move) {
 		SandAttack(target)
 	case "Double Team":
 		DoubleTeam(user)
+	case "Will-O-Wisp":
+		WillOWisp(target)
 	default:
 		fmt.Println("specified status move not implemented yet")
+	}
+}
+
+func WillOWisp(p *Pokemon) {
+	result := p.ApplyStatus(Burn)
+	if result == true {
+		fmt.Printf("%v was burned!\n", p.Name)
 	}
 }
 
