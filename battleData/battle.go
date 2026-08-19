@@ -95,15 +95,25 @@ func BattleSequence(ally, foe *pokemondata.Pokemon) {
 			secondAction = playerAction
 		}
 
-		applyDamage(firstAction.User, secondAction.User, *firstAction.Move)
-		ally.UpdateBattleStats()
-		foe.UpdateBattleStats()
-
-		if second.HP > 0 {
-			applyDamage(secondAction.User, firstAction.User, *secondAction.Move)
+		if pokemondata.CanMove(firstAction.User) {
+			applyDamage(firstAction.User, secondAction.User, *firstAction.Move)
 			ally.UpdateBattleStats()
 			foe.UpdateBattleStats()
+		}
+
+		if pokemondata.CanMove(secondAction.User) {
+			if second.HP > 0 {
+				applyDamage(secondAction.User, firstAction.User, *secondAction.Move)
+				ally.UpdateBattleStats()
+				foe.UpdateBattleStats()
+			}
+		}
+
+		if ally.HP > 0 && ally.Status != pokemondata.None {
 			pokemondata.ProcessStatus(ally)
+		}
+
+		if foe.HP > 0 && foe.Status != pokemondata.None {
 			pokemondata.ProcessStatus(foe)
 		}
 	}

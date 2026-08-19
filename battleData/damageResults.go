@@ -48,6 +48,9 @@ func calculateMove(attacker, defender *pokemondata.Pokemon, move pokemondata.Mov
 	// Damage Calculation
 	switch move.Category {
 	case pokemondata.Physical:
+		if attacker.Status == pokemondata.Burn {
+			result.Damage = int(float64(((((((2 * attacker.Level) / 5) + 2) * move.Power * attacker.BattleStats.Attack / defender.BattleStats.Defense) / 50) + 2)) * multiplier * result.Effectiveness * 0.5)
+		}
 		result.Damage = int(float64(((((((2 * attacker.Level) / 5) + 2) * move.Power * attacker.BattleStats.Attack / defender.BattleStats.Defense) / 50) + 2)) * multiplier * result.Effectiveness)
 	case pokemondata.Special:
 		result.Damage = int(float64(((((((2 * attacker.Level) / 5) + 2) * move.Power * attacker.BattleStats.SpAttack / defender.BattleStats.SpDefense) / 50) + 2)) * multiplier * result.Effectiveness)
@@ -75,6 +78,10 @@ func calculateMove(attacker, defender *pokemondata.Pokemon, move pokemondata.Mov
 
 func CheckAccuracy(attacker, defender *pokemondata.Pokemon, move pokemondata.Move) bool {
 	if move.NeverMisses {
+		return true
+	}
+
+	if move.Name == "Toxic" && attacker.HasType(pokemondata.Poison) {
 		return true
 	}
 

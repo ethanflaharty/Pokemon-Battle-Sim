@@ -28,8 +28,44 @@ func CalculateStatusMove(user, target *Pokemon, move Move) {
 		DoubleTeam(user)
 	case "Will-O-Wisp":
 		WillOWisp(target)
+	case "Poison Powder":
+		PoisonPowder(target)
+	case "Toxic":
+		Toxic(target)
+	case "Stun Spore":
+		StunSpore(target)
 	default:
 		fmt.Println("specified status move not implemented yet")
+	}
+}
+
+func StunSpore(p *Pokemon) {
+	if len(p.Types) == 2 {
+		if p.Types[0] == Grass || p.Types[1] == Grass {
+			fmt.Printf("It doesn't affect %v\n", p.Name)
+		}
+	}
+	if p.Types[0] == Grass {
+		fmt.Printf("It doesn't affect %v\n", p.Name)
+	}
+
+	result := p.ApplyStatus(Paralysis)
+	if result == true {
+		fmt.Printf("%v is paralyzed, so it may be unable to move!\n", p.Name)
+	}
+}
+
+func Toxic(p *Pokemon) {
+	result := p.ApplyStatus(PoisonBad)
+	if result == true {
+		fmt.Printf("%v was badly poisoned!\n", p.Name)
+	}
+}
+
+func PoisonPowder(p *Pokemon) {
+	result := p.ApplyStatus(PoisonReg)
+	if result == true {
+		fmt.Printf("%v was poisoned!\n", p.Name)
 	}
 }
 

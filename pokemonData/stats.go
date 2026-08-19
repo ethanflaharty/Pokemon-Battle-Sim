@@ -48,6 +48,9 @@ func (p *Pokemon) UpdateBattleStats() {
 		p.Speed,
 		p.StatStages.Speed,
 	)
+	if p.Status == Paralysis {
+		p.BattleStats.Speed /= 2
+	}
 }
 
 func (p *Pokemon) ChangeStatStage(stat Stat, change int) {

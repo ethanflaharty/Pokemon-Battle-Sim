@@ -43,7 +43,7 @@ func main() {
 		},
 		Level: 50,
 		Moves: []pokemondata.Move{
-			{Name: "Will-O-Wisp", Power: 0, Type: pokemondata.Fire, Accuracy: 85, NeverMisses: true, TotalPP: 15, PPLeft: 15, Category: pokemondata.Status},
+			{Name: "Stun Spore", Power: 0, Type: pokemondata.Grass, Accuracy: 75, NeverMisses: false, TotalPP: 30, PPLeft: 30, Category: pokemondata.Status},
 			{Name: "Venoshock", Power: 65, Type: pokemondata.Poison, Accuracy: 100, NeverMisses: false, TotalPP: 10, PPLeft: 10, Category: pokemondata.Special},
 			{Name: "Magical Leaf", Power: 60, Type: pokemondata.Grass, Accuracy: 100, NeverMisses: true, TotalPP: 20, PPLeft: 20, Category: pokemondata.Special},
 			{Name: "Razor Leaf", Power: 55, Type: pokemondata.Grass, Accuracy: 95, NeverMisses: false, TotalPP: 25, PPLeft: 25, Category: pokemondata.Physical},

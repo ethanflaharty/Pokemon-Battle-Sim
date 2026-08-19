@@ -40,6 +40,16 @@ func singleTypeEffectiveness(defType, atkType Type) float64 {
 	return 1
 }
 
+func (p *Pokemon) HasType(t Type) bool {
+	for _, pokemonType := range p.Types {
+		if pokemonType == t {
+			return true
+		}
+	}
+
+	return false
+}
+
 type Effectiveness int
 
 const (
