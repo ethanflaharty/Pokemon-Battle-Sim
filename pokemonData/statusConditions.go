@@ -73,8 +73,6 @@ func ProcessStatus(p *Pokemon) {
 		ApplyBurnDamage(p)
 	case PoisonReg:
 		ApplyRegPoisonDamage(p)
-	case Sleep:
-
 	case Freeze:
 
 	case PoisonBad:
@@ -89,6 +87,22 @@ func CanMove(p *Pokemon) bool {
 		if rand.IntN(1000) < 125 {
 			fmt.Printf("%v couldn't move because it's paralyzed!\n", p.Name)
 			return false
+		}
+	case Sleep:
+		p.StatusTurns++
+		switch p.StatusTurns {
+		case 1:
+			fmt.Printf("%v is fast asleep!\n", p.Name)
+			return false
+		case 2:
+			if rand.IntN(100) < 67 {
+				fmt.Printf("%v is fast asleep!\n", p.Name)
+				return false
+			}
+		case 3:
+			p.Status = None
+			fmt.Printf("%v woke up!\n", p.Name)
+			return true
 		}
 	case Freeze:
 

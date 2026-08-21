@@ -34,8 +34,28 @@ func CalculateStatusMove(user, target *Pokemon, move Move) {
 		Toxic(target)
 	case "Stun Spore":
 		StunSpore(target)
+	case "Sleep Powder":
+		SleepPowder(target)
 	default:
 		fmt.Println("specified status move not implemented yet")
+	}
+}
+
+func SleepPowder(p *Pokemon) {
+	if len(p.Types) == 2 {
+		if p.Types[0] == Grass || p.Types[1] == Grass {
+			fmt.Printf("It doesn't affect %v\n", p.Name)
+			return
+		}
+	}
+	if p.Types[0] == Grass {
+		fmt.Printf("It doesn't affect %v\n", p.Name)
+		return
+	}
+
+	result := p.ApplyStatus(Sleep)
+	if result == true {
+		fmt.Printf("%v fell asleep!\n", p.Name)
 	}
 }
 
@@ -43,10 +63,12 @@ func StunSpore(p *Pokemon) {
 	if len(p.Types) == 2 {
 		if p.Types[0] == Grass || p.Types[1] == Grass {
 			fmt.Printf("It doesn't affect %v\n", p.Name)
+			return
 		}
 	}
 	if p.Types[0] == Grass {
 		fmt.Printf("It doesn't affect %v\n", p.Name)
+		return
 	}
 
 	result := p.ApplyStatus(Paralysis)
