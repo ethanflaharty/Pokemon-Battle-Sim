@@ -48,7 +48,16 @@ func (p *Pokemon) ApplyStatus(status StatusCondition) bool {
 	case Sleep:
 
 	case Freeze:
-
+		if len(p.Types) == 2 {
+			if p.Types[0] == Ice || p.Types[1] == Ice {
+				fmt.Printf("It doesn't affect %v\n", p.Name)
+				return false
+			}
+		}
+		if p.Types[0] == Ice {
+			fmt.Printf("It doesn't affect %v\n", p.Name)
+			return false
+		}
 	case PoisonBad:
 		if len(p.Types) == 2 {
 			if p.Types[0] == Poison || p.Types[1] == Poison || p.Types[0] == Steel || p.Types[1] == Steel {
@@ -73,8 +82,6 @@ func ProcessStatus(p *Pokemon) {
 		ApplyBurnDamage(p)
 	case PoisonReg:
 		ApplyRegPoisonDamage(p)
-	case Freeze:
-
 	case PoisonBad:
 		p.StatusTurns++
 		ApplyBadPoisonDamage(p)
@@ -95,7 +102,11 @@ func CanMove(p *Pokemon) bool {
 			fmt.Printf("%v is fast asleep!\n", p.Name)
 			return false
 		case 2:
-			if rand.IntN(100) < 67 {
+			if rand.IntN(100) < 33 {
+				p.Status = None
+				fmt.Printf("%v woke up!\n", p.Name)
+				return true
+			} else {
 				fmt.Printf("%v is fast asleep!\n", p.Name)
 				return false
 			}
@@ -105,7 +116,28 @@ func CanMove(p *Pokemon) bool {
 			return true
 		}
 	case Freeze:
-
+		p.StatusTurns++
+		switch p.StatusTurns {
+		case 1:
+			if rand.IntN(100) < 25 {
+				fmt.Printf("%v thawed out!\n", p.Name)
+				return true
+			} else {
+				fmt.Printf("%v is frozen solid!\n", p.Name)
+				return false
+			}
+		case 2:
+			if rand.IntN(100) < 25 {
+				fmt.Printf("%v thawed out!\n", p.Name)
+				return true
+			} else {
+				fmt.Printf("%v is frozen solid!\n", p.Name)
+				return false
+			}
+		case 3:
+			fmt.Printf("%v thawed out!\n", p.Name)
+			return true
+		}
 	}
 
 	return true

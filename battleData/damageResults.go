@@ -23,6 +23,15 @@ func calculateMove(attacker, defender *pokemondata.Pokemon, move pokemondata.Mov
 		return result
 	}
 
+	if result.Hit {
+		if defender.Status == pokemondata.Freeze {
+			if move.Type == pokemondata.Fire {
+				fmt.Printf("%v thawed out!\n", defender.Name)
+				defender.ApplyStatus(pokemondata.None)
+			}
+		}
+	}
+
 	// Check for a Crit
 	if rand.Float64() < 0.0625 {
 		result.Crit = true
@@ -52,8 +61,10 @@ func calculateMove(attacker, defender *pokemondata.Pokemon, move pokemondata.Mov
 			result.Damage = int(float64(((((((2 * attacker.Level) / 5) + 2) * move.Power * attacker.BattleStats.Attack / defender.BattleStats.Defense) / 50) + 2)) * multiplier * result.Effectiveness * 0.5)
 		}
 		result.Damage = int(float64(((((((2 * attacker.Level) / 5) + 2) * move.Power * attacker.BattleStats.Attack / defender.BattleStats.Defense) / 50) + 2)) * multiplier * result.Effectiveness)
+		CheckSecondaryEffect(attacker, defender, move)
 	case pokemondata.Special:
 		result.Damage = int(float64(((((((2 * attacker.Level) / 5) + 2) * move.Power * attacker.BattleStats.SpAttack / defender.BattleStats.SpDefense) / 50) + 2)) * multiplier * result.Effectiveness)
+		CheckSecondaryEffect(attacker, defender, move)
 	case pokemondata.Status:
 		pokemondata.CalculateStatusMove(attacker, defender, move)
 		if result.Crit == true {
@@ -74,6 +85,90 @@ func calculateMove(attacker, defender *pokemondata.Pokemon, move pokemondata.Mov
 	}
 
 	return result
+}
+
+func CheckSecondaryEffect(attacker, defender *pokemondata.Pokemon, move pokemondata.Move) {
+	switch move.Name {
+	case "Malignant Chain":
+		if len(defender.Types) == 2 {
+			if defender.Types[0] == pokemondata.Poison || defender.Types[1] == pokemondata.Poison || defender.Types[0] == pokemondata.Steel || defender.Types[1] == pokemondata.Steel {
+				return
+			}
+		} else {
+			if defender.Types[0] == pokemondata.Poison || defender.Types[0] == pokemondata.Steel {
+				return
+			}
+		}
+
+		if rand.IntN(100) < 50 {
+			result := defender.ApplyStatus(pokemondata.PoisonBad)
+			if result {
+				fmt.Printf("%v was badly poisoned!\n", defender.Name)
+			}
+		}
+	case "Sludge Bomb":
+		if len(defender.Types) == 2 {
+			if defender.Types[0] == pokemondata.Poison || defender.Types[1] == pokemondata.Poison || defender.Types[0] == pokemondata.Steel || defender.Types[1] == pokemondata.Steel {
+				return
+			}
+		} else {
+			if defender.Types[0] == pokemondata.Poison || defender.Types[0] == pokemondata.Steel {
+				return
+			}
+		}
+
+		if rand.IntN(100) < 30 {
+			result := defender.ApplyStatus(pokemondata.PoisonReg)
+			if result {
+				fmt.Printf("%v was poisoned!\n", defender.Name)
+			}
+		}
+	case "Discharge":
+		if len(defender.Types) == 2 {
+			if defender.Types[0] == pokemondata.Electric || defender.Types[1] == pokemondata.Electric || defender.Types[0] == pokemondata.Ground || defender.Types[1] == pokemondata.Ground {
+				return
+			}
+		} else {
+			if defender.Types[0] == pokemondata.Electric || defender.Types[0] == pokemondata.Ground {
+				return
+			}
+		}
+
+	case "Ice Beam":
+		if len(defender.Types) == 2 {
+			if defender.Types[0] == pokemondata.Ice || defender.Types[1] == pokemondata.Ice {
+				return
+			}
+		} else {
+			if defender.Types[0] == pokemondata.Ice {
+				return
+			}
+		}
+
+		if rand.IntN(100) < 10 {
+			result := defender.ApplyStatus(pokemondata.Freeze)
+			if result {
+				fmt.Printf("%v was frozen solid!\n", defender.Name)
+			}
+		}
+	case "Ember":
+		if len(defender.Types) == 2 {
+			if defender.Types[0] == pokemondata.Fire || defender.Types[1] == pokemondata.Fire {
+				return
+			}
+		} else {
+			if defender.Types[0] == pokemondata.Fire {
+				return
+			}
+		}
+
+		if rand.IntN(100) < 10 {
+			result := defender.ApplyStatus(pokemondata.Burn)
+			if result {
+				fmt.Printf("%v was burned!\n", defender.Name)
+			}
+		}
+	}
 }
 
 func CheckAccuracy(attacker, defender *pokemondata.Pokemon, move pokemondata.Move) bool {

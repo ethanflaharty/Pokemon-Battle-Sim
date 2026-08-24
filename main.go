@@ -20,6 +20,7 @@ func main() {
 		Level: 50,
 		Moves: []pokemondata.Move{
 			{Name: "Scratch", Power: 40, Type: pokemondata.Normal, Accuracy: 100, NeverMisses: false, TotalPP: 35, PPLeft: 35, Category: pokemondata.Physical},
+			{Name: "Ember", Power: 40, Type: pokemondata.Fire, Accuracy: 100, NeverMisses: false, TotalPP: 10, PPLeft: 10, Category: pokemondata.Special},
 		},
 		Types: []pokemondata.Type{
 			pokemondata.Fire,
@@ -42,9 +43,9 @@ func main() {
 		Level: 50,
 		Moves: []pokemondata.Move{
 			{Name: "Sleep Powder", Power: 0, Type: pokemondata.Grass, Accuracy: 75, NeverMisses: false, TotalPP: 15, PPLeft: 15, Category: pokemondata.Status},
-			{Name: "Venoshock", Power: 65, Type: pokemondata.Poison, Accuracy: 100, NeverMisses: false, TotalPP: 10, PPLeft: 10, Category: pokemondata.Special},
+			{Name: "Sludge Bomb", Power: 90, Type: pokemondata.Poison, Accuracy: 100, NeverMisses: false, TotalPP: 10, PPLeft: 10, Category: pokemondata.Special},
 			{Name: "Magical Leaf", Power: 60, Type: pokemondata.Grass, Accuracy: 100, NeverMisses: true, TotalPP: 20, PPLeft: 20, Category: pokemondata.Special},
-			{Name: "Razor Leaf", Power: 55, Type: pokemondata.Grass, Accuracy: 95, NeverMisses: false, TotalPP: 25, PPLeft: 25, Category: pokemondata.Physical},
+			{Name: "Malignant Chain", Power: 100, Type: pokemondata.Poison, Accuracy: 100, NeverMisses: false, TotalPP: 25, PPLeft: 25, Category: pokemondata.Special},
 		},
 		Types: []pokemondata.Type{
 			pokemondata.Grass,
