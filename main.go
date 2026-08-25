@@ -58,6 +58,7 @@ func main() {
 			SpAttack: 252,
 			Speed:    252,
 		},
+		Nature: pokemondata.Modest,
 		Moves: []pokemondata.Move{
 			{Name: "Sleep Powder", Power: 0, Type: pokemondata.Grass, Accuracy: 75, NeverMisses: false, TotalPP: 15, PPLeft: 15, Category: pokemondata.Status},
 			{Name: "Sludge Bomb", Power: 90, Type: pokemondata.Poison, Accuracy: 100, NeverMisses: false, TotalPP: 10, PPLeft: 10, Category: pokemondata.Special},

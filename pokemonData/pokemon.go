@@ -7,10 +7,12 @@ type Pokemon struct {
 	Moves     []Move
 
 	Types       []Type
-	StatStages  StatStages
-	BattleStats BattleStats
 	IVs         Stats
 	EVs         Stats
+	Nature      Nature
+	StatStages  StatStages
+	BattleStats BattleStats
+
 	Status      StatusCondition
 	StatusTurns int
 
@@ -22,3 +24,29 @@ type Pokemon struct {
 	SpDefense int
 	Speed     int
 }
+
+type Nature int
+
+const (
+	Lonely Nature = iota
+	Adamant
+	Naughty
+	Brave
+	Bold
+	Impish
+	Lax
+	Relaxed
+	Modest
+	Mild
+	Rash
+	Quiet
+	Calm
+	Gentle
+	Careful
+	Sassy
+	Timid
+	Hasty
+	Jolly
+	Naive
+	Serious
+)

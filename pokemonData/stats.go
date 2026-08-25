@@ -4,7 +4,7 @@ import (
 	"log"
 )
 
-func (p *Pokemon) TotalEVs() int {
+func (p Pokemon) TotalEVs() int {
 	return p.EVs.HP +
 		p.EVs.Attack +
 		p.EVs.Defense +
@@ -13,7 +13,7 @@ func (p *Pokemon) TotalEVs() int {
 		p.EVs.Speed
 }
 
-func (p *Pokemon) ValidateIVs() bool {
+func (p Pokemon) ValidateIVs() bool {
 	if p.IVs.HP > 31 ||
 		p.IVs.Attack > 31 ||
 		p.IVs.Defense > 31 ||
@@ -35,7 +35,7 @@ func (p *Pokemon) ValidateIVs() bool {
 	return true
 }
 
-func (p *Pokemon) ValidateEVs() bool {
+func (p Pokemon) ValidateEVs() bool {
 	if p.EVs.HP > 252 ||
 		p.EVs.Attack > 252 ||
 		p.EVs.Defense > 252 ||
@@ -66,16 +66,165 @@ func HPForumla(p Pokemon) int {
 	return final
 }
 
-func calculateStat(baseStat, level, iv, ev int) int {
-	return (((2*baseStat + iv + ev/4) * level) / 100) + 5
+func calculateStat(baseStat, level, iv, ev int, natureMult float64) int {
+	stat := (((2*baseStat + iv + ev/4) * level) / 100) + 5
+
+	return int(float64(stat) * natureMult)
+}
+
+func (p Pokemon) NatureMultiplier(stat Stat) float64 {
+	switch p.Nature {
+	case Lonely:
+		switch stat {
+		case Attack:
+			return 1.1
+		case Defense:
+			return 0.9
+		}
+	case Adamant:
+		switch stat {
+		case Attack:
+			return 1.1
+		case SpAttack:
+			return 0.9
+		}
+	case Naughty:
+		switch stat {
+		case Attack:
+			return 1.1
+		case SpDefense:
+			return 0.9
+		}
+	case Brave:
+		switch stat {
+		case Attack:
+			return 1.1
+		case Speed:
+			return 0.9
+		}
+	case Bold:
+		switch stat {
+		case Defense:
+			return 1.1
+		case Attack:
+			return 0.9
+		}
+	case Impish:
+		switch stat {
+		case Defense:
+			return 1.1
+		case SpAttack:
+			return 0.9
+		}
+	case Lax:
+		switch stat {
+		case Defense:
+			return 1.1
+		case SpDefense:
+			return 0.9
+		}
+	case Relaxed:
+		switch stat {
+		case Defense:
+			return 1.1
+		case Speed:
+			return 0.9
+		}
+	case Modest:
+		switch stat {
+		case SpAttack:
+			return 1.1
+		case Attack:
+			return 0.9
+		}
+	case Mild:
+		switch stat {
+		case SpAttack:
+			return 1.1
+		case Defense:
+			return 0.9
+		}
+	case Rash:
+		switch stat {
+		case SpAttack:
+			return 1.1
+		case SpDefense:
+			return 0.9
+		}
+	case Quiet:
+		switch stat {
+		case SpAttack:
+			return 1.1
+		case Speed:
+			return 0.9
+		}
+	case Calm:
+		switch stat {
+		case SpDefense:
+			return 1.1
+		case Attack:
+			return 0.9
+		}
+	case Gentle:
+		switch stat {
+		case SpDefense:
+			return 1.1
+		case Defense:
+			return 0.9
+		}
+	case Careful:
+		switch stat {
+		case SpDefense:
+			return 1.1
+		case SpAttack:
+			return 0.9
+		}
+	case Sassy:
+		switch stat {
+		case SpDefense:
+			return 1.1
+		case Speed:
+			return 0.9
+		}
+	case Timid:
+		switch stat {
+		case Speed:
+			return 1.1
+		case Attack:
+			return 0.9
+		}
+	case Hasty:
+		switch stat {
+		case Speed:
+			return 1.1
+		case Defense:
+			return 0.9
+		}
+	case Jolly:
+		switch stat {
+		case Speed:
+			return 1.1
+		case SpAttack:
+			return 0.9
+		}
+	case Naive:
+		switch stat {
+		case Speed:
+			return 1.1
+		case SpDefense:
+			return 0.9
+		}
+	}
+
+	return 1
 }
 
 func (p *Pokemon) CalculateBattleStats() {
-	p.Attack = calculateStat(p.BaseStats.Attack, p.Level, p.IVs.Attack, p.EVs.Attack)
-	p.Defense = calculateStat(p.BaseStats.Defense, p.Level, p.IVs.Defense, p.EVs.Defense)
-	p.SpAttack = calculateStat(p.BaseStats.SpAttack, p.Level, p.IVs.SpAttack, p.EVs.SpAttack)
-	p.SpDefense = calculateStat(p.BaseStats.SpDefense, p.Level, p.IVs.SpDefense, p.EVs.SpDefense)
-	p.Speed = calculateStat(p.BaseStats.Speed, p.Level, p.IVs.Speed, p.EVs.Speed)
+	p.Attack = calculateStat(p.BaseStats.Attack, p.Level, p.IVs.Attack, p.EVs.Attack, p.NatureMultiplier(Attack))
+	p.Defense = calculateStat(p.BaseStats.Defense, p.Level, p.IVs.Defense, p.EVs.Defense, p.NatureMultiplier(Defense))
+	p.SpAttack = calculateStat(p.BaseStats.SpAttack, p.Level, p.IVs.SpAttack, p.EVs.SpAttack, p.NatureMultiplier(SpAttack))
+	p.SpDefense = calculateStat(p.BaseStats.SpDefense, p.Level, p.IVs.SpDefense, p.EVs.SpDefense, p.NatureMultiplier(SpDefense))
+	p.Speed = calculateStat(p.BaseStats.Speed, p.Level, p.IVs.Speed, p.EVs.Speed, p.NatureMultiplier(Speed))
 }
 
 func (p *Pokemon) UpdateBattleStats() {

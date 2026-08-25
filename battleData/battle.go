@@ -101,8 +101,8 @@ func BattleSequence(ally, foe *pokemondata.Pokemon) {
 			foe.UpdateBattleStats()
 		}
 
-		if pokemondata.CanMove(secondAction.User) {
-			if second.HP > 0 {
+		if second.HP > 0 {
+			if pokemondata.CanMove(secondAction.User) {
 				applyDamage(secondAction.User, firstAction.User, *secondAction.Move)
 				ally.UpdateBattleStats()
 				foe.UpdateBattleStats()
