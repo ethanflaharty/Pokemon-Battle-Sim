@@ -33,10 +33,11 @@
             - [x] Growth Added 
     - [] Status Conditions
         - [x] Burn
-        - [] Poison
-        - [] Paralysis
-        - [] Sleep
-        - [] Freeze
+        - [x] Poison
+        - [x] Paralysis
+        - [x] Sleep
+        - [x] Freeze
+        - [] Confusion
     - [] Flinch
     - [] Protect
     - [] Other Temporary Battle States(like Protect)
@@ -55,7 +56,7 @@
         - [] Spikes
         - [] Toxic Spikes
         - [] Sticky Web
-- [] Status moves
+- [x] Status moves
 
 
 ### Types

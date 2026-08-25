@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	battledata "pokemonBattleSim/battleData"
 	pokemondata "pokemonBattleSim/pokemonData"
 )
@@ -9,7 +10,7 @@ import (
 func main() {
 	wild := pokemondata.Pokemon{
 		Name: "Charmander",
-		BaseStats: pokemondata.PokemonBaseStats{
+		BaseStats: pokemondata.Stats{
 			HP:        39,
 			Attack:    52,
 			Defense:   43,
@@ -26,13 +27,19 @@ func main() {
 			pokemondata.Fire,
 		},
 	}
+	if !wild.ValidateEVs() {
+		log.Fatalf("%v has invalid EVs", wild.Name)
+	}
+	if !wild.ValidateIVs() {
+		log.Fatalf("%v has invalid IVs", wild.Name)
+	}
 	wild.HP = pokemondata.HPForumla(wild)
 	wild.MaxHP = wild.HP
 	wild.CalculateBattleStats()
 
 	ally := pokemondata.Pokemon{
 		Name: "Bulbasaur",
-		BaseStats: pokemondata.PokemonBaseStats{
+		BaseStats: pokemondata.Stats{
 			HP:        45,
 			Attack:    49,
 			Defense:   49,
@@ -41,6 +48,16 @@ func main() {
 			Speed:     45,
 		},
 		Level: 50,
+		IVs: pokemondata.Stats{
+			Attack:   0,
+			SpAttack: 31,
+			Speed:    31,
+		},
+		EVs: pokemondata.Stats{
+			HP:       4,
+			SpAttack: 252,
+			Speed:    252,
+		},
 		Moves: []pokemondata.Move{
 			{Name: "Sleep Powder", Power: 0, Type: pokemondata.Grass, Accuracy: 75, NeverMisses: false, TotalPP: 15, PPLeft: 15, Category: pokemondata.Status},
 			{Name: "Sludge Bomb", Power: 90, Type: pokemondata.Poison, Accuracy: 100, NeverMisses: false, TotalPP: 10, PPLeft: 10, Category: pokemondata.Special},
@@ -51,6 +68,12 @@ func main() {
 			pokemondata.Grass,
 			pokemondata.Poison,
 		},
+	}
+	if !ally.ValidateEVs() {
+		log.Fatalf("%v has invalid EVs", ally.Name)
+	}
+	if !ally.ValidateIVs() {
+		log.Fatalf("%v has invalid IVs", ally.Name)
 	}
 	ally.HP = pokemondata.HPForumla(ally)
 	ally.MaxHP = ally.HP

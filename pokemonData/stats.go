@@ -4,23 +4,78 @@ import (
 	"log"
 )
 
+func (p *Pokemon) TotalEVs() int {
+	return p.EVs.HP +
+		p.EVs.Attack +
+		p.EVs.Defense +
+		p.EVs.SpAttack +
+		p.EVs.SpDefense +
+		p.EVs.Speed
+}
+
+func (p *Pokemon) ValidateIVs() bool {
+	if p.IVs.HP > 31 ||
+		p.IVs.Attack > 31 ||
+		p.IVs.Defense > 31 ||
+		p.IVs.SpAttack > 31 ||
+		p.IVs.SpDefense > 31 ||
+		p.IVs.Speed > 31 {
+		return false
+	}
+
+	if p.IVs.HP < 0 ||
+		p.IVs.Attack < 0 ||
+		p.IVs.Defense < 0 ||
+		p.IVs.SpAttack < 0 ||
+		p.IVs.SpDefense < 0 ||
+		p.IVs.Speed < 0 {
+		return false
+	}
+
+	return true
+}
+
+func (p *Pokemon) ValidateEVs() bool {
+	if p.EVs.HP > 252 ||
+		p.EVs.Attack > 252 ||
+		p.EVs.Defense > 252 ||
+		p.EVs.SpAttack > 252 ||
+		p.EVs.SpDefense > 252 ||
+		p.EVs.Speed > 252 {
+		return false
+	}
+
+	if p.EVs.HP < 0 ||
+		p.EVs.Attack < 0 ||
+		p.EVs.Defense < 0 ||
+		p.EVs.SpAttack < 0 ||
+		p.EVs.SpDefense < 0 ||
+		p.EVs.Speed < 0 {
+		return false
+	}
+
+	// Used 508 instead of 510 since the missing 2 can
+	// never add a stat point to a Pokemon
+	return p.TotalEVs() <= 508
+}
+
 func HPForumla(p Pokemon) int {
-	dividend := (2 * p.BaseStats.HP) * p.Level
+	dividend := (2*p.BaseStats.HP + p.IVs.HP + p.EVs.HP/4) * p.Level
 	division := dividend / 100
 	final := division + p.Level + 10
 	return final
 }
 
-func calculateStat(baseStat, level int) int {
-	return ((2 * baseStat * level) / 100) + 5
+func calculateStat(baseStat, level, iv, ev int) int {
+	return (((2*baseStat + iv + ev/4) * level) / 100) + 5
 }
 
 func (p *Pokemon) CalculateBattleStats() {
-	p.Attack = calculateStat(p.BaseStats.Attack, p.Level)
-	p.Defense = calculateStat(p.BaseStats.Defense, p.Level)
-	p.SpAttack = calculateStat(p.BaseStats.SpAttack, p.Level)
-	p.SpDefense = calculateStat(p.BaseStats.SpDefense, p.Level)
-	p.Speed = calculateStat(p.BaseStats.Speed, p.Level)
+	p.Attack = calculateStat(p.BaseStats.Attack, p.Level, p.IVs.Attack, p.EVs.Attack)
+	p.Defense = calculateStat(p.BaseStats.Defense, p.Level, p.IVs.Defense, p.EVs.Defense)
+	p.SpAttack = calculateStat(p.BaseStats.SpAttack, p.Level, p.IVs.SpAttack, p.EVs.SpAttack)
+	p.SpDefense = calculateStat(p.BaseStats.SpDefense, p.Level, p.IVs.SpDefense, p.EVs.SpDefense)
+	p.Speed = calculateStat(p.BaseStats.Speed, p.Level, p.IVs.Speed, p.EVs.Speed)
 }
 
 func (p *Pokemon) UpdateBattleStats() {
@@ -106,7 +161,7 @@ func (p *Pokemon) CalculateStatChange(stat, stage int) int {
 	}
 }
 
-type PokemonBaseStats struct {
+type Stats struct {
 	HP        int
 	Attack    int
 	Defense   int
