@@ -39,8 +39,52 @@ func CalculateStatusMove(user, target *Pokemon, move Move, bs *battledata.Battle
 		SleepPowder(target)
 	case "Sunny Day":
 		SunnyDay(bs)
+	case "Rain Dance":
+		RainDance(bs)
+	case "Sandstorm":
+		Sandstorm(bs)
 	default:
 		fmt.Println("specified status move not implemented yet")
+	}
+}
+
+func Sandstorm(bs *battledata.BattleState) {
+	switch bs.Conditions.Weather {
+	case battledata.Sandstorm:
+		fmt.Println("But it failed!")
+	case battledata.ExtremeHarshSunlight:
+		fmt.Println("The Sandstorm failed!")
+		fmt.Println("The extremely harsh sunlight is so strong, it can't be blown away!")
+	case battledata.HeavyRain:
+		fmt.Println("The Sandstorm failed!")
+		fmt.Println("There is no relief from this heavy rain!")
+	case battledata.StrongWinds:
+		fmt.Println("The Sandstrom failed!")
+		fmt.Println("A mysterious air current is protecting Flying-type Pokémon!")
+	default:
+		bs.Conditions.WeatherTurns = 5
+		bs.Conditions.Weather = battledata.Sandstorm
+		fmt.Println("A sandstorm kicked up!")
+	}
+}
+
+func RainDance(bs *battledata.BattleState) {
+	switch bs.Conditions.Weather {
+	case battledata.Rain:
+		fmt.Println("But it failed!")
+	case battledata.ExtremeHarshSunlight:
+		fmt.Println("The Rain Dance failed!")
+		fmt.Println("The extremely harsh sunlight is so strong, it can't be blown away!")
+	case battledata.HeavyRain:
+		fmt.Println("The Rain Dance failed!")
+		fmt.Println("There is no relief from this heavy rain!")
+	case battledata.StrongWinds:
+		fmt.Println("The Rain Dance failed!")
+		fmt.Println("A mysterious air current is protecting Flying-type Pokémon!")
+	default:
+		bs.Conditions.WeatherTurns = 5
+		bs.Conditions.Weather = battledata.Rain
+		fmt.Println("It started to rain!")
 	}
 }
 

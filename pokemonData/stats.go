@@ -2,6 +2,7 @@ package pokemondata
 
 import (
 	"log"
+	battledata "pokemonBattleSim/battleSystem/battleData"
 )
 
 func (p Pokemon) TotalEVs() int {
@@ -226,7 +227,7 @@ func (p *Pokemon) CalculateBattleStats() {
 	p.Speed = calculateStat(p.BaseStats.Speed, p.Level, p.IVs.Speed, p.EVs.Speed, p.NatureMultiplier(Speed))
 }
 
-func (p *Pokemon) UpdateBattleStats() {
+func (p *Pokemon) UpdateBattleStats(bs battledata.BattleState) {
 	p.BattleStats.Attack = p.CalculateStatChange(
 		p.Attack,
 		p.StatStages.Attack,
@@ -253,6 +254,21 @@ func (p *Pokemon) UpdateBattleStats() {
 	)
 	if p.Status == Paralysis {
 		p.BattleStats.Speed /= 2
+	}
+
+	switch bs.Conditions.Weather {
+	case battledata.Sandstorm:
+		if len(p.Types) == 2 {
+			if p.Types[0] == Rock || p.Types[1] == Rock {
+				p.BattleStats.SpDefense = int(float64(p.BattleStats.SpDefense) * 1.5)
+			}
+		} else {
+			if p.Types[0] == Rock {
+				p.BattleStats.SpDefense = int(float64(p.BattleStats.SpDefense) * 1.5)
+			}
+		}
+	case battledata.Snow:
+
 	}
 }
 

@@ -69,8 +69,8 @@ func BattleSequence(ally, foe *pokemondata.Pokemon) {
 		fmt.Printf("Turn %v\n", turn)
 		fmt.Println()
 
-		ally.UpdateBattleStats()
-		foe.UpdateBattleStats()
+		ally.UpdateBattleStats(bs)
+		foe.UpdateBattleStats(bs)
 
 		playerMove, playerMoveIndex := selectPlayerMove(ally)
 
@@ -99,15 +99,15 @@ func BattleSequence(ally, foe *pokemondata.Pokemon) {
 
 		if pokemondata.CanMove(firstAction.User) {
 			applyDamage(firstAction.User, secondAction.User, *firstAction.Move, &bs)
-			ally.UpdateBattleStats()
-			foe.UpdateBattleStats()
+			ally.UpdateBattleStats(bs)
+			foe.UpdateBattleStats(bs)
 		}
 
 		if second.HP > 0 {
 			if pokemondata.CanMove(secondAction.User) {
 				applyDamage(secondAction.User, firstAction.User, *secondAction.Move, &bs)
-				ally.UpdateBattleStats()
-				foe.UpdateBattleStats()
+				ally.UpdateBattleStats(bs)
+				foe.UpdateBattleStats(bs)
 			}
 		}
 
@@ -120,7 +120,7 @@ func BattleSequence(ally, foe *pokemondata.Pokemon) {
 		}
 
 		if ally.HP > 0 && foe.HP > 0 && bs.Conditions.Weather != battledata.Clear {
-			battledata.ProcessWeather(&bs)
+			ProcessWeather(ally, foe, &bs)
 		}
 	}
 }

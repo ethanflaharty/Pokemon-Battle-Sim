@@ -100,6 +100,13 @@ func CheckWeatherMult(move pokemondata.Move, bs *battledata.BattleState) float64
 		case pokemondata.Water:
 			return 0.5
 		}
+	case battledata.Rain:
+		switch move.Type {
+		case pokemondata.Fire:
+			return 0.5
+		case pokemondata.Water:
+			return 1.5
+		}
 	}
 	return 1
 }
