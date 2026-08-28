@@ -1,8 +1,9 @@
-package battledata
+package battle
 
 import (
 	"fmt"
 	"math/rand/v2"
+	battledata "pokemonBattleSim/battleSystem/battleData"
 	pokemondata "pokemonBattleSim/pokemonData"
 )
 
@@ -14,7 +15,7 @@ type MoveResult struct {
 	STAB          bool
 }
 
-func calculateMove(attacker, defender *pokemondata.Pokemon, move pokemondata.Move) MoveResult {
+func calculateMove(attacker, defender *pokemondata.Pokemon, move pokemondata.Move, bs *battledata.BattleState) MoveResult {
 	result := MoveResult{}
 
 	// Check for a hit
@@ -48,6 +49,9 @@ func calculateMove(attacker, defender *pokemondata.Pokemon, move pokemondata.Mov
 		}
 	}
 
+	// Check for Weather Mult
+	weatherMult := CheckWeatherMult(move, bs)
+
 	// Calculate Type Effectiveness
 	result.Effectiveness = pokemondata.EffectivenessCalc(defender.Types, move.Type)
 
@@ -58,15 +62,15 @@ func calculateMove(attacker, defender *pokemondata.Pokemon, move pokemondata.Mov
 	switch move.Category {
 	case pokemondata.Physical:
 		if attacker.Status == pokemondata.Burn {
-			result.Damage = int(float64(((((((2 * attacker.Level) / 5) + 2) * move.Power * attacker.BattleStats.Attack / defender.BattleStats.Defense) / 50) + 2)) * multiplier * result.Effectiveness * 0.5)
+			result.Damage = int(float64(((((((2 * attacker.Level) / 5) + 2) * move.Power * attacker.BattleStats.Attack / defender.BattleStats.Defense) / 50) + 2)) * weatherMult * multiplier * result.Effectiveness * 0.5)
 		}
-		result.Damage = int(float64(((((((2 * attacker.Level) / 5) + 2) * move.Power * attacker.BattleStats.Attack / defender.BattleStats.Defense) / 50) + 2)) * multiplier * result.Effectiveness)
+		result.Damage = int(float64(((((((2 * attacker.Level) / 5) + 2) * move.Power * attacker.BattleStats.Attack / defender.BattleStats.Defense) / 50) + 2)) * weatherMult * multiplier * result.Effectiveness)
 		CheckSecondaryEffect(attacker, defender, move)
 	case pokemondata.Special:
-		result.Damage = int(float64(((((((2 * attacker.Level) / 5) + 2) * move.Power * attacker.BattleStats.SpAttack / defender.BattleStats.SpDefense) / 50) + 2)) * multiplier * result.Effectiveness)
+		result.Damage = int(float64(((((((2 * attacker.Level) / 5) + 2) * move.Power * attacker.BattleStats.SpAttack / defender.BattleStats.SpDefense) / 50) + 2)) * weatherMult * multiplier * result.Effectiveness)
 		CheckSecondaryEffect(attacker, defender, move)
 	case pokemondata.Status:
-		pokemondata.CalculateStatusMove(attacker, defender, move)
+		pokemondata.CalculateStatusMove(attacker, defender, move, bs)
 		if result.Crit == true {
 			result.Crit = false
 		}
@@ -85,6 +89,19 @@ func calculateMove(attacker, defender *pokemondata.Pokemon, move pokemondata.Mov
 	}
 
 	return result
+}
+
+func CheckWeatherMult(move pokemondata.Move, bs *battledata.BattleState) float64 {
+	switch bs.Conditions.Weather {
+	case battledata.HarshSunlight:
+		switch move.Type {
+		case pokemondata.Fire:
+			return 1.5
+		case pokemondata.Water:
+			return 0.5
+		}
+	}
+	return 1
 }
 
 func CheckSecondaryEffect(attacker, defender *pokemondata.Pokemon, move pokemondata.Move) {
@@ -246,10 +263,10 @@ func CheckAccuracy(attacker, defender *pokemondata.Pokemon, move pokemondata.Mov
 	return result
 }
 
-func applyDamage(attacker, defender *pokemondata.Pokemon, move pokemondata.Move) {
+func applyDamage(attacker, defender *pokemondata.Pokemon, move pokemondata.Move, bs *battledata.BattleState) {
 	fmt.Printf("%v used %v!\n", attacker.Name, move.Name)
 
-	result := calculateMove(attacker, defender, move)
+	result := calculateMove(attacker, defender, move, bs)
 
 	if !result.Hit {
 		fmt.Printf("%v's attack missed!\n", attacker.Name)

@@ -38,7 +38,7 @@
         - [x] Sleep
         - [x] Freeze
         - [] Confusion
-    - [] Flinch
+        - [] Flinch
     - [] Protect
     - [] Other Temporary Battle States(like Protect)
     - [] Weather

@@ -71,8 +71,9 @@ func (p *Pokemon) ApplyStatus(status StatusCondition) bool {
 		}
 	}
 
-	p.Status = status
 	p.StatusTurns = 0
+	p.Status = status
+
 	return true
 }
 
@@ -224,4 +225,8 @@ const (
 	Sleep
 	Freeze
 	PoisonBad
+	Confusion
+	Flinch
+	Love
+	Drowsy
 )

@@ -62,8 +62,7 @@ func (p Pokemon) ValidateEVs() bool {
 func HPForumla(p Pokemon) int {
 	dividend := (2*p.BaseStats.HP + p.IVs.HP + p.EVs.HP/4) * p.Level
 	division := dividend / 100
-	final := division + p.Level + 10
-	return final
+	return division + p.Level + 10
 }
 
 func calculateStat(baseStat, level, iv, ev int, natureMult float64) int {

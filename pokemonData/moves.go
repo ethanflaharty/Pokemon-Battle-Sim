@@ -2,9 +2,10 @@ package pokemondata
 
 import (
 	"fmt"
+	battledata "pokemonBattleSim/battleSystem/battleData"
 )
 
-func CalculateStatusMove(user, target *Pokemon, move Move) {
+func CalculateStatusMove(user, target *Pokemon, move Move, bs *battledata.BattleState) {
 	switch move.Name {
 	case "Growth":
 		Growth(user)
@@ -36,8 +37,30 @@ func CalculateStatusMove(user, target *Pokemon, move Move) {
 		StunSpore(target)
 	case "Sleep Powder":
 		SleepPowder(target)
+	case "Sunny Day":
+		SunnyDay(bs)
 	default:
 		fmt.Println("specified status move not implemented yet")
+	}
+}
+
+func SunnyDay(bs *battledata.BattleState) {
+	switch bs.Conditions.Weather {
+	case battledata.HarshSunlight:
+		fmt.Println("But it failed!")
+	case battledata.ExtremeHarshSunlight:
+		fmt.Println("The Sunny Day failed!")
+		fmt.Println("The extremely harsh sunlight is so strong, it can't be blown away!")
+	case battledata.HeavyRain:
+		fmt.Println("The Sunny Day failed!")
+		fmt.Println("There is no relief from this heavy rain!")
+	case battledata.StrongWinds:
+		fmt.Println("The Sunny Day failed!")
+		fmt.Println("A mysterious air current is protecting Flying-type Pokémon!")
+	default:
+		bs.Conditions.WeatherTurns = 5
+		bs.Conditions.Weather = battledata.HarshSunlight
+		fmt.Println("The sunlight turned harsh!")
 	}
 }
 

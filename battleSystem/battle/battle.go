@@ -1,8 +1,9 @@
-package battledata
+package battle
 
 import (
 	"fmt"
 	"math/rand/v2"
+	battledata "pokemonBattleSim/battleSystem/battleData"
 	pokemondata "pokemonBattleSim/pokemonData"
 )
 
@@ -59,6 +60,7 @@ type TurnAction struct {
 func BattleSequence(ally, foe *pokemondata.Pokemon) {
 	ally.StatStages = pokemondata.StatStages{}
 	foe.StatStages = pokemondata.StatStages{}
+	bs := battledata.BattleState{}
 	turn := 0
 
 	for ally.HP > 0 && foe.HP > 0 {
@@ -96,14 +98,14 @@ func BattleSequence(ally, foe *pokemondata.Pokemon) {
 		}
 
 		if pokemondata.CanMove(firstAction.User) {
-			applyDamage(firstAction.User, secondAction.User, *firstAction.Move)
+			applyDamage(firstAction.User, secondAction.User, *firstAction.Move, &bs)
 			ally.UpdateBattleStats()
 			foe.UpdateBattleStats()
 		}
 
 		if second.HP > 0 {
 			if pokemondata.CanMove(secondAction.User) {
-				applyDamage(secondAction.User, firstAction.User, *secondAction.Move)
+				applyDamage(secondAction.User, firstAction.User, *secondAction.Move, &bs)
 				ally.UpdateBattleStats()
 				foe.UpdateBattleStats()
 			}
@@ -115,6 +117,10 @@ func BattleSequence(ally, foe *pokemondata.Pokemon) {
 
 		if foe.HP > 0 && foe.Status != pokemondata.None {
 			pokemondata.ProcessStatus(foe)
+		}
+
+		if ally.HP > 0 && foe.HP > 0 && bs.Conditions.Weather != battledata.Clear {
+			battledata.ProcessWeather(&bs)
 		}
 	}
 }

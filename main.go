@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"log"
-	battledata "pokemonBattleSim/battleData"
+	battle "pokemonBattleSim/battleSystem/battle"
 	pokemondata "pokemonBattleSim/pokemonData"
 )
 
@@ -63,7 +63,7 @@ func main() {
 			{Name: "Sleep Powder", Power: 0, Type: pokemondata.Grass, Accuracy: 75, NeverMisses: false, TotalPP: 15, PPLeft: 15, Category: pokemondata.Status},
 			{Name: "Sludge Bomb", Power: 90, Type: pokemondata.Poison, Accuracy: 100, NeverMisses: false, TotalPP: 10, PPLeft: 10, Category: pokemondata.Special},
 			{Name: "Magical Leaf", Power: 60, Type: pokemondata.Grass, Accuracy: 100, NeverMisses: true, TotalPP: 20, PPLeft: 20, Category: pokemondata.Special},
-			{Name: "Malignant Chain", Power: 100, Type: pokemondata.Poison, Accuracy: 100, NeverMisses: false, TotalPP: 25, PPLeft: 25, Category: pokemondata.Special},
+			{Name: "Sunny Day", Power: 0, Type: pokemondata.Poison, Accuracy: 100, NeverMisses: true, TotalPP: 25, PPLeft: 25, Category: pokemondata.Status},
 		},
 		Types: []pokemondata.Type{
 			pokemondata.Grass,
@@ -83,5 +83,5 @@ func main() {
 	fmt.Printf("A wild %v appeared!\n", wild.Name)
 	fmt.Printf("Go! %v!\n", ally.Name)
 
-	battledata.BattleSequence(&ally, &wild)
+	battle.BattleSequence(&ally, &wild)
 }
