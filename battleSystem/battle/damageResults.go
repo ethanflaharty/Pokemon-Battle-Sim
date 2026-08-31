@@ -33,6 +33,9 @@ func calculateMove(attacker, defender *pokemondata.Pokemon, move pokemondata.Mov
 		}
 	}
 
+	// Check Specific Circumstances
+	CheckSpecificMoveCases(&move, *bs)
+
 	// Check for a Crit
 	if rand.Float64() < 0.0625 {
 		result.Crit = true
@@ -50,7 +53,7 @@ func calculateMove(attacker, defender *pokemondata.Pokemon, move pokemondata.Mov
 	}
 
 	// Check for Weather Mult
-	weatherMult := CheckWeatherMult(move, bs)
+	weatherMult := CheckWeatherMult(move, *bs)
 
 	// Calculate Type Effectiveness
 	result.Effectiveness = pokemondata.EffectivenessCalc(defender.Types, move.Type)
@@ -90,8 +93,35 @@ func calculateMove(attacker, defender *pokemondata.Pokemon, move pokemondata.Mov
 
 	return result
 }
+func CheckSpecificMoveCases(move *pokemondata.Move, bs battledata.BattleState) {
+	switch move.Name {
+	case "Weather Ball":
+		switch bs.Conditions.Weather {
+		case battledata.HarshSunlight:
+			move.Type = pokemondata.Fire
+			move.Power = move.Power * 2
+		case battledata.ExtremeHarshSunlight:
+			move.Type = pokemondata.Fire
+			move.Power = move.Power * 2
+		case battledata.Rain:
+			move.Type = pokemondata.Water
+			move.Power = move.Power * 2
+		case battledata.HeavyRain:
+			move.Type = pokemondata.Water
+			move.Power = move.Power * 2
+		case battledata.Sandstorm:
+			move.Type = pokemondata.Rock
+			move.Power = move.Power * 2
+		case battledata.Snow:
+			move.Type = pokemondata.Ice
+			move.Power = move.Power * 2
+		default:
+			return
+		}
+	}
+}
 
-func CheckWeatherMult(move pokemondata.Move, bs *battledata.BattleState) float64 {
+func CheckWeatherMult(move pokemondata.Move, bs battledata.BattleState) float64 {
 	switch bs.Conditions.Weather {
 	case battledata.HarshSunlight:
 		switch move.Type {
