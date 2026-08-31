@@ -117,5 +117,10 @@ func ProcessWeather(ally, foe *pokemondata.Pokemon, bs *battledata.BattleState) 
 				}
 			}
 		}
+	case battledata.Snow:
+		bs.Conditions.WeatherTurns--
+		if bs.Conditions.WeatherTurns == 0 {
+			fmt.Println("The snow stopped.")
+		}
 	}
 }

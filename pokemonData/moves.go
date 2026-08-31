@@ -43,8 +43,30 @@ func CalculateStatusMove(user, target *Pokemon, move Move, bs *battledata.Battle
 		RainDance(bs)
 	case "Sandstorm":
 		Sandstorm(bs)
+	case "Snowscape":
+		Snowscape(bs)
 	default:
 		fmt.Println("specified status move not implemented yet")
+	}
+}
+
+func Snowscape(bs *battledata.BattleState) {
+	switch bs.Conditions.Weather {
+	case battledata.Snow:
+		fmt.Println("But it failed!")
+	case battledata.ExtremeHarshSunlight:
+		fmt.Println("The Snowscape failed!")
+		fmt.Println("The extremely harsh sunlight is so strong, it can't be blown away!")
+	case battledata.HeavyRain:
+		fmt.Println("The Snowscape failed!")
+		fmt.Println("There is no relief from this heavy rain!")
+	case battledata.StrongWinds:
+		fmt.Println("The Snowscape failed!")
+		fmt.Println("A mysterious air current is protecting Flying-type Pokémon!")
+	default:
+		bs.Conditions.WeatherTurns = 5
+		bs.Conditions.Weather = battledata.Snow
+		fmt.Println("It started to snow!")
 	}
 }
 

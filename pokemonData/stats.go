@@ -268,7 +268,15 @@ func (p *Pokemon) UpdateBattleStats(bs battledata.BattleState) {
 			}
 		}
 	case battledata.Snow:
-
+		if len(p.Types) == 2 {
+			if p.Types[0] == Ice || p.Types[1] == Ice {
+				p.BattleStats.Defense = int(float64(p.BattleStats.SpDefense) * 1.5)
+			}
+		} else {
+			if p.Types[0] == Ice {
+				p.BattleStats.Defense = int(float64(p.BattleStats.SpDefense) * 1.5)
+			}
+		}
 	}
 }
 
