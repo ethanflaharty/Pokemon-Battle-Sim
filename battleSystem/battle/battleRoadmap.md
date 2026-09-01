@@ -16,7 +16,7 @@
 - [x] Accuracy
 - [x] PP
 - [x] Physical/Special split
-- [] Secondary Effects
+- [x] Secondary Effects
     - [x] Stat Stages
         - [x] +1
         - [x] +2
@@ -31,6 +31,7 @@
         - [x] -5
         - [x] -6
             - [x] Growth Added 
+            - [x] Many Status Moves Added
     - [] Status Conditions
         - [x] Burn
         - [x] Poison

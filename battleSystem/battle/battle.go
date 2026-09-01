@@ -7,7 +7,8 @@ import (
 	pokemondata "pokemonBattleSim/pokemonData"
 )
 
-func determineSpeedOrder(ally, foe *pokemondata.Pokemon) (*pokemondata.Pokemon, *pokemondata.Pokemon) {
+func determineSpeedOrder(ally, foe *pokemondata.Pokemon, bs battledata.BattleState) (*pokemondata.Pokemon, *pokemondata.Pokemon) {
+	// BattleState will be used later from what I think will make sense for speed control but this may change
 	if ally.BattleStats.Speed > foe.BattleStats.Speed {
 		return ally, foe
 	}
@@ -58,6 +59,18 @@ type TurnAction struct {
 }
 
 func CheckPriority(first, second *pokemondata.Pokemon, firstMove, secondMove pokemondata.Move) (*pokemondata.Pokemon, *pokemondata.Pokemon) {
+	if firstMove.Priority > 5 {
+		firstMove.Priority = 5
+	} else if firstMove.Priority < -7 {
+		firstMove.Priority = -7
+	}
+
+	if secondMove.Priority > 5 {
+		secondMove.Priority = 5
+	} else if secondMove.Priority < -7 {
+		secondMove.Priority = -7
+	}
+
 	if firstMove.Priority < secondMove.Priority {
 		return second, first
 	}
@@ -92,7 +105,7 @@ func BattleSequence(ally, foe *pokemondata.Pokemon) {
 			Move: selectAIMove(foe),
 		}
 
-		first, second := determineSpeedOrder(ally, foe)
+		first, second := determineSpeedOrder(ally, foe, bs)
 
 		var firstAction TurnAction
 		var secondAction TurnAction

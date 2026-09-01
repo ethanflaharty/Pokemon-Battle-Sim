@@ -19,7 +19,7 @@ func calculateMove(attacker, defender *pokemondata.Pokemon, move pokemondata.Mov
 	result := MoveResult{}
 
 	// Check Specific Circumstances
-	CheckSpecificMoveCases(&move, *bs)
+	CheckSpecificMoveCases(&move, *bs, *attacker, *defender)
 
 	// Check for a hit
 	result.Hit = CheckAccuracy(attacker, defender, move)
@@ -101,36 +101,29 @@ func calculateMove(attacker, defender *pokemondata.Pokemon, move pokemondata.Mov
 	return result
 }
 
-func CheckSpecificMoveCases(move *pokemondata.Move, bs battledata.BattleState) {
+func CheckSpecificMoveCases(move *pokemondata.Move, bs battledata.BattleState, attacker, defender pokemondata.Pokemon) {
 	switch move.Name {
+	case "Toxic":
+		if len(attacker.Types) == 2 {
+			if attacker.Types[0] == pokemondata.Poison || attacker.Types[1] == pokemondata.Poison {
+				move.NeverMisses = true
+			}
+		} else {
+			if attacker.Types[0] == pokemondata.Poison {
+				move.NeverMisses = true
+			}
+		}
 	case "Blizzard":
 		switch bs.Conditions.Weather {
 		case battledata.Snow:
 			move.NeverMisses = true
 		}
-	case "Sandsear Storm":
+	case "Bleakwind Storm", "Wildbolt Storm", "Sandsear Storm":
 		switch bs.Conditions.Weather {
 		case battledata.Rain, battledata.HeavyRain:
 			move.NeverMisses = true
 		}
-	case "Wildbolt Storm":
-		switch bs.Conditions.Weather {
-		case battledata.Rain, battledata.HeavyRain:
-			move.NeverMisses = true
-		}
-	case "Bleakwind Storm":
-		switch bs.Conditions.Weather {
-		case battledata.Rain, battledata.HeavyRain:
-			move.NeverMisses = true
-		}
-	case "Hurricane":
-		switch bs.Conditions.Weather {
-		case battledata.HarshSunlight, battledata.ExtremeHarshSunlight:
-			move.Accuracy = 50
-		case battledata.Rain, battledata.HeavyRain:
-			move.NeverMisses = true
-		}
-	case "Thunder":
+	case "Thunder", "Hurricane":
 		switch bs.Conditions.Weather {
 		case battledata.HarshSunlight, battledata.ExtremeHarshSunlight:
 			move.Accuracy = 50
@@ -297,10 +290,6 @@ func CheckSecondaryEffect(attacker, defender *pokemondata.Pokemon, move pokemond
 
 func CheckAccuracy(attacker, defender *pokemondata.Pokemon, move pokemondata.Move) bool {
 	if move.NeverMisses {
-		return true
-	}
-
-	if move.Name == "Toxic" && attacker.HasType(pokemondata.Poison) {
 		return true
 	}
 

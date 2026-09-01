@@ -28,7 +28,7 @@ func ProcessWeather(ally, foe *pokemondata.Pokemon, bs *battledata.BattleState) 
 			return
 		}
 
-		first, _ := determineSpeedOrder(ally, foe)
+		first, _ := determineSpeedOrder(ally, foe, *bs)
 		if first == ally {
 			if len(ally.Types) == 2 {
 				if ally.Types[0] == pokemondata.Rock || ally.Types[1] == pokemondata.Rock || ally.Types[0] == pokemondata.Steel || ally.Types[1] == pokemondata.Steel || ally.Types[0] == pokemondata.Ground || ally.Types[1] == pokemondata.Ground {

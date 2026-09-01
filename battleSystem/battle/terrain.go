@@ -15,7 +15,7 @@ func ProcessTerrain(ally, foe *pokemondata.Pokemon, bs *battledata.BattleState) 
 			fmt.Println("The electric current disappeared from the battlefield!")
 		}
 	case battledata.Grassy:
-		first, _ := determineSpeedOrder(ally, foe)
+		first, _ := determineSpeedOrder(ally, foe, *bs)
 		if first == ally {
 			if ally.HP < ally.MaxHP {
 				ally.HP += ally.MaxHP / 16
