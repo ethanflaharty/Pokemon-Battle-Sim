@@ -47,8 +47,21 @@ func CalculateStatusMove(user, target *Pokemon, move Move, bs *battledata.Battle
 		Snowscape(bs)
 	case "Electric Terrain":
 		ElectricTerrain(bs)
+	case "Grassy Terrain":
+		GrassyTerrain(bs)
 	default:
 		fmt.Println("specified status move not implemented yet")
+	}
+}
+
+func GrassyTerrain(bs *battledata.BattleState) {
+	switch bs.Conditions.Terrain {
+	case battledata.Grassy:
+		fmt.Println("But it failed!")
+	default:
+		bs.Conditions.Terrain = battledata.Grassy
+		bs.Conditions.TerrainTurns = 5
+		fmt.Println("The battlefield turned into a grass field!")
 	}
 }
 

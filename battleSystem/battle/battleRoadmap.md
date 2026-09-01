@@ -47,7 +47,7 @@
         - [x] Sandstorm
         - [x] Snow
     - [] Terrain
-        - [] Electric
+        - [x] Electric
         - [] Grassy
         - [] Psychic
         - [] Misty

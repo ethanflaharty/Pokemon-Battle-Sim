@@ -123,5 +123,9 @@ func BattleSequence(ally, foe *pokemondata.Pokemon) {
 		if ally.HP > 0 && foe.HP > 0 && bs.Conditions.Weather != battledata.Clear {
 			ProcessWeather(ally, foe, &bs)
 		}
+
+		if ally.HP > 0 && foe.HP > 0 && bs.Conditions.Terrain != battledata.Regular {
+			ProcessTerrain(ally, foe, &bs)
+		}
 	}
 }
