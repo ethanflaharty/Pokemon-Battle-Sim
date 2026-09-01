@@ -51,8 +51,21 @@ func CalculateStatusMove(user, target *Pokemon, move Move, bs *battledata.Battle
 		GrassyTerrain(bs)
 	case "Misty Terrain":
 		MistyTerrain(bs)
+	case "Psychic Terrain":
+		PsychicTerrain(bs)
 	default:
 		fmt.Println("specified status move not implemented yet")
+	}
+}
+
+func PsychicTerrain(bs *battledata.BattleState) {
+	switch bs.Conditions.Terrain {
+	case battledata.Psych:
+		fmt.Println("But it failed!")
+	default:
+		bs.Conditions.Terrain = battledata.Psych
+		bs.Conditions.TerrainTurns = 5
+		fmt.Println("The battlefield turned into Psychic Terrain!")
 	}
 }
 
@@ -369,6 +382,7 @@ type Move struct {
 
 	Accuracy    int
 	NeverMisses bool
+	Priority    int
 
 	TotalPP int
 	PPLeft  int

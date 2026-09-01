@@ -54,6 +54,10 @@ func calculateMove(attacker, defender *pokemondata.Pokemon, move pokemondata.Mov
 
 	// Check for Terrain Mult
 	terrainMult := CheckTerrainMult(move, *bs)
+	if terrainMult == 0 {
+		fmt.Printf("%v is protected by the Psychic Terrain!\n", defender.Name)
+		return result
+	}
 
 	// Check for Weather Mult
 	weatherMult := CheckWeatherMult(move, *bs)
@@ -173,6 +177,14 @@ func CheckTerrainMult(move pokemondata.Move, bs battledata.BattleState) float64 
 		switch move.Type {
 		case pokemondata.Dragon:
 			return 0.5
+		}
+	case battledata.Psych:
+		switch move.Type {
+		case pokemondata.Psychic:
+			return 1.3
+		}
+		if move.Priority > 0 {
+			return 0
 		}
 	}
 
@@ -365,6 +377,10 @@ func applyDamage(attacker, defender *pokemondata.Pokemon, move pokemondata.Move,
 
 	if !result.Hit {
 		fmt.Printf("%v's attack missed!\n", attacker.Name)
+		return
+	}
+
+	if result.Damage == 0 {
 		return
 	}
 

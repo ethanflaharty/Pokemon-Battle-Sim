@@ -48,9 +48,9 @@
         - [x] Snow
     - [] Terrain
         - [x] Electric
-        - [] Grassy
-        - [] Psychic
-        - [] Misty
+        - [x] Grassy
+        - [x] Psychic
+        - [x] Misty
     - [] Entry Hazards
         - [] Stealth Rock
         - [] Spikes

@@ -61,5 +61,11 @@ func ProcessTerrain(ally, foe *pokemondata.Pokemon, bs *battledata.BattleState) 
 			bs.Conditions.Terrain = battledata.Regular
 			fmt.Println("The mist disappeared from the battlefield.")
 		}
+	case battledata.Psych:
+		bs.Conditions.TerrainTurns--
+		if bs.Conditions.TerrainTurns == 0 {
+			bs.Conditions.Terrain = battledata.Regular
+			fmt.Println("The Psychic Terrain disappeared!")
+		}
 	}
 }

@@ -63,7 +63,7 @@ func main() {
 			{Name: "Weather Ball", Power: 50, Type: pokemondata.Normal, Accuracy: 100, NeverMisses: false, TotalPP: 15, PPLeft: 15, Category: pokemondata.Special},
 			{Name: "Dragon Claw", Power: 80, Type: pokemondata.Dragon, Accuracy: 100, NeverMisses: false, TotalPP: 10, PPLeft: 10, Category: pokemondata.Physical},
 			{Name: "Magical Leaf", Power: 60, Type: pokemondata.Grass, Accuracy: 100, NeverMisses: true, TotalPP: 20, PPLeft: 20, Category: pokemondata.Special},
-			{Name: "Misty Terrain", Power: 0, Type: pokemondata.Fairy, Accuracy: 100, NeverMisses: true, TotalPP: 25, PPLeft: 25, Category: pokemondata.Status},
+			{Name: "Psychic Terrain", Power: 0, Type: pokemondata.Fairy, Accuracy: 100, NeverMisses: true, TotalPP: 25, PPLeft: 25, Category: pokemondata.Status},
 		},
 		Types: []pokemondata.Type{
 			pokemondata.Grass,

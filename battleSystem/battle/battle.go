@@ -57,6 +57,14 @@ type TurnAction struct {
 	MoveIndex int
 }
 
+func CheckPriority(first, second *pokemondata.Pokemon, firstMove, secondMove pokemondata.Move) (*pokemondata.Pokemon, *pokemondata.Pokemon) {
+	if firstMove.Priority < secondMove.Priority {
+		return second, first
+	}
+
+	return first, second
+}
+
 func BattleSequence(ally, foe *pokemondata.Pokemon) {
 	ally.StatStages = pokemondata.StatStages{}
 	foe.StatStages = pokemondata.StatStages{}
@@ -89,6 +97,15 @@ func BattleSequence(ally, foe *pokemondata.Pokemon) {
 		var firstAction TurnAction
 		var secondAction TurnAction
 
+		if first == ally {
+			firstAction = playerAction
+			secondAction = enemyAction
+		} else {
+			firstAction = enemyAction
+			secondAction = playerAction
+		}
+
+		first, second = CheckPriority(first, second, *firstAction.Move, *secondAction.Move)
 		if first == ally {
 			firstAction = playerAction
 			secondAction = enemyAction
