@@ -8,7 +8,7 @@ import (
 func CalculateStatusMove(user, target *Pokemon, move Move, bs *battledata.BattleState) {
 	switch move.Name {
 	case "Growth":
-		Growth(user)
+		Growth(user, *bs)
 	case "Growl":
 		Growl(target)
 	case "Iron Defense":
@@ -28,15 +28,15 @@ func CalculateStatusMove(user, target *Pokemon, move Move, bs *battledata.Battle
 	case "Double Team":
 		DoubleTeam(user)
 	case "Will-O-Wisp":
-		WillOWisp(target)
+		WillOWisp(target, *bs)
 	case "Poison Powder":
-		PoisonPowder(target)
+		PoisonPowder(target, *bs)
 	case "Toxic":
-		Toxic(target)
+		Toxic(target, *bs)
 	case "Stun Spore":
-		StunSpore(target)
+		StunSpore(target, *bs)
 	case "Sleep Powder":
-		SleepPowder(target)
+		SleepPowder(target, *bs)
 	case "Sunny Day":
 		SunnyDay(bs)
 	case "Rain Dance":
@@ -130,7 +130,7 @@ func SunnyDay(bs *battledata.BattleState) {
 	}
 }
 
-func SleepPowder(p *Pokemon) {
+func SleepPowder(p *Pokemon, bs battledata.BattleState) {
 	if len(p.Types) == 2 {
 		if p.Types[0] == Grass || p.Types[1] == Grass {
 			fmt.Printf("It doesn't affect %v\n", p.Name)
@@ -142,13 +142,13 @@ func SleepPowder(p *Pokemon) {
 		return
 	}
 
-	result := p.ApplyStatus(Sleep)
+	result := p.ApplyStatus(Sleep, bs)
 	if result == true {
 		fmt.Printf("%v fell asleep!\n", p.Name)
 	}
 }
 
-func StunSpore(p *Pokemon) {
+func StunSpore(p *Pokemon, bs battledata.BattleState) {
 	if len(p.Types) == 2 {
 		if p.Types[0] == Grass || p.Types[1] == Grass {
 			fmt.Printf("It doesn't affect %v\n", p.Name)
@@ -160,28 +160,28 @@ func StunSpore(p *Pokemon) {
 		return
 	}
 
-	result := p.ApplyStatus(Paralysis)
+	result := p.ApplyStatus(Paralysis, bs)
 	if result == true {
 		fmt.Printf("%v is paralyzed, so it may be unable to move!\n", p.Name)
 	}
 }
 
-func Toxic(p *Pokemon) {
-	result := p.ApplyStatus(PoisonBad)
+func Toxic(p *Pokemon, bs battledata.BattleState) {
+	result := p.ApplyStatus(PoisonBad, bs)
 	if result == true {
 		fmt.Printf("%v was badly poisoned!\n", p.Name)
 	}
 }
 
-func PoisonPowder(p *Pokemon) {
-	result := p.ApplyStatus(PoisonReg)
+func PoisonPowder(p *Pokemon, bs battledata.BattleState) {
+	result := p.ApplyStatus(PoisonReg, bs)
 	if result == true {
 		fmt.Printf("%v was poisoned!\n", p.Name)
 	}
 }
 
-func WillOWisp(p *Pokemon) {
-	result := p.ApplyStatus(Burn)
+func WillOWisp(p *Pokemon, bs battledata.BattleState) {
+	result := p.ApplyStatus(Burn, bs)
 	if result == true {
 		fmt.Printf("%v was burned!\n", p.Name)
 	}
@@ -234,51 +234,30 @@ func HoneClaws(p *Pokemon) {
 }
 
 func ScaryFace(p *Pokemon) {
-	switch p.StatStages.Speed {
-	case -6:
+	if p.StatStages.Speed == -6 {
 		fmt.Printf("%v Speed won't go any lower!\n", p.Name)
 		return
-	case -5:
-		p.ChangeStatStage(Speed, -1)
-		fmt.Printf("%v Speed harshly fell!\n", p.Name)
-		return
-	default:
-		p.ChangeStatStage(Speed, -2)
-		fmt.Printf("%v Speed harshly fell!\n", p.Name)
-		return
 	}
+	p.ChangeStatStage(Speed, -2)
+	fmt.Printf("%v Speed harshly fell!\n", p.Name)
 }
 
 func Agility(p *Pokemon) {
-	switch p.StatStages.Speed {
-	case 6:
+	if p.StatStages.Speed == 6 {
 		fmt.Printf("%v Speed won't go any higher!\n", p.Name)
 		return
-	case 5:
-		p.ChangeStatStage(Speed, 1)
-		fmt.Printf("%v Speed rose sharply!\n", p.Name)
-		return
-	default:
-		p.ChangeStatStage(Speed, 2)
-		fmt.Printf("%v Speed rose sharply!\n", p.Name)
-		return
 	}
+	p.ChangeStatStage(Speed, 2)
+	fmt.Printf("%v Speed rose sharply!\n", p.Name)
 }
 
 func Amnesia(p *Pokemon) {
-	switch p.StatStages.SpDefense {
-	case 6:
+	if p.StatStages.SpDefense == 6 {
 		fmt.Printf("%v Special Defense won't go any higher!\n", p.Name)
 		return
-	case 5:
-		p.ChangeStatStage(SpDefense, 1)
-		fmt.Printf("%v Special Defense rose sharply!\n", p.Name)
-		return
-	default:
-		p.ChangeStatStage(SpDefense, 2)
-		fmt.Printf("%v Special Defense rose sharply!\n", p.Name)
-		return
 	}
+	p.ChangeStatStage(SpDefense, 2)
+	fmt.Printf("%v Special Defense rose sharply!\n", p.Name)
 }
 
 func TailWhip(p *Pokemon) {
@@ -293,42 +272,34 @@ func TailWhip(p *Pokemon) {
 }
 
 func IronDefense(p *Pokemon) {
-	switch p.StatStages.Defense {
-	case 6:
+	if p.StatStages.Defense == 6 {
 		fmt.Printf("%v Defense won't go any higher!\n", p.Name)
 		return
-	case 5:
-		p.ChangeStatStage(Defense, 1)
-		fmt.Printf("%v Defense rose sharply!\n", p.Name)
-		return
-	default:
-		p.ChangeStatStage(Defense, 2)
-		fmt.Printf("%v Defense rose sharply!\n", p.Name)
-		return
 	}
+	p.ChangeStatStage(Defense, 2)
+	fmt.Printf("%v Defense rose sharply!\n", p.Name)
 }
 
-func Growth(p *Pokemon) {
-	if p.StatStages.Attack == 6 && p.StatStages.SpAttack == 6 {
+func Growth(p *Pokemon, bs battledata.BattleState) {
+	amount := 1
+
+	switch bs.Conditions.Weather {
+	case battledata.HarshSunlight, battledata.ExtremeHarshSunlight:
+		amount = 2
+	}
+
+	if p.StatStages.Attack == 6 {
 		fmt.Printf("%v Attack won't go any higher!\n", p.Name)
-		fmt.Printf("%v Special Attack won't go any higher!\n", p.Name)
-		return
-	} else if p.StatStages.Attack == 6 && p.StatStages.SpAttack != 6 {
-		fmt.Printf("%v Attack won't go any higher!\n", p.Name)
-		p.ChangeStatStage(SpAttack, 1)
-		fmt.Printf("%v Special Attack rose!\n", p.Name)
-		return
-	} else if p.StatStages.Attack != 6 && p.StatStages.SpAttack == 6 {
-		p.ChangeStatStage(Attack, 1)
-		fmt.Printf("%v Attack rose!\n", p.Name)
-		fmt.Printf("%v Special Attack won't go any higher!\n", p.Name)
-		return
 	} else {
-		p.ChangeStatStage(Attack, 1)
-		p.ChangeStatStage(SpAttack, 1)
+		p.ChangeStatStage(Attack, amount)
 		fmt.Printf("%v Attack rose!\n", p.Name)
+	}
+
+	if p.StatStages.SpAttack == 6 {
+		fmt.Printf("%v Special Attack won't go any higher!\n", p.Name)
+	} else {
+		p.ChangeStatStage(SpAttack, amount)
 		fmt.Printf("%v Special Attack rose!\n", p.Name)
-		return
 	}
 }
 

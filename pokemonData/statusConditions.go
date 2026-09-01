@@ -3,9 +3,10 @@ package pokemondata
 import (
 	"fmt"
 	"math/rand/v2"
+	battledata "pokemonBattleSim/battleSystem/battleData"
 )
 
-func (p *Pokemon) ApplyStatus(status StatusCondition) bool {
+func (p *Pokemon) ApplyStatus(status StatusCondition, bs battledata.BattleState) bool {
 	if p.Status != None {
 		fmt.Printf("It doesn't affect %v\n", p.Name)
 		return false
@@ -56,6 +57,9 @@ func (p *Pokemon) ApplyStatus(status StatusCondition) bool {
 		}
 		if p.Types[0] == Ice {
 			fmt.Printf("It doesn't affect %v\n", p.Name)
+			return false
+		}
+		if bs.Conditions.Weather == battledata.HarshSunlight || bs.Conditions.Weather == battledata.ExtremeHarshSunlight {
 			return false
 		}
 	case PoisonBad:

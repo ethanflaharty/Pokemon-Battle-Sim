@@ -284,18 +284,53 @@ func (p *Pokemon) ChangeStatStage(stat Stat, change int) {
 	switch stat {
 	case Attack:
 		p.StatStages.Attack += change
+		if p.StatStages.Attack > 6 {
+			p.StatStages.Attack = 6
+		} else if p.StatStages.Attack < -6 {
+			p.StatStages.Attack = -6
+		}
 	case Defense:
 		p.StatStages.Defense += change
+		if p.StatStages.Defense > 6 {
+			p.StatStages.Defense = 6
+		} else if p.StatStages.Defense < -6 {
+			p.StatStages.Defense = -6
+		}
 	case SpAttack:
 		p.StatStages.SpAttack += change
+		if p.StatStages.SpAttack > 6 {
+			p.StatStages.SpAttack = 6
+		} else if p.StatStages.SpAttack < -6 {
+			p.StatStages.SpAttack = -6
+		}
 	case SpDefense:
 		p.StatStages.SpDefense += change
+		if p.StatStages.SpDefense > 6 {
+			p.StatStages.SpDefense = 6
+		} else if p.StatStages.SpDefense < -6 {
+			p.StatStages.SpDefense = -6
+		}
 	case Speed:
 		p.StatStages.Speed += change
+		if p.StatStages.Speed > 6 {
+			p.StatStages.Speed = 6
+		} else if p.StatStages.Speed < -6 {
+			p.StatStages.Speed = -6
+		}
 	case Accuracy:
 		p.StatStages.Accuracy += change
+		if p.StatStages.Accuracy > 6 {
+			p.StatStages.Accuracy = 6
+		} else if p.StatStages.Accuracy < -6 {
+			p.StatStages.Accuracy = -6
+		}
 	case Evasion:
 		p.StatStages.Evasion += change
+		if p.StatStages.Evasion > 6 {
+			p.StatStages.Evasion = 6
+		} else if p.StatStages.Evasion < -6 {
+			p.StatStages.Evasion = -6
+		}
 	}
 }
 

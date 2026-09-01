@@ -18,6 +18,9 @@ type MoveResult struct {
 func calculateMove(attacker, defender *pokemondata.Pokemon, move pokemondata.Move, bs *battledata.BattleState) MoveResult {
 	result := MoveResult{}
 
+	// Check Specific Circumstances
+	CheckSpecificMoveCases(&move, *bs)
+
 	// Check for a hit
 	result.Hit = CheckAccuracy(attacker, defender, move)
 	if !result.Hit {
@@ -28,13 +31,10 @@ func calculateMove(attacker, defender *pokemondata.Pokemon, move pokemondata.Mov
 		if defender.Status == pokemondata.Freeze {
 			if move.Type == pokemondata.Fire {
 				fmt.Printf("%v thawed out!\n", defender.Name)
-				defender.ApplyStatus(pokemondata.None)
+				defender.ApplyStatus(pokemondata.None, *bs)
 			}
 		}
 	}
-
-	// Check Specific Circumstances
-	CheckSpecificMoveCases(&move, *bs)
 
 	// Check for a Crit
 	if rand.Float64() < 0.0625 {
@@ -68,10 +68,10 @@ func calculateMove(attacker, defender *pokemondata.Pokemon, move pokemondata.Mov
 			result.Damage = int(float64(((((((2 * attacker.Level) / 5) + 2) * move.Power * attacker.BattleStats.Attack / defender.BattleStats.Defense) / 50) + 2)) * weatherMult * multiplier * result.Effectiveness * 0.5)
 		}
 		result.Damage = int(float64(((((((2 * attacker.Level) / 5) + 2) * move.Power * attacker.BattleStats.Attack / defender.BattleStats.Defense) / 50) + 2)) * weatherMult * multiplier * result.Effectiveness)
-		CheckSecondaryEffect(attacker, defender, move)
+		CheckSecondaryEffect(attacker, defender, move, *bs)
 	case pokemondata.Special:
 		result.Damage = int(float64(((((((2 * attacker.Level) / 5) + 2) * move.Power * attacker.BattleStats.SpAttack / defender.BattleStats.SpDefense) / 50) + 2)) * weatherMult * multiplier * result.Effectiveness)
-		CheckSecondaryEffect(attacker, defender, move)
+		CheckSecondaryEffect(attacker, defender, move, *bs)
 	case pokemondata.Status:
 		pokemondata.CalculateStatusMove(attacker, defender, move, bs)
 		if result.Crit == true {
@@ -93,8 +93,43 @@ func calculateMove(attacker, defender *pokemondata.Pokemon, move pokemondata.Mov
 
 	return result
 }
+
 func CheckSpecificMoveCases(move *pokemondata.Move, bs battledata.BattleState) {
 	switch move.Name {
+	case "Blizzard":
+		switch bs.Conditions.Weather {
+		case battledata.Snow:
+			move.NeverMisses = true
+		}
+	case "Sandsear Storm":
+		switch bs.Conditions.Weather {
+		case battledata.Rain, battledata.HeavyRain:
+			move.NeverMisses = true
+		}
+	case "Wildbolt Storm":
+		switch bs.Conditions.Weather {
+		case battledata.Rain, battledata.HeavyRain:
+			move.NeverMisses = true
+		}
+	case "Bleakwind Storm":
+		switch bs.Conditions.Weather {
+		case battledata.Rain, battledata.HeavyRain:
+			move.NeverMisses = true
+		}
+	case "Hurricane":
+		switch bs.Conditions.Weather {
+		case battledata.HarshSunlight, battledata.ExtremeHarshSunlight:
+			move.Accuracy = 50
+		case battledata.Rain, battledata.HeavyRain:
+			move.NeverMisses = true
+		}
+	case "Thunder":
+		switch bs.Conditions.Weather {
+		case battledata.HarshSunlight, battledata.ExtremeHarshSunlight:
+			move.Accuracy = 50
+		case battledata.Rain, battledata.HeavyRain:
+			move.NeverMisses = true
+		}
 	case "Weather Ball":
 		switch bs.Conditions.Weather {
 		case battledata.HarshSunlight:
@@ -115,8 +150,6 @@ func CheckSpecificMoveCases(move *pokemondata.Move, bs battledata.BattleState) {
 		case battledata.Snow:
 			move.Type = pokemondata.Ice
 			move.Power = move.Power * 2
-		default:
-			return
 		}
 	}
 }
@@ -141,7 +174,7 @@ func CheckWeatherMult(move pokemondata.Move, bs battledata.BattleState) float64 
 	return 1
 }
 
-func CheckSecondaryEffect(attacker, defender *pokemondata.Pokemon, move pokemondata.Move) {
+func CheckSecondaryEffect(attacker, defender *pokemondata.Pokemon, move pokemondata.Move, bs battledata.BattleState) {
 	switch move.Name {
 	case "Malignant Chain":
 		if len(defender.Types) == 2 {
@@ -155,7 +188,7 @@ func CheckSecondaryEffect(attacker, defender *pokemondata.Pokemon, move pokemond
 		}
 
 		if rand.IntN(100) < 50 {
-			result := defender.ApplyStatus(pokemondata.PoisonBad)
+			result := defender.ApplyStatus(pokemondata.PoisonBad, bs)
 			if result {
 				fmt.Printf("%v was badly poisoned!\n", defender.Name)
 			}
@@ -172,7 +205,7 @@ func CheckSecondaryEffect(attacker, defender *pokemondata.Pokemon, move pokemond
 		}
 
 		if rand.IntN(100) < 30 {
-			result := defender.ApplyStatus(pokemondata.PoisonReg)
+			result := defender.ApplyStatus(pokemondata.PoisonReg, bs)
 			if result {
 				fmt.Printf("%v was poisoned!\n", defender.Name)
 			}
@@ -200,7 +233,7 @@ func CheckSecondaryEffect(attacker, defender *pokemondata.Pokemon, move pokemond
 		}
 
 		if rand.IntN(100) < 10 {
-			result := defender.ApplyStatus(pokemondata.Freeze)
+			result := defender.ApplyStatus(pokemondata.Freeze, bs)
 			if result {
 				fmt.Printf("%v was frozen solid!\n", defender.Name)
 			}
@@ -217,7 +250,7 @@ func CheckSecondaryEffect(attacker, defender *pokemondata.Pokemon, move pokemond
 		}
 
 		if rand.IntN(100) < 10 {
-			result := defender.ApplyStatus(pokemondata.Burn)
+			result := defender.ApplyStatus(pokemondata.Burn, bs)
 			if result {
 				fmt.Printf("%v was burned!\n", defender.Name)
 			}

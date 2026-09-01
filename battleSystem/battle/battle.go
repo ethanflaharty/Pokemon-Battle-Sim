@@ -111,12 +111,13 @@ func BattleSequence(ally, foe *pokemondata.Pokemon) {
 			}
 		}
 
-		if ally.HP > 0 && ally.Status != pokemondata.None {
-			pokemondata.ProcessStatus(ally)
-		}
-
-		if foe.HP > 0 && foe.Status != pokemondata.None {
-			pokemondata.ProcessStatus(foe)
+		if ally.HP > 0 && foe.HP > 0 {
+			if ally.Status != pokemondata.None {
+				pokemondata.ProcessStatus(ally)
+			}
+			if foe.Status != pokemondata.None {
+				pokemondata.ProcessStatus(foe)
+			}
 		}
 
 		if ally.HP > 0 && foe.HP > 0 && bs.Conditions.Weather != battledata.Clear {
