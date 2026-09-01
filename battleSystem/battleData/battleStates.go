@@ -29,4 +29,7 @@ type Terrain int
 const (
 	Regular Terrain = iota
 	Elec
+	Grassy
+	Misty
+	Psych
 )

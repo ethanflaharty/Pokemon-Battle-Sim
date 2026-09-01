@@ -42,10 +42,10 @@
     - [] Protect
     - [] Other Temporary Battle States(like Protect)
     - [] Weather
-        - [] Rain
-        - [] Sun
-        - [] Sandstorm
-        - [] Snow
+        - [x] Rain
+        - [x] Sun
+        - [x] Sandstorm
+        - [x] Snow
     - [] Terrain
         - [] Electric
         - [] Grassy

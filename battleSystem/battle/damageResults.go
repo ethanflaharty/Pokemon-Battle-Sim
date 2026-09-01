@@ -52,6 +52,9 @@ func calculateMove(attacker, defender *pokemondata.Pokemon, move pokemondata.Mov
 		}
 	}
 
+	// Check for Terrain Mult
+	terrainMult := CheckTerrainMult(move, *bs)
+
 	// Check for Weather Mult
 	weatherMult := CheckWeatherMult(move, *bs)
 
@@ -65,12 +68,12 @@ func calculateMove(attacker, defender *pokemondata.Pokemon, move pokemondata.Mov
 	switch move.Category {
 	case pokemondata.Physical:
 		if attacker.Status == pokemondata.Burn {
-			result.Damage = int(float64(((((((2 * attacker.Level) / 5) + 2) * move.Power * attacker.BattleStats.Attack / defender.BattleStats.Defense) / 50) + 2)) * weatherMult * multiplier * result.Effectiveness * 0.5)
+			result.Damage = int(float64(((((((2 * attacker.Level) / 5) + 2) * move.Power * attacker.BattleStats.Attack / defender.BattleStats.Defense) / 50) + 2)) * weatherMult * terrainMult * multiplier * result.Effectiveness * 0.5)
 		}
-		result.Damage = int(float64(((((((2 * attacker.Level) / 5) + 2) * move.Power * attacker.BattleStats.Attack / defender.BattleStats.Defense) / 50) + 2)) * weatherMult * multiplier * result.Effectiveness)
+		result.Damage = int(float64(((((((2 * attacker.Level) / 5) + 2) * move.Power * attacker.BattleStats.Attack / defender.BattleStats.Defense) / 50) + 2)) * weatherMult * terrainMult * multiplier * result.Effectiveness)
 		CheckSecondaryEffect(attacker, defender, move, *bs)
 	case pokemondata.Special:
-		result.Damage = int(float64(((((((2 * attacker.Level) / 5) + 2) * move.Power * attacker.BattleStats.SpAttack / defender.BattleStats.SpDefense) / 50) + 2)) * weatherMult * multiplier * result.Effectiveness)
+		result.Damage = int(float64(((((((2 * attacker.Level) / 5) + 2) * move.Power * attacker.BattleStats.SpAttack / defender.BattleStats.SpDefense) / 50) + 2)) * weatherMult * terrainMult * multiplier * result.Effectiveness)
 		CheckSecondaryEffect(attacker, defender, move, *bs)
 	case pokemondata.Status:
 		pokemondata.CalculateStatusMove(attacker, defender, move, bs)
@@ -152,6 +155,18 @@ func CheckSpecificMoveCases(move *pokemondata.Move, bs battledata.BattleState) {
 			move.Power = move.Power * 2
 		}
 	}
+}
+
+func CheckTerrainMult(move pokemondata.Move, bs battledata.BattleState) float64 {
+	switch bs.Conditions.Terrain {
+	case battledata.Elec:
+		switch move.Type {
+		case pokemondata.Electric:
+			return 1.3
+		}
+	}
+
+	return 1
 }
 
 func CheckWeatherMult(move pokemondata.Move, bs battledata.BattleState) float64 {

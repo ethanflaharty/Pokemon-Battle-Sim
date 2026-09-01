@@ -47,7 +47,9 @@ func (p *Pokemon) ApplyStatus(status StatusCondition, bs battledata.BattleState)
 			return false
 		}
 	case Sleep:
-
+		if bs.Conditions.Terrain == battledata.Elec {
+			return false
+		}
 	case Freeze:
 		if len(p.Types) == 2 {
 			if p.Types[0] == Ice || p.Types[1] == Ice {

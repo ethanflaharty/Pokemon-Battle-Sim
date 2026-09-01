@@ -11,17 +11,21 @@ func ProcessWeather(ally, foe *pokemondata.Pokemon, bs *battledata.BattleState) 
 	case battledata.HarshSunlight:
 		bs.Conditions.WeatherTurns--
 		if bs.Conditions.WeatherTurns == 0 {
+			bs.Conditions.Weather = battledata.Clear
 			fmt.Println("The sunlight faded.")
 		}
 	case battledata.Rain:
 		bs.Conditions.WeatherTurns--
 		if bs.Conditions.WeatherTurns == 0 {
+			bs.Conditions.Weather = battledata.Clear
 			fmt.Println("The rain stopped.")
 		}
 	case battledata.Sandstorm:
 		bs.Conditions.WeatherTurns--
 		if bs.Conditions.WeatherTurns == 0 {
+			bs.Conditions.Weather = battledata.Clear
 			fmt.Println("The sandstorm subsided.")
+			return
 		}
 
 		first, _ := determineSpeedOrder(ally, foe)
@@ -120,6 +124,7 @@ func ProcessWeather(ally, foe *pokemondata.Pokemon, bs *battledata.BattleState) 
 	case battledata.Snow:
 		bs.Conditions.WeatherTurns--
 		if bs.Conditions.WeatherTurns == 0 {
+			bs.Conditions.Weather = battledata.Clear
 			fmt.Println("The snow stopped.")
 		}
 	}
