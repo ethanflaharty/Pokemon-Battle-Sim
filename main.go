@@ -28,10 +28,10 @@ func main() {
 		},
 	}
 	if !wild.ValidateEVs() {
-		log.Fatalf("%v has invalid EVs", wild.Name)
+		log.Fatalf("%v has invalid EVs\n", wild.Name)
 	}
 	if !wild.ValidateIVs() {
-		log.Fatalf("%v has invalid IVs", wild.Name)
+		log.Fatalf("%v has invalid IVs\n", wild.Name)
 	}
 	wild.HP = pokemondata.HPForumla(wild)
 	wild.MaxHP = wild.HP
@@ -61,9 +61,9 @@ func main() {
 		Nature: pokemondata.Modest,
 		Moves: []pokemondata.Move{
 			{Name: "Weather Ball", Power: 50, Type: pokemondata.Normal, Accuracy: 100, NeverMisses: false, TotalPP: 15, PPLeft: 15, Category: pokemondata.Special},
-			{Name: "Thunder", Power: 110, Type: pokemondata.Electric, Accuracy: 70, NeverMisses: false, TotalPP: 10, PPLeft: 10, Category: pokemondata.Special},
+			{Name: "Dragon Claw", Power: 80, Type: pokemondata.Dragon, Accuracy: 100, NeverMisses: false, TotalPP: 10, PPLeft: 10, Category: pokemondata.Physical},
 			{Name: "Magical Leaf", Power: 60, Type: pokemondata.Grass, Accuracy: 100, NeverMisses: true, TotalPP: 20, PPLeft: 20, Category: pokemondata.Special},
-			{Name: "Grassy Terrain", Power: 0, Type: pokemondata.Grass, Accuracy: 100, NeverMisses: true, TotalPP: 25, PPLeft: 25, Category: pokemondata.Status},
+			{Name: "Misty Terrain", Power: 0, Type: pokemondata.Fairy, Accuracy: 100, NeverMisses: true, TotalPP: 25, PPLeft: 25, Category: pokemondata.Status},
 		},
 		Types: []pokemondata.Type{
 			pokemondata.Grass,
@@ -71,10 +71,10 @@ func main() {
 		},
 	}
 	if !ally.ValidateEVs() {
-		log.Fatalf("%v has invalid EVs", ally.Name)
+		log.Fatalf("%v has invalid EVs\n", ally.Name)
 	}
 	if !ally.ValidateIVs() {
-		log.Fatalf("%v has invalid IVs", ally.Name)
+		log.Fatalf("%v has invalid IVs\n", ally.Name)
 	}
 	ally.HP = pokemondata.HPForumla(ally)
 	ally.MaxHP = ally.HP

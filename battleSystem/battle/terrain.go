@@ -55,5 +55,11 @@ func ProcessTerrain(ally, foe *pokemondata.Pokemon, bs *battledata.BattleState) 
 			bs.Conditions.Terrain = battledata.Regular
 			fmt.Println("The battlefield returned to normal.")
 		}
+	case battledata.Misty:
+		bs.Conditions.TerrainTurns--
+		if bs.Conditions.TerrainTurns == 0 {
+			bs.Conditions.Terrain = battledata.Regular
+			fmt.Println("The mist disappeared from the battlefield.")
+		}
 	}
 }

@@ -12,6 +12,11 @@ func (p *Pokemon) ApplyStatus(status StatusCondition, bs battledata.BattleState)
 		return false
 	}
 
+	if bs.Conditions.Terrain == battledata.Misty {
+		fmt.Printf("%v surrounds itself with misty terrain!\n", p.Name)
+		return false
+	}
+
 	switch status {
 	case Burn:
 		if len(p.Types) == 2 {

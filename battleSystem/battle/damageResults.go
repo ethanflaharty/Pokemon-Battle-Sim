@@ -169,6 +169,11 @@ func CheckTerrainMult(move pokemondata.Move, bs battledata.BattleState) float64 
 		case pokemondata.Grass:
 			return 1.3
 		}
+	case battledata.Misty:
+		switch move.Type {
+		case pokemondata.Dragon:
+			return 0.5
+		}
 	}
 
 	return 1
