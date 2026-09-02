@@ -25,7 +25,13 @@ This is a Pokemon Battle Simulator that takes place in your CLI.
 
 2. Navigate to the project directory
 
+    ```bash
+    cd Pokemon-Battle-Sim
+
 3. Run the simulator using "go run ."
+
+    ```bash
+    go run .
 
 ## Project Structure
 
