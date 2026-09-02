@@ -1,0 +1,2550 @@
+{
+    "Pound" : {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 40,
+        "accuracy": 100,
+        "pp": 35
+    },
+    "Mega Punch": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 80,
+        "accuracy": 85,
+        "pp": 20
+    },
+    "Pay Day": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 40,
+        "accuracy": 100,
+        "pp": 20
+    },
+    "Fire Punch": {
+        "type": "Fire",
+        "category": "Physical",
+        "power": 75,
+        "accuracy": 100,
+        "pp": 15
+    },
+    "Ice Punch": {
+        "type": "Ice",
+        "category": "Physical",
+        "power": 75,
+        "accuracy": 100,
+        "pp": 15
+    },
+    "Thunder Punch": {
+        "type": "Electric",
+        "category": "Physical",
+        "power": 75,
+        "accuracy": 100,
+        "pp": 15
+    },
+    "Scratch": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 40,
+        "accuracy": 100,
+        "pp": 35
+    },
+    "Vise Grip": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 55,
+        "accuracy": 100,
+        "pp": 30
+    },
+    "Guillotine": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 0,
+        "accuracy": 30,
+        "pp": 5
+    },
+    "Swords Dance": {
+        "type": "Normal",
+        "category": "Status",
+        "power": 0,
+        "accuracy": 0,
+        "pp": 20
+    },
+    "Cut": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 50,
+        "accuracy": 95,
+        "pp": 30
+    },
+    "Gust": {
+        "type": "Flying",
+        "category": "Special",
+        "power": 40,
+        "accuracy": 100,
+        "pp": 35
+    },
+    "Wing Attack": {
+        "type": "Flying",
+        "category": "Physical",
+        "power": 60,
+        "accuracy": 100,
+        "pp": 35
+    },
+    "Whirlwind": {
+        "type": "Normal",
+        "category": "Status",
+        "power": 0,
+        "accuracy": 0,
+        "pp": 20
+    },
+    "Fly": {
+        "type": "Flying",
+        "category": "Physical",
+        "power": 90,
+        "accuracy": 95,
+        "pp": 15
+    },
+    "Bind": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 15,
+        "accuracy": 85,
+        "pp": 20
+    },
+    "Slam": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 80,
+        "accuracy": 75,
+        "pp": 20
+    },
+    "Vine Whip": {
+        "type": "Grass",
+        "category": "Physical",
+        "power": 45,
+        "accuracy": 100,
+        "pp": 25
+    },
+    "Stomp": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 65,
+        "accuracy": 100,
+        "pp": 20
+    },
+    "Double Kick": {
+        "type": "Fighting",
+        "category": "Physical",
+        "power": 30,
+        "accuracy": 100,
+        "pp": 30
+    },
+    "Mega Kick": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 120,
+        "accuracy": 75,
+        "pp": 5
+    },
+    "Sand Attack": {
+        "type": "Ground",
+        "category": "Status",
+        "power": 0,
+        "accuracy": 100,
+        "pp": 15
+    },
+    "Headbutt": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 70,
+        "accuracy": 100,
+        "pp": 15
+    },
+    "Horn Attack": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 65,
+        "accuracy": 100,
+        "pp": 25
+    },
+    "Fury Attack": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 15,
+        "accuracy": 85,
+        "pp": 20
+    },
+    "Horn Drill": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 0,
+        "accuracy": 30,
+        "pp": 5
+    },
+    "Tackle": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 40,
+        "accuracy": 100,
+        "pp": 35
+    },
+    "Body Slam": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 85,
+        "accuracy": 100,
+        "pp": 15
+    },
+    "Wrap": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 15,
+        "accuracy": 90,
+        "pp": 20
+    },
+    "Take Down": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 90,
+        "accuracy": 85,
+        "pp": 20
+    },
+    "Thrash": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 120,
+        "accuracy": 100,
+        "pp": 10
+    },
+    "Double-Edge": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 120,
+        "accuracy": 100,
+        "pp": 15
+    },
+    "Tail Whip": {
+        "type": "Normal",
+        "category": "Status",
+        "power": 0,
+        "accuracy": 100,
+        "pp": 30
+    },
+    "Poison Sting": {
+        "type": "Poison",
+        "category": "Physical",
+        "power": 15,
+        "accuracy": 100,
+        "pp": 35
+    },
+    "Pin Missile": {
+        "type": "Bug",
+        "category": "Physical",
+        "power": 25,
+        "accuracy": 95,
+        "pp": 20
+    },
+    "Leer": {
+        "type": "Normal",
+        "category": "Status",
+        "power": 0,
+        "accuracy": 100,
+        "pp": 30
+    },
+    "Bite": {
+        "type": "Dark",
+        "category": "Physical",
+        "power": 60,
+        "accuracy": 100,
+        "pp": 25
+    },
+    "Growl": {
+        "type": "Normal",
+        "category": "Status",
+        "power": 0,
+        "accuracy": 100,
+        "pp": 40
+    },
+    "Roar": {
+        "type": "Normal",
+        "category": "Status",
+        "power": 0,
+        "accuracy": 0,
+        "pp": 20
+    },
+    "Sing": {
+        "type": "Normal",
+        "category": "Status",
+        "power": 0,
+        "accuracy": 55,
+        "pp": 15
+    },
+    "Supersonic": {
+        "type": "Normal",
+        "category": "Status",
+        "power": 0,
+        "accuracy": 55,
+        "pp": 20
+    },
+    "Disable": {
+        "type": "Normal",
+        "category": "Status",
+        "power": 0,
+        "accuracy": 100,
+        "pp": 20
+    },
+    "Acid": {
+        "type": "Poison",
+        "category": "Special",
+        "power": 40,
+        "accuracy": 100,
+        "pp": 30
+    },
+    "Ember": {
+        "type": "Fire",
+        "category": "Special",
+        "power": 40,
+        "accuracy": 100,
+        "pp": 25
+    },
+    "Flamethrower": {
+        "type": "Fire",
+        "category": "Special",
+        "power": 90,
+        "accuracy": 100,
+        "pp": 15
+    },
+    "Mist": {
+        "type": "Ice",
+        "category": "Status",
+        "power": 0,
+        "accuracy": 0,
+        "pp": 30
+    },
+    "Water Gun": {
+        "type": "Water",
+        "category": "Special",
+        "power": 40,
+        "accuracy": 100,
+        "pp": 25
+    },
+    "Hydro Pump": {
+        "type": "Water",
+        "category": "Special",
+        "power": 110,
+        "accuracy": 80,
+        "pp": 5
+    },
+    "Surf": {
+        "type": "Water",
+        "category": "Special",
+        "power": 90,
+        "accuracy": 100,
+        "pp": 15
+    },
+    "Ice Beam": {
+        "type": "Ice",
+        "category": "Special",
+        "power": 90,
+        "accuracy": 100,
+        "pp": 10
+    },
+    "Blizzard": {
+        "type": "Ice",
+        "category": "Special",
+        "power": 110,
+        "accuracy": 70,
+        "pp": 5
+    },
+    "Psybeam": {
+        "type": "Psychic",
+        "category": "Special",
+        "power": 65,
+        "accuracy": 100,
+        "pp": 20
+    },
+    "Bubble Beam": {
+        "type": "Water",
+        "category": "Special",
+        "power": 65,
+        "accuracy": 100,
+        "pp": 20
+    },
+    "Aurora Beam": {
+        "type": "Ice",
+        "category": "Special",
+        "power": 65,
+        "accuracy": 100,
+        "pp": 20
+    },
+    "Hyper Beam": {
+        "type": "Normal",
+        "category": "Special",
+        "power": 150,
+        "accuracy": 90,
+        "pp": 5
+    },
+    "Peck": {
+        "type": "Flying",
+        "category": "Physical",
+        "power": 35,
+        "accuracy": 100,
+        "pp": 35
+    },
+    "Drill Peck": {
+        "type": "Flying",
+        "category": "Physical",
+        "power": 80,
+        "accuracy": 100,
+        "pp": 20
+    },
+    "Low Kick": {
+        "type": "Fighting",
+        "category": "Physical",
+        "power": 0,
+        "accuracy": 100,
+        "pp": 20
+    },
+    "Counter": {
+        "type": "Fighting",
+        "category": "Physical",
+        "power": 0,
+        "accuracy": 100,
+        "pp": 20
+    },
+    "Seismic Toss": {
+        "type": "Fighting",
+        "category": "Physical",
+        "power": 0,
+        "accuracy": 100,
+        "pp": 20
+    },
+    "Strength": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 80,
+        "accuracy": 100,
+        "pp": 15
+    },
+    "Absorb": {
+        "type": "Grass",
+        "category": "Special",
+        "power": 20,
+        "accuracy": 100,
+        "pp": 25
+    },
+    "Mega Drain": {
+        "type": "Grass",
+        "category": "Special",
+        "power": 40,
+        "accuracy": 100,
+        "pp": 15
+    },
+    "Leech Seed": {
+        "type": "Grass",
+        "category": "Status",
+        "power": 0,
+        "accuracy": 90,
+        "pp": 10
+    },
+    "Growth": {
+        "type": "Normal",
+        "category": "Status",
+        "power": 0,
+        "accuracy": 0,
+        "pp": 20
+    },
+    "Razor Leaf": {
+        "type": "Grass",
+        "category": "Physical",
+        "power": 55,
+        "accuracy": 95,
+        "pp": 25
+    },
+    "Solar Beam": {
+        "type": "Grass",
+        "category": "Special",
+        "power": 120,
+        "accuracy": 100,
+        "pp": 10
+    },
+    "Poison Powder": {
+        "type": "Poison",
+        "category": "Status",
+        "power": 0,
+        "accuracy": 75,
+        "pp": 35
+    },
+    "Stun Spore": {
+        "type": "Grass",
+        "category": "Status",
+        "power": 0,
+        "accuracy": 75,
+        "pp": 30
+    },
+    "Sleep Powder": {
+        "type": "Grass",
+        "category": "Status",
+        "power": 0,
+        "accuracy": 75,
+        "pp": 15
+    },
+    "Petal Dance": {
+        "type": "Grass",
+        "category": "Special",
+        "power": 120,
+        "accuracy": 100,
+        "pp": 10
+    },
+    "String Shot": {
+        "type": "Bug",
+        "category": "Status",
+        "power": 0,
+        "accuracy": 95,
+        "pp": 40
+    },
+    "Fire Spin": {
+        "type": "Fire",
+        "category": "Special",
+        "power": 35,
+        "accuracy": 85,
+        "pp": 15
+    },
+    "Thunder Shock": {
+        "type": "Electric",
+        "category": "Special",
+        "power": 40,
+        "accuracy": 100,
+        "pp": 30
+    },
+    "Thunderbolt": {
+        "type": "Electric",
+        "category": "Special",
+        "power": 90,
+        "accuracy": 100,
+        "pp": 15
+    },
+    "Thunder Wave": {
+        "type": "Electric",
+        "category": "Status",
+        "power": 0,
+        "accuracy": 90,
+        "pp": 20
+    },
+    "Thunder": {
+        "type": "Electric",
+        "category": "Special",
+        "power": 110,
+        "accuracy": 70,
+        "pp": 10
+    },
+    "Rock Throw": {
+        "type": "Rock",
+        "category": "Physical",
+        "power": 50,
+        "accuracy": 90,
+        "pp": 15
+    },
+    "Earthquake": {
+        "type": "Ground",
+        "category": "Physical",
+        "power": 100,
+        "accuracy": 100,
+        "pp": 10
+    },
+    "Fissure": {
+        "type": "Ground",
+        "category": "Physical",
+        "power": 0,
+        "accuracy": 30,
+        "pp": 5
+    },
+    "Dig": {
+        "type": "Ground",
+        "category": "Physical",
+        "power": 80,
+        "accuracy": 100,
+        "pp": 10
+    },
+    "Toxic": {
+        "type": "Poison",
+        "category": "Status",
+        "power": 0,
+        "accuracy": 90,
+        "pp": 10
+    },
+    "Confusion": {
+        "type": "Psychic",
+        "category": "Special",
+        "power": 50,
+        "accuracy": 100,
+        "pp": 25
+    },
+    "Psychic": {
+        "type": "Psychic",
+        "category": "Special",
+        "power": 90,
+        "accuracy": 100,
+        "pp": 10
+    },
+    "Hypnosis": {
+        "type": "Psychic",
+        "category": "Status",
+        "power": 0,
+        "accuracy": 60,
+        "pp": 20
+    },
+    "Agility": {
+        "type": "Psychic",
+        "category": "Status",
+        "power": 0,
+        "accuracy": 0,
+        "pp": 30
+    },
+    "Quick Attack": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 40,
+        "accuracy": 100,
+        "pp": 30
+    },
+    "Teleport": {
+        "type": "Psychic",
+        "category": "Status",
+        "power": 0,
+        "accuracy": 0,
+        "pp": 20
+    },
+    "Night Shade": {
+        "type": "Ghost",
+        "category": "Special",
+        "power": 0,
+        "accuracy": 100,
+        "pp": 15
+    },
+    "Mimic": {
+        "type": "Normal",
+        "category": "Status",
+        "power": 0,
+        "accuracy": 0,
+        "pp": 10
+    },
+    "Screech": {
+        "type": "Normal",
+        "category": "Status",
+        "power": 0,
+        "accuracy": 85,
+        "pp": 40
+    },
+    "Double Team": {
+        "type": "Normal",
+        "category": "Status",
+        "power": 0,
+        "accuracy": 0,
+        "pp": 15
+    },
+    "Recover": {
+        "type": "Normal",
+        "category": "Status",
+        "power": 0,
+        "accuracy": 0,
+        "pp": 5
+    },
+    "Harden": {
+        "type": "Normal",
+        "category": "Status",
+        "power": 0,
+        "accuracy": 0,
+        "pp": 30
+    },
+    "Minimize": {
+        "type": "Normal",
+        "category": "Status",
+        "power": 0,
+        "accuracy": 0,
+        "pp": 10
+    },
+    "Smokescreen": {
+        "type": "Normal",
+        "category": "Status",
+        "power": 0,
+        "accuracy": 100,
+        "pp": 20
+    },
+    "Confuse Ray": {
+        "type": "Ghost",
+        "category": "Status",
+        "power": 0,
+        "accuracy": 100,
+        "pp": 10
+    },
+    "Withdraw": {
+        "type": "Water",
+        "category": "Status",
+        "power": 0,
+        "accuracy": 0,
+        "pp": 40
+    },
+    "Defense Curl": {
+        "type": "Normal",
+        "category": "Status",
+        "power": 0,
+        "accuracy": 0,
+        "pp": 40
+    },
+    "Light Screen": {
+        "type": "Psychic",
+        "category": "Status",
+        "power": 0,
+        "accuracy": 0,
+        "pp": 30
+    },
+    "Haze": {
+        "type": "Ice",
+        "category": "Status",
+        "power": 0,
+        "accuracy": 0,
+        "pp": 30
+    },
+    "Reflect": {
+        "type": "Psychic",
+        "category": "Status",
+        "power": 0,
+        "accuracy": 0,
+        "pp": 20
+    },
+    "Focus Energy": {
+        "type": "Normal",
+        "category": "Status",
+        "power": 0,
+        "accuracy": 0,
+        "pp": 30
+    },
+    "Metronome": {
+        "type": "Normal",
+        "category": "Status",
+        "power": 0,
+        "accuracy": 0,
+        "pp": 10
+    },
+    "Self-Destruct": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 200,
+        "accuracy": 100,
+        "pp": 5
+    },
+    "Lick": {
+        "type": "Ghost",
+        "category": "Physical",
+        "power": 30,
+        "accuracy": 100,
+        "pp": 30
+    },
+    "Smog": {
+        "type": "Poison",
+        "category": "Special",
+        "power": 30,
+        "accuracy": 70,
+        "pp": 20
+    },
+    "Sludge": {
+        "type": "Poison",
+        "category": "Special",
+        "power": 65,
+        "accuracy": 100,
+        "pp": 20
+    },
+    "Fire Blast": {
+        "type": "Fire",
+        "category": "Special",
+        "power": 11,
+        "accuracy": 100,
+        "pp": 5
+    },
+    "Waterfall": {
+        "type": "Water",
+        "category": "Physical",
+        "power": 80,
+        "accuracy": 100,
+        "pp": 15
+    },
+    "Swift": {
+        "type": "Normal",
+        "category": "Special",
+        "power": 60,
+        "accuracy": 0,
+        "pp": 20
+    },
+    "Amnesia": {
+        "type": "Psychic",
+        "category": "Status",
+        "power": 0,
+        "accuracy": 0,
+        "pp": 20
+    },
+    "Soft-Boiled": {
+        "type": "Normal",
+        "category": "Status",
+        "power": 0,
+        "accuracy": 0,
+        "pp": 5
+    },
+    "High Jump Kick": {
+        "type": "Fighting",
+        "category": "Physical",
+        "power": 130,
+        "accuracy": 90,
+        "pp": 10
+    },
+    "Glare": {
+        "type": "Normal",
+        "category": "Status",
+        "power": 0,
+        "accuracy": 100,
+        "pp": 30
+    },
+    "Dream Eater": {
+        "type": "Psychic",
+        "category": "Special",
+        "power": 100,
+        "accuracy": 100,
+        "pp": 15
+    },
+    "Poison Gas": {
+        "type": "Poison",
+        "category": "Status",
+        "power": 0,
+        "accuracy": 90,
+        "pp": 40
+    },
+    "Leech Life": {
+        "type": "Bug",
+        "category": "Physical",
+        "power": 80,
+        "accuracy": 100,
+        "pp": 10
+    },
+    "Sky Attack": {
+
+    },
+    "Transform": {
+
+    },
+    "Spore": {
+
+    },
+    "Splash": {
+
+    },
+    "Acid Armor": {
+
+    },
+    "Crabhammer": {
+
+    },
+    "Explosion": {
+
+    },
+    "Fury Swipes": {
+
+    },
+    "Rest": {
+
+    },
+    "Rock Slide": {
+
+    },
+    "Tri Attack": {
+
+    },
+    "Super Fang": {
+
+    },
+    "Slash": {
+
+    },
+    "Substitute": {
+
+    },
+    "Struggle": {
+
+    },
+    "Thief": {
+
+    },
+    "Flame Wheel": {
+
+    },
+    "Snore": {
+
+    },
+    "Curse": {
+
+    },
+    "Flail": {
+
+    },
+    "Cotton Spore": {
+
+    },
+    "Reversal": {
+
+    },
+    "Spite": {
+
+    },
+    "Powder Snow": {
+
+    },
+    "Protect": {
+
+    },
+    "Mach Punch": {
+
+    },
+    "Scary Face": {
+
+    },
+    "Sweet Kiss": {
+
+    },
+    "Belly Drum": {
+
+    },
+    "Sludge Bomb": {
+
+    },
+    "Mud-Slap": {
+
+    },
+    "Spikes": {
+
+    },
+    "Zap Cannon": {
+
+    },
+    "Destiny Bond": {
+
+    },
+    "Perish Song": {
+
+    },
+    "Icy Wind": {
+
+    },
+    "Detect": {
+
+    },
+    "Bone Rush": {
+
+    },
+    "Lock-On": {
+
+    },
+    "Outrage": {
+
+    },
+    "Sandstorm": {
+
+    },
+    "Giga Drain": {
+
+    },
+    "Endure": {
+
+    },
+    "Charm": {
+
+    },
+    "Rollout": {
+
+    },
+    "False Swipe": {
+
+    },
+    "Swagger": {
+
+    },
+    "Milk Drink": {
+
+    },
+    "Spark": {
+
+    },
+    "Fury Cutter": {
+
+    },
+    "Steel Wing": {
+
+    },
+    "Mean Look": {
+
+    },
+    "Attract": {
+
+    },
+    "Sleep Talk": {
+
+    },
+    "Heal Bell": {
+
+    },
+    "Present": {
+
+    },
+    "Safeguard": {
+
+    },
+    "Pain Split": {
+
+    },
+    "Dynamic Punch": {
+
+    },
+    "Megahorn": {
+
+    },
+    "Dragon Breath": {
+
+    },
+    "Baton Pass": {
+
+    },
+    "Encore": {
+
+    },
+    "Rapid Spin": {
+
+    },
+    "Sweet Scent": {
+
+    },
+    "Iron Tail": {
+
+    },
+    "Metal Claw": {
+
+    },
+    "Morning Sun": {
+
+    },
+    "Synthesis": {
+
+    },
+    "Moonlight": {
+
+    },
+    "Cross Chop": {
+
+    },
+    "Twister": {
+
+    },
+    "Rain Dance": {
+
+    },
+    "Sunny Day": {
+
+    },
+    "Crunch": {
+
+    },
+    "Mirror Coat": {
+
+    },
+    "Psych Up": {
+
+    },
+    "Extreme Speed": {
+
+    },
+    "Ancient Power": {
+
+    },
+    "Shadow Ball": {
+
+    },
+    "Future Sight": {
+
+    },
+    "Rock Smash": {
+
+    },
+    "Whirlpool": {
+
+    },
+    "Beat Up": {
+
+    },
+    "Fake Out": {
+        
+    },
+    "Uproar": {
+        
+    },
+    "Stockpile": {
+        
+    },
+    "Spit Up": {
+        
+    },
+    "Swallow": {
+        
+    },
+    "Heat Wave": {
+        
+    },
+    "Torment": {
+        
+    },
+    "Flatter": {
+        
+    },
+    "Will-O-Wisp": {
+        
+    },
+    "Memento": {
+        
+    },
+    "Facade": {
+        
+    },
+    "Focus Punch": {
+        
+    },
+    "Follow Me": {
+        
+    },
+    "Charge": {
+        
+    },
+    "Taunt": {
+        
+    },
+    "Helping Hand": {
+        
+    },
+    "Trick": {
+        
+    },
+    "Role Play": {
+        
+    },
+    "Wish": {
+        
+    },
+    "Ingrain": {
+        
+    },
+    "Superpower": {
+        
+    },
+    "Recycle": {
+        
+    },
+    "Brick Break": {
+        
+    },
+    "Yawn": {
+        
+    },
+    "Knock Off": {
+
+    },
+    "Endeavor": {
+
+    },
+    "Eruption": {
+
+    },
+    "Skill Swap": {
+
+    },
+    "Imprison": {
+
+    },
+    "Dive": {
+
+    },
+    "Arm Thrust": {
+
+    },
+    "Feather Dance": {
+
+    },
+    "Teeter Dance": {
+
+    },
+    "Blaze Kick": {
+
+    },
+    "Slack Off": {
+
+    },
+    "Hyper Voice": {
+
+    },
+    "Poison Fang": {
+
+    },
+    "Crush Claw": {
+
+    },
+    "Blast Burn": {
+
+    },
+    "Hydro Cannon": {
+
+    },
+    "Meteor Mash": {
+
+    },
+    "Astonish": {
+
+    },
+    "Weather Ball": {
+
+    },
+    "Fake Tears": {
+
+    },
+    "Air Cutter": {
+
+    },
+    "Overheat": {
+
+    },
+    "Rock Tomb": {
+
+    },
+    "Metal Sound": {
+
+    },
+    "Tickle": {
+
+    },
+    "Cosmic Power": {
+
+    },
+    "Water Spout": {
+
+    },
+    "Shadow Punch": {
+
+    },
+    "Extrasensory": {
+
+    },
+    "Sand Tomb": {
+
+    },
+    "Sheer Cold": {
+
+    },
+    "Muddy Water": {
+
+    },
+    "Bullet Seed": {
+
+    },
+    "Aerial Ace": {
+
+    },
+    "Icicle Spear": {
+
+    },
+    "Iron Defense": {
+
+    },
+    "Block": {
+
+    },
+    "Howl": {
+
+    },
+    "Dragon Claw": {
+
+    },
+    "Frenzy Plant": {
+
+    },
+    "Bulk Up": {
+
+    },
+    "Bounce": {
+
+    },
+    "Mud Shot": {
+
+    },
+    "Poison Tail": {
+
+    },
+    "Covet": {
+
+    },
+    "Volt Tackle": {
+
+    },
+    "Magical Leaf": {
+
+    },
+    "Calm Mind": {
+
+    },
+    "Leaf Blade": {
+
+    },
+    "Dragon Dance": {
+
+    },
+    "Rock Blast": {
+
+    },
+    "Shock Wave": {
+
+    },
+    "Water Pulse": {
+
+    },
+    "Roost": {
+
+    },
+    "Gravity": {
+
+    },
+    "Hammer Arm": {
+
+    },
+    "Gyro Ball": {
+
+    },
+    "Healing Wish": {
+
+    },
+    "Brine": {
+
+    },
+    "Feint": {
+
+    },
+    "Pluck": {
+
+    },
+    "Tailwind": {
+
+    },
+    "Acupressure": {
+
+    },
+    "Metal Burst": {
+
+    },
+    "U-turn": {
+
+    },
+    "Close Combat": {
+
+    },
+    "Payback": {
+
+    },
+    "Assurance": {
+
+    },
+    "Fling": {
+
+    },
+    "Power Trick": {
+
+    },
+    "Gastro Acid": {
+
+    },
+    "Copycat": {
+
+    },
+    "Power Swap": {
+
+    },
+    "Guard Swap": {
+
+    },
+    "Last Resort": {
+
+    },
+    "Worry Seed": {
+
+    },
+    "Sucker Punch": {
+
+    },
+    "Toxic Spikes": {
+
+    },
+    "Heart Swap": {
+
+    },
+    "Aqua Ring": {
+
+    },
+    "Magnet Rise": {
+
+    },
+    "Flare Blitz": {
+
+    },
+    "Force Palm": {
+
+    },
+    "Aura Sphere": {
+
+    },
+    "Rock Polish": {
+
+    },
+    "Poison Jab": {
+
+    },
+    "Dark Pulse": {
+
+    },
+    "Night Slash": {
+
+    },
+    "Aqua Tail": {
+
+    },
+    "Seed Bomb": {
+
+    },
+    "Air Slash": {
+
+    },
+    "X-Scissor": {
+
+    },
+    "Bug Buzz": {
+
+    },
+    "Dragon Pulse": {
+
+    },
+    "Dragon Rush": {
+
+    },
+    "Power Gem": {
+
+    },
+    "Drain Punch": {
+
+    },
+    "Vacuum Wave": {
+
+    },
+    "Focus Blast": {
+
+    },
+    "Energy Ball": {
+
+    },
+    "Brave Bird": {
+
+    },
+    "Earth Power": {
+
+    },
+    "Switcheroo": {
+
+    },
+    "Giga Impact": {
+
+    },
+    "Nasty Plot": {
+
+    },
+    "Bullet Punch": {
+
+    },
+    "Avalanche": {
+
+    },
+    "Ice Shard": {
+
+    },
+    "Shadow Claw": {
+
+    },
+    "Thunder Fang": {
+
+    },
+    "Ice Fang": {
+
+    },
+    "Fire Fang": {
+
+    },
+    "Shadow Sneak": {
+
+    },
+    "Psycho Cut": {
+
+    },
+    "Zen Headbutt": {
+
+    },
+    "Flash Cannon": {
+
+    },
+    "Defog": {
+
+    },
+    "Trick Room": {
+
+    },
+    "Draco Meteor": {
+
+    },
+    "Discharge": {
+
+    },
+    "Lava Plume": {
+
+    },
+    "Leaf Storm": {
+
+    },
+    "Power Whip": {
+
+    },
+    "Cross Poison": {
+
+    },
+    "Gunk Shot": {
+
+    },
+    "Iron Head": {
+
+    },
+    "Stone Edge": {
+
+    },
+    "Stealth Rock": {
+
+    },
+    "Grass Knot": {
+
+    },
+    "Judgment": {
+
+    },
+    "Bug Bite": {
+
+    },
+    "Charge Beam": {
+
+    },
+    "Wood Hammer": {
+
+    },
+    "Aqua Jet": {
+
+    },
+    "Attack Order": {
+
+    },
+    "Defend Order": {
+
+    },
+    "Head Smash": {
+
+    },
+    "Double Hit": {
+
+    },
+    "Roar of Time": {
+
+    },
+    "Spacial Rend": {
+
+    },
+    "Lunar Dance": {
+
+    },
+    "Magma Storm": {
+
+    },
+    "Shadow Force": {
+
+    },
+    "Hone Claws": {
+
+    },
+    "Wide Guard": {
+
+    },
+    "Guard Split": {
+
+    },
+    "Power Split": {
+
+    },
+    "Wonder Room": {
+
+    },
+    "Psyshock": {
+
+    },
+    "Venoshock": {
+
+    },
+    "Rage Powder": {
+
+    },
+    "Magic Room": {
+
+    },
+    "Smack Down": {
+
+    },
+    "Sludge Wave": {
+
+    },
+    "Quiver Dance": {
+
+    },
+    "Heavy Slam": {
+
+    },
+    "Electro Ball": {
+
+    },
+    "Soak": {
+
+    },
+    "Flame Charge": {
+
+    },
+    "Coil": {
+
+    },
+    "Low Sweep": {
+
+    },
+    "Acid Spray": {
+
+    },
+    "Foul Play": {
+
+    },
+    "Simple Beam": {
+
+    },
+    "Entrainment": {
+
+    },
+    "After You": {
+
+    },
+    "Round": {
+
+    },
+    "Echoed Voice": {
+
+    },
+    "Clear Smog": {
+
+    },
+    "Stored Power": {
+
+    },
+    "Quick Guard": {
+
+    },
+    "Ally Switch": {
+
+    },
+    "Scald": {
+
+    },
+    "Shell Smash": {
+
+    },
+    "Heal Pulse": {
+
+    },
+    "Hex": {
+
+    },
+    "Shift Gear": {
+
+    },
+    "Circle Throw": {
+
+    },
+    "Incinerate": {
+
+    },
+    "Quash": {
+
+    },
+    "Acrobatics": {
+
+    },
+    "Reflect Type": {
+
+    },
+    "Retaliate": {
+
+    },
+    "Final Gambit": {
+
+    },
+    "Inferno": {
+
+    },
+    "Water Pledge": {
+
+    },
+    "Fire Pledge": {
+
+    },
+    "Grass Pledge": {
+
+    },
+    "Volt Switch": {
+
+    },
+    "Struggle Bug": {
+
+    },
+    "Bulldoze": {
+
+    },
+    "Frost Breath": {
+
+    },
+    "Dragon Tail": {
+
+    },
+    "Work Up": {
+
+    },
+    "Electroweb": {
+
+    },
+    "Wild Charge": {
+
+    },
+    "Drill Run": {
+
+    },
+    "Horn Leech": {
+
+    },
+    "Sacred Sword": {
+
+    },
+    "Razor Shell": {
+
+    },
+    "Heat Crash": {
+
+    },
+    "Cotton Guard": {
+
+    },
+    "Night Daze": {
+
+    },
+    "Psystrike": {
+
+    },
+    "Tail Slap": {
+
+    },
+    "Hurricane": {
+
+    },
+    "Relic Song": {
+
+    },
+    "Fiery Dance": {
+
+    },
+    "Snarl": {
+
+    },
+    "Icicle Crash": {
+
+    },
+    "V-create": {
+
+    },
+    "Flying Press": {
+
+    },
+    "Belch": {
+
+    },
+    "Sticky Web": {
+
+    },
+    "Fell Stinger": {
+
+    },
+    "Phantom Force": {
+
+    },
+    "Noble Roar": {
+
+    },
+    "Parabolic Charge": {
+
+    },
+    "Petal Blizzard": {
+
+    },
+    "Freeze-Dry": {
+
+    },
+    "Disarming Voice": {
+
+    },
+    "Parting Shot": {
+
+    },
+    "Draining Kiss": {
+
+    },
+    "Grassy Terrain": {
+
+    },
+    "Misty Terrain": {
+
+    },
+    "Play Rough": {
+
+    },
+    "Fairy Wind": {
+
+    },
+    "Moonblast": {
+
+    },
+    "Boomburst": {
+
+    },
+    "Fairy Lock": {
+
+    },
+    "Play Nice": {
+
+    },
+    "Confide": {
+
+    },
+    "Diamond Storm": {
+
+    },
+    "Steam Eruption": {
+
+    },
+    "Hyperspace Hole": {
+
+    },
+    "Water Shuriken": {
+
+    },
+    "Mystical Fire": {
+
+    },
+    "Spiky Shield": {
+
+    },
+    "Aromatic Mist": {
+
+    },
+    "Eerie Impulse": {
+
+    },
+    "Magnetic Flux": {
+
+    },
+    "Happy Hour": {
+
+    },
+    "Electric Terrain": {
+
+    },
+    "Dazzling Gleam": {
+
+    },
+    "Celebrate": {
+
+    },
+    "Hold Hands": {
+
+    },
+    "Baby-Doll Eyes": {
+
+    },
+    "Nuzzle": {
+
+    },
+    "Hold Back": {
+
+    },
+    "Infestation": {
+
+    },
+    "Origin Pulse": {
+
+    },
+    "Precipice Blades": {
+
+    },
+    "Dragon Ascent": {
+
+    },
+    "Hyperspace Fury": {
+
+    },
+    "Shore Up": {
+
+    },
+    "First Impression": {
+
+    },
+    "Baneful Bunker": {
+
+    },
+    "Spirit Shackle": {
+
+    },
+    "Darkest Lariet": {
+
+    },
+    "Ice Hammer": {
+
+    },
+    "High Horsepower": {
+
+    },
+    "Strength Sap": {
+
+    },
+    "Solar Blade": {
+
+    },
+    "Leafage": {
+
+    },
+    "Throat Chop": {
+
+    },
+    "Pollen Puff": {
+
+    },
+    "Psychic Terrain": {
+
+    },
+    "Lunge": {
+
+    },
+    "Fire Lash": {
+
+    },
+    "Power Trip": {
+
+    },
+    "Burn Up": {
+
+    },
+    "Speed Swap": {
+
+    },
+    "Smart Strike": {
+
+    },
+    "Revelation Dance": {
+
+    },
+    "Trop Kick": {
+
+    },
+    "Instruct": {
+
+    },
+    "Prutal Swing": {
+
+    },
+    "Aurora Veil": {
+
+    },
+    "Fleur Cannon": {
+
+    },
+    "Psychic Fangs": {
+
+    },
+    "Stomping Tantrum": {
+
+    },
+    "Accelerock": {
+
+    },
+    "Liquidation": {
+
+    },
+    "Tearful Look": {
+
+    },
+    "Zing Zap": {
+
+    },
+    "Dynamax Cannon": {
+
+    },
+    "Snipe Shot": {
+
+    },
+    "Jaw Lock": {
+
+    },
+    "Stuff Cheeks": {
+
+    },
+    "No Retreat": {
+
+    },
+    "Tar Shot": {
+
+    },
+    "Magic Powder": {
+
+    },
+    "Dragon Darts": {
+
+    },
+    "Teatime": {
+
+    },
+    "Court Change": {
+
+    },
+    "Body Press": {
+
+    },
+    "Drum Beating": {
+
+    },
+    "Pyro Ball": {
+
+    },
+    "Behemoth Blade": {
+
+    },
+    "Behemoth Bash": {
+
+    },
+    "Breaking Swipe": {
+
+    },
+    "Branch Poke": {
+
+    },
+    "Overdrive": {
+
+    },
+    "Apple Acid": {
+
+    },
+    "Grav Apple": {
+
+    },
+    "Spirit Break": {
+
+    },
+    "Life Dew": {
+
+    },
+    "False Surrender": {
+
+    },
+    "Steel Beam": {
+
+    },
+    "Expanding Force": {
+
+    },
+    "Steel Roller": {
+
+    },
+    "Scale Shot": {
+
+    },
+    "Meteor Beam": {
+
+    },
+    "Shell Side Arm": {
+
+    },
+    "Misty Explosion": {
+
+    },
+    "Grassy Glide": {
+
+    },
+    "Rising Voltage": {
+
+    },
+    "Terrain Pulse": {
+
+    },
+    "Skitter Smack": {
+
+    },
+    "Burning Jealousy": {
+
+    },
+    "Lash Out": {
+
+    },
+    "Poltergeist": {
+
+    },
+    "Corrosive Gas": {
+
+    },
+    "Coaching": {
+
+    },
+    "Flip Turn": {
+
+    },
+    "Triple Axel": {
+
+    },
+    "Dual Wingbeat": {
+
+    },
+    "Scorching Sands": {
+
+    },
+    "Jungle Healing": {
+
+    },
+    "Wicked Blow": {
+
+    },
+    "Surging Strikes": {
+
+    },
+    "Thunder Cage": {
+
+    },
+    "Dragon Energy": {
+
+    },
+    "Freezing Glare": {
+
+    },
+    "Fiery Wrath": {
+
+    },
+    "Thunderous Kick": {
+
+    },
+    "Glacial Lance": {
+
+    },
+    "Astral Barrage": {
+
+    },
+    "Eerie Spell": {
+
+    },
+    "Dire Claw": {
+
+    },
+    "Psyshield Bash": {
+
+    },
+    "Power Shift": {
+
+    },
+    "Stone Axe": {
+
+    },
+    "Springtide Storm": {
+
+    },
+    "Mystical Power": {
+
+    },
+    "Raging Fury": {
+
+    },
+    "Wave Crash": {
+
+    },
+    "Chloroblast": {
+
+    },
+    "Mountain Glare": {
+
+    },
+    "Victory Dance": {
+
+    },
+    "Headlong Rush": {
+
+    },
+    "Barb Barrage": {
+
+    },
+    "Esper Wing": {
+
+    },
+    "Bitter Malice": {
+
+    },
+    "Shelter": {
+
+    },
+    "Triple Arrows": {
+
+    },
+    "Infernal Parade": {
+
+    },
+    "Ceaseless Edge": {
+
+    },
+    "Bleakwind Storm": {
+
+    },
+    "Wildbolt Storm": {
+
+    },
+    "Sandsear Storm": {
+
+    },
+    "Lunar Blessing": {
+
+    },
+    "Tera Blast": {
+
+    },
+    "Silk Trap": {
+
+    },
+    "Axe Kick": {
+
+    },
+    "Last Respects": {
+
+    },
+    "Lumina Crash": {
+
+    },
+    "Order Up": {
+
+    },
+    "Jet Punch": {
+
+    },
+    "Spicy Extract": {
+
+    },
+    "Spin Out": {
+
+    },
+    "Population Bomb": {
+
+    },
+    "Ice Spinner": {
+
+    },
+    "Glaive Rush": {
+
+    },
+    "Revival Blessing": {
+
+    },
+    "Salt Cure": {
+
+    },
+    "Triple Dive": {
+
+    },
+    "Mortal Spin": {
+
+    },
+    "Doodle": {
+
+    },
+    "Fillet Away": {
+
+    },
+    "Kowtow Cleave": {
+
+    },
+    "Flower Trick": {
+
+    },
+    "Torch Song": {
+
+    },
+    "Aqua Step": {
+
+    },
+    "Raging Bull": {
+
+    },
+    "Make It Rain": {
+
+    },
+    "Ruination": {
+
+    },
+    "Collision Course": {
+
+    },
+    "Electro Drift": {
+
+    },
+    "Shed Tail": {
+
+    },
+    "Chilly Reception": {
+
+    },
+    "Tidy Up": {
+
+    },
+    "Snowscape": {
+
+    },
+    "Pounce": {
+
+    },
+    "Trailblaze": {
+
+    },
+    "Chilling Water": {
+
+    },
+    "Hyper Drill": {
+
+    },
+    "Twin Beam": {
+
+    },
+    "Rage Fist": {
+
+    },
+    "Armor Cannon": {
+
+    },
+    "Bitter Blade": {
+
+    },
+    "Double Shock": {
+
+    },
+    "Gigaton Hammer": {
+
+    },
+    "Comeuppance": {
+
+    },
+    "Aqua Cutter": {
+
+    },
+    "Psyblade": {
+
+    },
+    "Hydro Steam": {
+
+    },
+    "Tail Glow": {
+
+    },
+    "Doom Desire": {
+
+    },
+    "Dark Void": {
+
+    },
+    "Seed Flare": {
+
+    },
+    "Forest's Curse": {
+
+    },
+    "Toxic Thread": {
+
+    },
+    "Clanging Scales": {
+
+    },
+    "Clangorous Soul": {
+
+    },
+    "Aura Wheel": {
+
+    },
+    "Strange Steam": {
+
+    },
+    "Take Heart": {
+
+    },
+    "Blood Moon": {
+
+    },
+    "Matcha Gotcha": {
+
+    },
+    "Syrup Bomb": {
+
+    },
+    "Ivy Cudgel": {
+
+    },
+    "Conversion": {
+
+    },
+    "Sketch": {
+
+    },
+    "Triple Kick": {
+
+    },
+    "Conversion 2": {
+
+    },
+    "Aeroblast": {
+
+    },
+    "Sacred Fire": {
+
+    },
+    "Luster Purge": {
+
+    },
+    "Mist Ball": {
+
+    },
+    "Psycho Boost": {
+
+    },
+    "Rock Wrecker": {
+
+    },
+    "Crush Grip": {
+
+    },
+    "Secret Sword": {
+
+    },
+    "Glaciate": {
+
+    },
+    "Bolt Strike": {
+
+    },
+    "Blue Flare": {
+
+    },
+    "Freeze Shock": {
+
+    },
+    "Ice Burn": {
+
+    },
+    "Fusion Flare": {
+
+    },
+    "Fusion Bolt": {
+
+    },
+    "Topsy-Turvy": {
+
+    },
+    "Sparkling Aria": {
+
+    },
+    "Floral Healing": {
+
+    },
+    "Beak Blast": {
+
+    },
+    "Dragon Hammer": {
+
+    },
+    "Prismatic Laser": {
+
+    },
+    "Sunsteel Strike": {
+
+    },
+    "Moongeist Beam": {
+
+    },
+    "Photon Geyser": {
+
+    },
+    "Decorate": {
+
+    },
+    "Electro Shot": {
+
+    },
+    "Tera Starstorm": {
+
+    },
+    "Fickle Beam": {
+
+    },
+    "Burning Bulwark": {
+
+    },
+    "Thunderclap": {
+
+    },
+    "Mighty Cleave": {
+
+    },
+    "Tachyon Cutter": {
+
+    },
+    "Hard Press": {
+
+    },
+    "Dragon Cheer": {
+
+    },
+    "Alluring Voice": {
+
+    },
+    "Temper Flare": {
+
+    },
+    "Supercell Slam": {
+
+    },
+    "Psychic Noise": {
+
+    },
+    "Upper Hand": {
+
+    },
+    "Malignant Chain": {
+
+    }
+}
