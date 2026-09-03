@@ -16,24 +16,28 @@ I began building this while I was about 2/3 of the way through my studies on Boo
 
 1. Clone the repository:
 
-    ```bash
-    git clone https://github.com/ethanflaharty/Pokemon-Battle-Sim.git
+```bash
+git clone https://github.com/ethanflaharty/Pokemon-Battle-Sim.git
+```
 
 2. Navigate to the project directory
 
-    ```bash
-    cd Pokemon-Battle-Sim
+```bash
+cd Pokemon-Battle-Sim
+```
 
 3. Run the simulator using "go run ."
 
-    ```bash
-    go run .
+```bash
+go run .
+```
 
 ## Usage
 - After running the project using:
 
-    ```bash
-    go run .
+```bash
+go run .
+```
 
 - Play the battle sim by inputing the number of the move you want to use each turn
 
@@ -41,18 +45,21 @@ I began building this while I was about 2/3 of the way through my studies on Boo
 
 ### Clone the Repo
 
-    ```bash
-    git clone https://github.com/ethanflaharty/Pokemon-Battle-Sim.git
+```bash
+git clone https://github.com/ethanflaharty/Pokemon-Battle-Sim.git
+```
 
 ### Build the compiled binary
 
-    ```bash
-    go build
+```bash
+go build
+```
 
 ### Run the program
 
-    ```bash
-    go run .
+```bash
+go run .
+```
 
 ## Current Status
 - The current version has the majority of parts of an individual pokemon implemented including:
