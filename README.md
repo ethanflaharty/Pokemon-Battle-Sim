@@ -1,16 +1,12 @@
 # Pokemon CLI Battle Simulator
 
-This is a Pokemon Battle Simulator that takes place in your CLI.
+This is a Pokemon Battle Simulator that takes place in your CLI, based off of the Generation 9 battle mechanics. 
 
-## Features 
+## Motivations
 
-- Pokemon's Battle Loop
-- Uses the math from the Pokemon games based on the Bulbapedia information
-- Can use whatever Pokemon you want from the start in the current state
-- Features functional battle states such as weathers and terrains
-- Features Status Conditions that work just like the ones in the original game
+I began building this while I was about 2/3 of the way through my studies on Boot.dev at a point where I was doubting how much I had actually learned so far. I figured this would be a good way to test my skills and have fun doing it because I am a huge Pokemon fan so I began building. After putting ~10 hours into this I decided to pause and continue it as my capstone project because I had really enjoyed the time I had put in at that time and knew I was going to need something for my capstone project and moved on having gotten many ideas of where to take this whilst doing it. I still plan on building this to improve the project as well as my skills and potentially get to a point where this could be an actual "fan game" type of project.
 
-## How to Run
+## Quick Start
 
 ### Requirements
 
@@ -22,31 +18,48 @@ This is a Pokemon Battle Simulator that takes place in your CLI.
 
     ```bash
     git clone https://github.com/ethanflaharty/Pokemon-Battle-Sim.git
+    ```
 
 2. Navigate to the project directory
 
     ```bash
     cd Pokemon-Battle-Sim
+    ```
 
 3. Run the simulator using "go run ."
 
     ```bash
     go run .
+    ```
 
-## Project Structure
+## Usage
+- After running the project using:
 
-The structure:
-- The main file/package uses all of the current package implementations
-- The battle package within the battleSystem folder is the next in line so to say as it takes information from pokemondata and battledata
-- Then we trickle down to pokemondata that takes info from battledata
-- And finally for what is currently implemented battledata is the baseline that doesn't use any of the other packages apart of this project specifically
-- The persistentData folder holds the JSON data that isn't currently implemented but is the part I'm working on implementing. This will hold the data of the Pokemon "world" that won't change, hench persistent
+    ```bash
+    go run .
+    ```
 
-## How It Works
-- After running "go run ." it will initiate the battle with the wild pokemon which in the current state is set to a Charmander and it will use your only pokemon Bulbasaur allowing you to choose your move. 
-- When damage is taken it will tell you how much damage was done and how much HP is left
-- Repeating that, once one of the pokemon faints it will print what pokemon fainted and end the program
-- If you want to change the pokemon, moves or any of the details of your pokemon in the current state in the main.go file update either the wild or ally pokemon that is in the battle
+- Play the battle sim by inputing the number of the move you want to use each turn
+
+## Contributing
+
+### Clone the Repo
+
+    ```bash
+    git clone https://github.com/ethanflaharty/Pokemon-Battle-Sim.git
+    ```
+
+### Build the compiled binary
+
+    ```bash
+    go build
+    ```
+
+### Run the program
+
+    ```bash
+    go run .
+    ```
 
 ## Current Status
 - The current version has the majority of parts of an individual pokemon implemented including:
