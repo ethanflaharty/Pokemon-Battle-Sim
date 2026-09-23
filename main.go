@@ -8,6 +8,11 @@ import (
 )
 
 func main() {
+	err := pokemondata.LoadMoves()
+	if err != nil {
+		log.Fatal(err)
+	}
+
 	wild := pokemondata.Pokemon{
 		Name: "Charmander",
 		BaseStats: pokemondata.Stats{
@@ -37,6 +42,10 @@ func main() {
 	wild.MaxHP = wild.HP
 	wild.CalculateBattleStats()
 
+	pound, err := pokemondata.GetMove("Pound")
+	if err != nil {
+		log.Fatalf("err: %v", err)
+	}
 	ally := pokemondata.Pokemon{
 		Name: "Bulbasaur",
 		BaseStats: pokemondata.Stats{
@@ -60,7 +69,7 @@ func main() {
 		},
 		Nature: pokemondata.Modest,
 		Moves: []pokemondata.Move{
-			{Name: "Weather Ball", Power: 50, Type: pokemondata.Normal, Accuracy: 100, NeverMisses: false, TotalPP: 15, PPLeft: 15, Category: pokemondata.Special},
+			pound,
 			{Name: "Dragon Claw", Power: 80, Type: pokemondata.Dragon, Accuracy: 100, NeverMisses: false, TotalPP: 10, PPLeft: 10, Category: pokemondata.Physical},
 			{Name: "Magical Leaf", Power: 60, Type: pokemondata.Grass, Accuracy: 100, NeverMisses: true, TotalPP: 20, PPLeft: 20, Category: pokemondata.Special},
 			{Name: "Psychic Terrain", Power: 0, Type: pokemondata.Fairy, Accuracy: 100, NeverMisses: true, TotalPP: 25, PPLeft: 25, Category: pokemondata.Status},

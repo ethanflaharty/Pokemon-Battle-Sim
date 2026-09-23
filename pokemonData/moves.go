@@ -1,7 +1,9 @@
 package pokemondata
 
 import (
+	"encoding/json"
 	"fmt"
+	"os"
 	battledata "pokemonBattleSim/battleSystem/battleData"
 )
 
@@ -366,6 +368,106 @@ func Growl(p *Pokemon) {
 	}
 }
 
+func typeConversion(typeName string) (Type, error) {
+	switch typeName {
+	case "Normal":
+		return Normal, nil
+	case "Fire":
+		return Fire, nil
+	case "Water":
+		return Water, nil
+	case "Electric":
+		return Electric, nil
+	case "Grass":
+		return Grass, nil
+	case "Ice":
+		return Ice, nil
+	case "Fighting":
+		return Fighting, nil
+	case "Poison":
+		return Poison, nil
+	case "Ground":
+		return Ground, nil
+	case "Flying":
+		return Flying, nil
+	case "Psychic":
+		return Psychic, nil
+	case "Bug":
+		return Bug, nil
+	case "Rock":
+		return Rock, nil
+	case "Ghost":
+		return Ghost, nil
+	case "Dragon":
+		return Dragon, nil
+	case "Dark":
+		return Dark, nil
+	case "Steel":
+		return Steel, nil
+	case "Fairy":
+		return Fairy, nil
+	default:
+		return Normal, fmt.Errorf("type not recognized")
+	}
+}
+
+func categoryConversion(category string) (MoveCategory, error) {
+	switch category {
+	case "Physical":
+		return Physical, nil
+	case "Special":
+		return Special, nil
+	case "Status":
+		return Status, nil
+	default:
+		return Status, fmt.Errorf("category not recognized")
+	}
+}
+
+func GetMove(name string) (Move, error) {
+	info, exists := movesData[name]
+	if !exists {
+		return Move{}, fmt.Errorf("move does not exist")
+	}
+
+	moveType, err := typeConversion(info.Type)
+	if err != nil {
+		return Move{}, err
+	}
+	category, err := categoryConversion(info.Category)
+	if err != nil {
+		return Move{}, err
+	}
+
+	pokemonMove := Move{
+		Name:        name,
+		Power:       info.Power,
+		Type:        moveType,
+		Category:    category,
+		Accuracy:    info.Accuracy,
+		NeverMisses: info.Accuracy == 0,
+		Priority:    info.Priority,
+		TotalPP:     info.PP,
+		PPLeft:      info.PP,
+	}
+
+	return pokemonMove, nil
+}
+
+func LoadMoves() error {
+	data, err := os.ReadFile("persistentData/moves.json")
+	if err != nil {
+		return err
+	}
+
+	err = json.Unmarshal(data, &movesData)
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
+
 type MoveCategory int
 
 const (
@@ -373,6 +475,17 @@ const (
 	Special
 	Status
 )
+
+var movesData map[string]moveJSON
+
+type moveJSON struct {
+	Power    int    `json:"power"`
+	Type     string `json:"type"`
+	Category string `json:"category"`
+	Accuracy int    `json:"accuracy"`
+	Priority int    `json:"priority"`
+	PP       int    `json:"pp"`
+}
 
 type Move struct {
 	Name     string

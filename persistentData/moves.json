@@ -4,56 +4,65 @@
         "category": "Physical",
         "power": 40,
         "accuracy": 100,
-        "pp": 35
+        "pp": 35,
+        "priority": 0,
+        "secondary": "None"
     },
     "Mega Punch": {
         "type": "Normal",
         "category": "Physical",
         "power": 80,
         "accuracy": 85,
-        "pp": 20
+        "pp": 20,
+        "secondary": "None"
     },
     "Pay Day": {
         "type": "Normal",
         "category": "Physical",
         "power": 40,
         "accuracy": 100,
-        "pp": 20
+        "pp": 20,
+        "secondary": "Not Implemented"
     },
     "Fire Punch": {
         "type": "Fire",
         "category": "Physical",
         "power": 75,
         "accuracy": 100,
-        "pp": 15
+        "pp": 15,
+        "secondary": "Not Implemented"
     },
     "Ice Punch": {
         "type": "Ice",
         "category": "Physical",
         "power": 75,
         "accuracy": 100,
-        "pp": 15
+        "pp": 15,
+        "secondary": "Not Implemented"
     },
     "Thunder Punch": {
         "type": "Electric",
         "category": "Physical",
         "power": 75,
         "accuracy": 100,
-        "pp": 15
+        "pp": 15,
+        "secondary": "Not Implemented"
     },
     "Scratch": {
         "type": "Normal",
         "category": "Physical",
         "power": 40,
         "accuracy": 100,
-        "pp": 35
+        "pp": 35,
+        "secondary": "None"
     },
     "Vise Grip": {
         "type": "Normal",
         "category": "Physical",
         "power": 55,
         "accuracy": 100,
-        "pp": 30
+        "pp": 30,
+        "secondary": "None"
     },
     "Guillotine": {
         "type": "Normal",
@@ -74,21 +83,24 @@
         "category": "Physical",
         "power": 50,
         "accuracy": 95,
-        "pp": 30
+        "pp": 30,
+        "secondary": "None"
     },
     "Gust": {
         "type": "Flying",
         "category": "Special",
         "power": 40,
         "accuracy": 100,
-        "pp": 35
+        "pp": 35,
+        "secondary": "Not Implemented"
     },
     "Wing Attack": {
         "type": "Flying",
         "category": "Physical",
         "power": 60,
         "accuracy": 100,
-        "pp": 35
+        "pp": 35,
+        "secondary": "None"
     },
     "Whirlwind": {
         "type": "Normal",
@@ -102,49 +114,56 @@
         "category": "Physical",
         "power": 90,
         "accuracy": 95,
-        "pp": 15
+        "pp": 15,
+        "secondary": "Not Implemented"
     },
     "Bind": {
         "type": "Normal",
         "category": "Physical",
         "power": 15,
         "accuracy": 85,
-        "pp": 20
+        "pp": 20,
+        "secondary": "Not Implemented"
     },
     "Slam": {
         "type": "Normal",
         "category": "Physical",
         "power": 80,
         "accuracy": 75,
-        "pp": 20
+        "pp": 20,
+        "secondary": "None"
     },
     "Vine Whip": {
         "type": "Grass",
         "category": "Physical",
         "power": 45,
         "accuracy": 100,
-        "pp": 25
+        "pp": 25,
+        "secondary": "None"
     },
     "Stomp": {
         "type": "Normal",
         "category": "Physical",
         "power": 65,
         "accuracy": 100,
-        "pp": 20
+        "pp": 20,
+        "secondary": "Not Implemented"
     },
     "Double Kick": {
         "type": "Fighting",
         "category": "Physical",
         "power": 30,
         "accuracy": 100,
-        "pp": 30
+        "pp": 30,
+        "secondary": "Not Implemented"
     },
     "Mega Kick": {
         "type": "Normal",
         "category": "Physical",
         "power": 120,
         "accuracy": 75,
-        "pp": 5
+        "pp": 5,
+        "secondary": "None"
     },
     "Sand Attack": {
         "type": "Ground",
@@ -158,21 +177,24 @@
         "category": "Physical",
         "power": 70,
         "accuracy": 100,
-        "pp": 15
+        "pp": 15,
+        "secondary": "Not Implemented"
     },
     "Horn Attack": {
         "type": "Normal",
         "category": "Physical",
         "power": 65,
         "accuracy": 100,
-        "pp": 25
+        "pp": 25,
+        "secondary": "None"
     },
     "Fury Attack": {
         "type": "Normal",
         "category": "Physical",
         "power": 15,
         "accuracy": 85,
-        "pp": 20
+        "pp": 20,
+        "secondary": "Not Implemented"
     },
     "Horn Drill": {
         "type": "Normal",
@@ -186,42 +208,48 @@
         "category": "Physical",
         "power": 40,
         "accuracy": 100,
-        "pp": 35
+        "pp": 35,
+        "secondary": "None"
     },
     "Body Slam": {
         "type": "Normal",
         "category": "Physical",
         "power": 85,
         "accuracy": 100,
-        "pp": 15
+        "pp": 15,
+        "secondary": "Not Implemented"
     },
     "Wrap": {
         "type": "Normal",
         "category": "Physical",
         "power": 15,
         "accuracy": 90,
-        "pp": 20
+        "pp": 20,
+        "secondary": "Not Implemented"
     },
     "Take Down": {
         "type": "Normal",
         "category": "Physical",
         "power": 90,
         "accuracy": 85,
-        "pp": 20
+        "pp": 20,
+        "secondary": "Not Implemented"
     },
     "Thrash": {
         "type": "Normal",
         "category": "Physical",
         "power": 120,
         "accuracy": 100,
-        "pp": 10
+        "pp": 10,
+        "secondary": "Not Implemented"
     },
     "Double-Edge": {
         "type": "Normal",
         "category": "Physical",
         "power": 120,
         "accuracy": 100,
-        "pp": 15
+        "pp": 15,
+        "secondary": "Not Implemented"
     },
     "Tail Whip": {
         "type": "Normal",
@@ -235,14 +263,16 @@
         "category": "Physical",
         "power": 15,
         "accuracy": 100,
-        "pp": 35
+        "pp": 35,
+        "secondary": "Not Implemented"
     },
     "Pin Missile": {
         "type": "Bug",
         "category": "Physical",
         "power": 25,
         "accuracy": 95,
-        "pp": 20
+        "pp": 20,
+        "secondary": "Not Implemented"
     },
     "Leer": {
         "type": "Normal",
@@ -256,7 +286,8 @@
         "category": "Physical",
         "power": 60,
         "accuracy": 100,
-        "pp": 25
+        "pp": 25,
+        "secondary": "Not Implemented"
     },
     "Growl": {
         "type": "Normal",
@@ -298,21 +329,24 @@
         "category": "Special",
         "power": 40,
         "accuracy": 100,
-        "pp": 30
+        "pp": 30,
+        "secondary": "Not Implemented"
     },
     "Ember": {
         "type": "Fire",
         "category": "Special",
         "power": 40,
         "accuracy": 100,
-        "pp": 25
+        "pp": 25,
+        "secondary": "Not Implemented"
     },
     "Flamethrower": {
         "type": "Fire",
         "category": "Special",
         "power": 90,
         "accuracy": 100,
-        "pp": 15
+        "pp": 15,
+        "secondary": "Not Implemented"
     },
     "Mist": {
         "type": "Ice",
@@ -326,119 +360,136 @@
         "category": "Special",
         "power": 40,
         "accuracy": 100,
-        "pp": 25
+        "pp": 25,
+        "secondary": "None"
     },
     "Hydro Pump": {
         "type": "Water",
         "category": "Special",
         "power": 110,
         "accuracy": 80,
-        "pp": 5
+        "pp": 5,
+        "secondary": "None"
     },
     "Surf": {
         "type": "Water",
         "category": "Special",
         "power": 90,
         "accuracy": 100,
-        "pp": 15
+        "pp": 15,
+        "secondary": "Not Implemented"
     },
     "Ice Beam": {
         "type": "Ice",
         "category": "Special",
         "power": 90,
         "accuracy": 100,
-        "pp": 10
+        "pp": 10,
+        "secondary": "Not Implemented"
     },
     "Blizzard": {
         "type": "Ice",
         "category": "Special",
         "power": 110,
         "accuracy": 70,
-        "pp": 5
+        "pp": 5,
+        "secondary": "Not Implemented"
     },
     "Psybeam": {
         "type": "Psychic",
         "category": "Special",
         "power": 65,
         "accuracy": 100,
-        "pp": 20
+        "pp": 20,
+        "secondary": "Not Implemented"
     },
     "Bubble Beam": {
         "type": "Water",
         "category": "Special",
         "power": 65,
         "accuracy": 100,
-        "pp": 20
+        "pp": 20,
+        "secondary": "Not Implemented"
     },
     "Aurora Beam": {
         "type": "Ice",
         "category": "Special",
         "power": 65,
         "accuracy": 100,
-        "pp": 20
+        "pp": 20,
+        "secondary": "Not Implemented"
     },
     "Hyper Beam": {
         "type": "Normal",
         "category": "Special",
         "power": 150,
         "accuracy": 90,
-        "pp": 5
+        "pp": 5,
+        "secondary": "Not Implemented"
     },
     "Peck": {
         "type": "Flying",
         "category": "Physical",
         "power": 35,
         "accuracy": 100,
-        "pp": 35
+        "pp": 35,
+        "secondary": "None"
     },
     "Drill Peck": {
         "type": "Flying",
         "category": "Physical",
         "power": 80,
         "accuracy": 100,
-        "pp": 20
+        "pp": 20,
+        "secondary": "None"
     },
     "Low Kick": {
         "type": "Fighting",
         "category": "Physical",
         "power": 0,
         "accuracy": 100,
-        "pp": 20
+        "pp": 20,
+        "secondary": "Not Implemented"
     },
     "Counter": {
         "type": "Fighting",
         "category": "Physical",
         "power": 0,
         "accuracy": 100,
-        "pp": 20
+        "pp": 20,
+        "secondary": "Not Implemented"
     },
     "Seismic Toss": {
         "type": "Fighting",
         "category": "Physical",
         "power": 0,
         "accuracy": 100,
-        "pp": 20
+        "pp": 20,
+        "secondary": "Not Implemented"
     },
     "Strength": {
         "type": "Normal",
         "category": "Physical",
         "power": 80,
         "accuracy": 100,
-        "pp": 15
+        "pp": 15,
+        "secondary": "None"
     },
     "Absorb": {
         "type": "Grass",
         "category": "Special",
         "power": 20,
         "accuracy": 100,
-        "pp": 25
+        "pp": 25,
+        "secondary": "Not Implemented"
     },
     "Mega Drain": {
         "type": "Grass",
         "category": "Special",
         "power": 40,
         "accuracy": 100,
-        "pp": 15
+        "pp": 15,
+        "secondary": "Not Implemented"
     },
     "Leech Seed": {
         "type": "Grass",
@@ -459,14 +510,16 @@
         "category": "Physical",
         "power": 55,
         "accuracy": 95,
-        "pp": 25
+        "pp": 25,
+        "secondary": "Not Implemented"
     },
     "Solar Beam": {
         "type": "Grass",
         "category": "Special",
         "power": 120,
         "accuracy": 100,
-        "pp": 10
+        "pp": 10,
+        "secondary": "Not Implemented"
     },
     "Poison Powder": {
         "type": "Poison",
@@ -494,7 +547,8 @@
         "category": "Special",
         "power": 120,
         "accuracy": 100,
-        "pp": 10
+        "pp": 10,
+        "secondary": "Not Implemented"
     },
     "String Shot": {
         "type": "Bug",
@@ -508,21 +562,24 @@
         "category": "Special",
         "power": 35,
         "accuracy": 85,
-        "pp": 15
+        "pp": 15,
+        "secondary": "Not Implemented"
     },
     "Thunder Shock": {
         "type": "Electric",
         "category": "Special",
         "power": 40,
         "accuracy": 100,
-        "pp": 30
+        "pp": 30,
+        "secondary": "Not Implemented"
     },
     "Thunderbolt": {
         "type": "Electric",
         "category": "Special",
         "power": 90,
         "accuracy": 100,
-        "pp": 15
+        "pp": 15,
+        "secondary": "Not Implemented"
     },
     "Thunder Wave": {
         "type": "Electric",
@@ -536,21 +593,24 @@
         "category": "Special",
         "power": 110,
         "accuracy": 70,
-        "pp": 10
+        "pp": 10,
+        "secondary": "Not Implemented"
     },
     "Rock Throw": {
         "type": "Rock",
         "category": "Physical",
         "power": 50,
         "accuracy": 90,
-        "pp": 15
+        "pp": 15,
+        "secondary": "None"
     },
     "Earthquake": {
         "type": "Ground",
         "category": "Physical",
         "power": 100,
         "accuracy": 100,
-        "pp": 10
+        "pp": 10,
+        "secondary": "Not Implemented"
     },
     "Fissure": {
         "type": "Ground",
@@ -564,7 +624,8 @@
         "category": "Physical",
         "power": 80,
         "accuracy": 100,
-        "pp": 10
+        "pp": 10,
+        "secondary": "Not Implemented"
     },
     "Toxic": {
         "type": "Poison",
@@ -578,14 +639,16 @@
         "category": "Special",
         "power": 50,
         "accuracy": 100,
-        "pp": 25
+        "pp": 25,
+        "secondary": "Not Implemented"
     },
     "Psychic": {
         "type": "Psychic",
         "category": "Special",
         "power": 90,
         "accuracy": 100,
-        "pp": 10
+        "pp": 10,
+        "secondary": "Not Implemented"
     },
     "Hypnosis": {
         "type": "Psychic",
@@ -606,7 +669,8 @@
         "category": "Physical",
         "power": 40,
         "accuracy": 100,
-        "pp": 30
+        "pp": 30,
+        "secondary": "Not Implemented"
     },
     "Teleport": {
         "type": "Psychic",
@@ -620,7 +684,8 @@
         "category": "Special",
         "power": 0,
         "accuracy": 100,
-        "pp": 15
+        "pp": 15,
+        "secondary": "Not Implemented"
     },
     "Mimic": {
         "type": "Normal",
@@ -732,49 +797,56 @@
         "category": "Physical",
         "power": 200,
         "accuracy": 100,
-        "pp": 5
+        "pp": 5,
+        "secondary": "Not Implemented"
     },
     "Lick": {
         "type": "Ghost",
         "category": "Physical",
         "power": 30,
         "accuracy": 100,
-        "pp": 30
+        "pp": 30,
+        "secondary": "Not Implemented"
     },
     "Smog": {
         "type": "Poison",
         "category": "Special",
         "power": 30,
         "accuracy": 70,
-        "pp": 20
+        "pp": 20,
+        "secondary": "Not Implemented"
     },
     "Sludge": {
         "type": "Poison",
         "category": "Special",
         "power": 65,
         "accuracy": 100,
-        "pp": 20
+        "pp": 20,
+        "secondary": "Not Implemented"
     },
     "Fire Blast": {
         "type": "Fire",
         "category": "Special",
-        "power": 11,
-        "accuracy": 100,
-        "pp": 5
+        "power": 110,
+        "accuracy": 85,
+        "pp": 5,
+        "secondary": "Not Implemented"
     },
     "Waterfall": {
         "type": "Water",
         "category": "Physical",
         "power": 80,
         "accuracy": 100,
-        "pp": 15
+        "pp": 15,
+        "secondary": "Not Implemented"
     },
     "Swift": {
         "type": "Normal",
         "category": "Special",
         "power": 60,
         "accuracy": 0,
-        "pp": 20
+        "pp": 20,
+        "secondary": "Not Implemented"
     },
     "Amnesia": {
         "type": "Psychic",
@@ -795,7 +867,8 @@
         "category": "Physical",
         "power": 130,
         "accuracy": 90,
-        "pp": 10
+        "pp": 10,
+        "secondary": "Not Implemented"
     },
     "Glare": {
         "type": "Normal",
@@ -809,7 +882,8 @@
         "category": "Special",
         "power": 100,
         "accuracy": 100,
-        "pp": 15
+        "pp": 15,
+        "secondary": "Not Implemented"
     },
     "Poison Gas": {
         "type": "Poison",
@@ -823,14 +897,16 @@
         "category": "Physical",
         "power": 80,
         "accuracy": 100,
-        "pp": 10
+        "pp": 10,
+        "secondary": "Not Implemented"
     },
     "Sky Attack": {
         "type": "Flying",
         "category": "Physical",
         "power": 140,
         "accuracy": 90,
-        "pp": 5
+        "pp": 5,
+        "secondary": "Not Implemented"
     },
     "Transform": {
         "type": "Normal",
@@ -865,21 +941,24 @@
         "category": "Physical",
         "power": 100,
         "accuracy": 90,
-        "pp": 10
+        "pp": 10,
+        "secondary": "Not Implemented"
     },
     "Explosion": {
         "type": "Normal",
         "category": "Physical",
         "power": 250,
         "accuracy": 100,
-        "pp": 5
+        "pp": 5,
+        "secondary": "Not Implemented"
     },
     "Fury Swipes": {
         "type": "Normal",
         "category": "Physical",
         "power": 18,
         "accuracy": 80,
-        "pp": 15
+        "pp": 15,
+        "secondary": "Not Implemented"
     },
     "Rest": {
         "type": "Psychic",
@@ -893,28 +972,32 @@
         "category": "Physical",
         "power": 75,
         "accuracy": 90,
-        "pp": 10
+        "pp": 10,
+        "secondary": "Not Implemented"
     },
     "Tri Attack": {
         "type": "Normal",
         "category": "Special",
         "power": 80,
         "accuracy": 100,
-        "pp": 10
+        "pp": 10,
+        "secondary": "Not Implemented"
     },
     "Super Fang": {
         "type": "Normal",
         "category": "Physical",
         "power": 0,
         "accuracy": 90,
-        "pp": 10
+        "pp": 10,
+        "secondary": "Not Implemented"
     },
     "Slash": {
         "type": "Normal",
         "category": "Physical",
         "power": 70,
         "accuracy": 100,
-        "pp": 20
+        "pp": 20,
+        "secondary": "Not Implemented"
     },
     "Substitute": {
         "type": "Normal",
@@ -935,21 +1018,24 @@
         "category": "Physical",
         "power": 60,
         "accuracy": 100,
-        "pp": 25
+        "pp": 25,
+        "secondary": "Not Implemented"
     },
     "Flame Wheel": {
         "type": "Fire",
         "category": "Physical",
         "power": 60,
         "accuracy": 100,
-        "pp": 25
+        "pp": 25,
+        "secondary": "Not Implemented"
     },
     "Snore": {
         "type": "Normal",
         "category": "Special",
         "power": 50,
         "accuracy": 100,
-        "pp": 15
+        "pp": 15,
+        "secondary": "Not Implemented"
     },
     "Curse": {
         "type": "Ghost",
@@ -963,7 +1049,8 @@
         "category": "Physical",
         "power": 0,
         "accuracy": 100,
-        "pp": 15
+        "pp": 15,
+        "secondary": "Not Implemented"
     },
     "Cotton Spore": {
         "type": "Grass",
@@ -977,11 +1064,12 @@
         "category": "Physical",
         "power": 0,
         "accuracy": 100,
-        "pp": 15
+        "pp": 15,
+        "secondary": "Not Implemented"
     },
     "Spite": {
         "type": "Ghost",
-        "category": "Physical",
+        "category": "Status",
         "power": 0,
         "accuracy": 100,
         "pp": 10
@@ -991,7 +1079,8 @@
         "category": "Special",
         "power": 40,
         "accuracy": 100,
-        "pp": 25
+        "pp": 25,
+        "secondary": "Not Implemented"
     },
     "Protect": {
         "type": "Normal",
@@ -1005,7 +1094,8 @@
         "category": "Physical",
         "power": 40,
         "accuracy": 100,
-        "pp": 30
+        "pp": 30,
+        "secondary": "Not Implemented"
     },
     "Scary Face": {
         "type": "Normal",
@@ -1033,14 +1123,16 @@
         "category": "Special",
         "power": 90,
         "accuracy": 100,
-        "pp": 10
+        "pp": 10,
+        "secondary": "Not Implemented"
     },
     "Mud-Slap": {
         "type": "Ground",
         "category": "Special",
         "power": 20,
         "accuracy": 100,
-        "pp": 10
+        "pp": 10,
+        "secondary": "Not Implemented"
     },
     "Spikes": {
         "type": "Ground",
@@ -1054,7 +1146,8 @@
         "category": "Special",
         "power": 120,
         "accuracy": 50,
-        "pp": 5
+        "pp": 5,
+        "secondary": "Not Implemented"
     },
     "Destiny Bond": {
         "type": "Ghost",
@@ -1075,7 +1168,8 @@
         "category": "Special",
         "power": 55,
         "accuracy": 95,
-        "pp": 15
+        "pp": 15,
+        "secondary": "Not Implemented"
     },
     "Detect": {
         "type": "Fighting",
@@ -1089,7 +1183,8 @@
         "category": "Physical",
         "power": 25,
         "accuracy": 90,
-        "pp": 10
+        "pp": 10,
+        "secondary": "Not Implemented"
     },
     "Lock-On": {
         "type": "Normal",
@@ -1103,7 +1198,8 @@
         "category": "Physical",
         "power": 120,
         "accuracy": 100,
-        "pp": 10
+        "pp": 10,
+        "secondary": "Not Implemented"
     },
     "Sandstorm": {
         "type": "Rock",
@@ -1117,7 +1213,8 @@
         "category": "Special",
         "power": 75,
         "accuracy": 100,
-        "pp": 10
+        "pp": 10,
+        "secondary": "Not Implemented"
     },
     "Endure": {
         "type": "Normal",
@@ -1138,14 +1235,16 @@
         "category": "Physical",
         "power": 30,
         "accuracy": 90,
-        "pp": 20
+        "pp": 20,
+        "secondary": "Not Implemented"
     },
     "False Swipe": {
         "type": "Normal",
         "category": "Physical",
         "power": 40,
         "accuracy": 100,
-        "pp": 40
+        "pp": 40,
+        "secondary": "Not Implemented"
     },
     "Swagger": {
         "type": "Normal",
@@ -1166,21 +1265,24 @@
         "category": "Physical",
         "power": 65,
         "accuracy": 100,
-        "pp": 20
+        "pp": 20,
+        "secondary": "Not Implemented"
     },
     "Fury Cutter": {
         "type": "Bug",
         "category": "Physical",
         "power": 40,
         "accuracy": 95,
-        "pp": 20
+        "pp": 20,
+        "secondary": "Not Implemented"
     },
     "Steel Wing": {
         "type": "Steel",
         "category": "Physical",
         "power": 70,
         "accuracy": 90,
-        "pp": 25
+        "pp": 25,
+        "secondary": "Not Implemented"
     },
     "Mean Look": {
         "type": "Normal",
@@ -1215,7 +1317,8 @@
         "category": "Physical",
         "power": 0,
         "accuracy": 90,
-        "pp": 15
+        "pp": 15,
+        "secondary": "Not Implemented"
     },
     "Safeguard": {
         "type": "Normal",
@@ -1236,21 +1339,24 @@
         "category": "Physical",
         "power": 100,
         "accuracy": 50,
-        "pp": 5
+        "pp": 5,
+        "secondary": "Not Implemented"
     },
     "Megahorn": {
         "type": "Bug",
         "category": "Physical",
         "power": 120,
         "accuracy": 85,
-        "pp": 10
+        "pp": 10,
+        "secondary": "None"
     },
     "Dragon Breath": {
         "type": "Dragon",
         "category": "Special",
         "power": 60,
         "accuracy": 100,
-        "pp": 20
+        "pp": 20,
+        "secondary": "Not Implemented"
     },
     "Baton Pass": {
         "type": "Normal",
@@ -1271,7 +1377,8 @@
         "category": "Physical",
         "power": 50,
         "accuracy": 100,
-        "pp": 40
+        "pp": 40,
+        "secondary": "Not Implemented"
     },
     "Sweet Scent": {
         "type": "Normal",
@@ -1285,14 +1392,16 @@
         "category": "Physical",
         "power": 100,
         "accuracy": 75,
-        "pp": 15
+        "pp": 15,
+        "secondary": "Not Implemented"
     },
     "Metal Claw": {
         "type": "Steel",
         "category": "Physical",
         "power": 50,
         "accuracy": 95,
-        "pp": 35
+        "pp": 35,
+        "secondary": "Not Implemented"
     },
     "Morning Sun": {
         "type": "Normal",
@@ -1320,14 +1429,16 @@
         "category": "Physical",
         "power": 100,
         "accuracy": 80,
-        "pp": 5
+        "pp": 5,
+        "secondary": "Not Implemented"
     },
     "Twister": {
         "type": "Dragon",
         "category": "Special",
         "power": 40,
         "accuracy": 100,
-        "pp": 20
+        "pp": 20,
+        "secondary": "Not Implemented"
     },
     "Rain Dance": {
         "type": "Water",
@@ -1348,14 +1459,16 @@
         "category": "Physical",
         "power": 80,
         "accuracy": 100,
-        "pp": 15
+        "pp": 15,
+        "secondary": "Not Implemented"
     },
     "Mirror Coat": {
         "type": "Psychic",
         "category": "Special",
         "power": 0,
         "accuracy": 100,
-        "pp": 20
+        "pp": 20,
+        "secondary": "Not Implemented"
     },
     "Psych Up": {
         "type": "Normal",
@@ -1369,63 +1482,72 @@
         "category": "Physical",
         "power": 80,
         "accuracy": 100,
-        "pp": 5
+        "pp": 5,
+        "secondary": "Not Implemented"
     },
     "Ancient Power": {
         "type": "Rock",
         "category": "Special",
         "power": 60,
         "accuracy": 100,
-        "pp": 5
+        "pp": 5,
+        "secondary": "Not Implemented"
     },
     "Shadow Ball": {
         "type": "Ghost",
         "category": "Special",
         "power": 80,
         "accuracy": 100,
-        "pp": 15
+        "pp": 15,
+        "secondary": "Not Implemented"
     },
     "Future Sight": {
         "type": "Psychic",
         "category": "Special",
         "power": 120,
         "accuracy": 100,
-        "pp": 10
+        "pp": 10,
+        "secondary": "Not Implemented"
     },
     "Rock Smash": {
         "type": "Fighting",
         "category": "Physical",
         "power": 40,
         "accuracy": 100,
-        "pp": 15
+        "pp": 15,
+        "secondary": "Not Implemented"
     },
     "Whirlpool": {
         "type": "Water",
         "category": "Special",
         "power": 35,
         "accuracy": 85,
-        "pp": 15
+        "pp": 15,
+        "secondary": "Not Implemented"
     },
     "Beat Up": {
         "type": "Dark",
         "category": "Physical",
         "power": 0,
         "accuracy": 100,
-        "pp": 10
+        "pp": 10,
+        "secondary": "Not Implemented"
     },
     "Fake Out": {
         "type": "Normal",
         "category": "Physical",
         "power": 40,
         "accuracy": 100,
-        "pp": 10
+        "pp": 10,
+        "secondary": "Not Implemented"
     },
     "Uproar": {
         "type": "Normal",
         "category": "Special",
         "power": 90,
         "accuracy": 100,
-        "pp": 10
+        "pp": 10,
+        "secondary": "Not Implemented"
     },
     "Stockpile": {
         "type": "Normal",
@@ -1439,7 +1561,8 @@
         "category": "Special",
         "power": 0,
         "accuracy": 100,
-        "pp": 10
+        "pp": 10,
+        "secondary": "Not Implemented"
     },
     "Swallow": {
         "type": "Normal",
@@ -1453,7 +1576,8 @@
         "category": "Special",
         "power": 95,
         "accuracy": 90,
-        "pp": 10
+        "pp": 10,
+        "secondary": "Not Implemented"
     },
     "Torment": {
         "type": "Dark",
@@ -1488,14 +1612,16 @@
         "category": "Physical",
         "power": 70,
         "accuracy": 100,
-        "pp": 20
+        "pp": 20,
+        "secondary": "Not Implemented"
     },
     "Focus Punch": {
         "type": "Fighting",
         "category": "Physical",
         "power": 150,
         "accuracy": 100,
-        "pp": 20
+        "pp": 20,
+        "secondary": "Not Implemented"
     },
     "Follow Me": {
         "type": "Normal",
@@ -1558,7 +1684,8 @@
         "category": "Physical",
         "power": 120,
         "accuracy": 100,
-        "pp": 5
+        "pp": 5,
+        "secondary": "Not Implemented"
     },
     "Recycle": {
         "type": "Normal",
@@ -1572,10 +1699,11 @@
         "category": "Physical",
         "power": 75,
         "accuracy": 100,
-        "pp": 15
+        "pp": 15,
+        "secondary": "Not Implemented"
     },
     "Yawn": {
-      "type": "Normal",
+        "type": "Normal",
         "category": "Status",
         "power": 0,
         "accuracy": 0,
