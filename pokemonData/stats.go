@@ -369,12 +369,12 @@ func (p *Pokemon) CalculateStatChange(stat, stage int) int {
 }
 
 type Stats struct {
-	HP        int
-	Attack    int
-	Defense   int
-	SpAttack  int
-	SpDefense int
-	Speed     int
+	HP        int `json:"hp"`
+	Attack    int `json:"attack"`
+	Defense   int `json:"defense"`
+	SpAttack  int `json:"spAtk"`
+	SpDefense int `json:"spDef"`
+	Speed     int `json:"speed"`
 }
 
 type BattleStats struct {
