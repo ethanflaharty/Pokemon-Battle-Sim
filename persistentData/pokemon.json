@@ -118,5 +118,627 @@
         "learnset": [
             "Scratch"
         ]
+    },
+    "Squirtle": {
+        "dex": 7,
+        "type1": "Water",
+        "type2": "",
+        "baseStats": {
+            "hp": 44,
+            "attack": 48,
+            "defense": 65,
+            "spAtk": 50,
+            "spDef": 64,
+            "speed": 43
+        },
+        "abilities": [
+            "Torrent",
+            "Rain Dish"
+        ],
+        "learnset": [
+            "Tackle"
+        ]
+    },
+    "Wartortle": {
+        "dex": 8,
+        "type1": "Water",
+        "type2": "",
+        "baseStats": {
+            "hp": 59,
+            "attack": 63,
+            "defense": 80,
+            "spAtk": 65,
+            "spDef": 80,
+            "speed": 58
+        },
+        "abilities": [
+            "Torrent",
+            "Rain Dish"
+        ],
+        "learnset": [
+            "Tackle"
+        ]
+    },
+    "Blastoise": {
+        "dex": 9,
+        "type1": "Water",
+        "type2": "",
+        "baseStats": {
+            "hp": 79,
+            "attack": 83,
+            "defense": 100,
+            "spAtk": 85,
+            "spDef": 105,
+            "speed": 78
+        },
+        "abilities": [
+            "Torrent",
+            "Rain Dish"
+        ],
+        "learnset": [
+            "Tackle"
+        ]
+    },
+    "Caterpie": {
+        "dex": 10,
+        "type1": "Bug",
+        "type2": "",
+        "baseStats": {
+            "hp": 45,
+            "attack": 30,
+            "defense": 35,
+            "spAtk": 20,
+            "spDef": 20,
+            "speed": 45
+        },
+        "abilities": [
+            "Shield Dust",
+            "Run Away"
+        ],
+        "learnset": [
+            "Tackle"
+        ]
+    },
+    "Metapod": {
+        "dex": 11,
+        "type1": "Bug",
+        "type2": "",
+        "baseStats": {
+            "hp": 50,
+            "attack": 20,
+            "defense": 55,
+            "spAtk": 25,
+            "spDef": 25,
+            "speed": 30
+        },
+        "abilities": [
+            "Shed Skin"
+        ],
+        "learnset": [
+            "Harden"
+        ]
+    },
+    "Butterfree": {
+        "dex": 12,
+        "type1": "Bug",
+        "type2": "Flying",
+        "baseStats": {
+            "hp": 60,
+            "attack": 45,
+            "defense": 50,
+            "spAtk": 80,
+            "spDef": 80,
+            "speed": 70
+        },
+        "abilities": [
+            "Compound Eyes",
+            "Tinted Lens"
+        ],
+        "learnset": [
+            "Gust",
+            "Harden",
+            "Tackle"
+        ]
+    },
+    "Weedle": {
+        "dex": 13,
+        "type1": "Bug",
+        "type2": "Poison",
+        "baseStats": {
+            "hp": 40,
+            "attack": 35,
+            "defense": 30,
+            "spAtk": 20,
+            "spDef": 20,
+            "speed": 50
+        },
+        "abilities": [
+            "Shield Dust",
+            "Run Away"
+        ],
+        "learnset": [
+            "Poison Sting",
+            "String Shot"
+        ]
+    },
+    "Kakuna": {
+        "dex": 14,
+        "type1": "Bug",
+        "type2": "Poison",
+        "baseStats": {
+            "hp": 45,
+            "attack": 25,
+            "defense": 50,
+            "spAtk": 25,
+            "spDef": 25,
+            "speed": 35
+        },
+        "abilities": [
+            "Shed Skin"
+        ],
+        "learnset": [
+            "Poison Sting",
+            "String Shot",
+            "Harden"
+        ]
+    },
+    "Beedrill": {
+        "dex": 15,
+        "type1": "Bug",
+        "type2": "Poison",
+        "baseStats": {
+            "hp": 65,
+            "attack": 90,
+            "defense": 40,
+            "spAtk": 45,
+            "spDef": 80,
+            "speed": 75
+        },
+        "abilities": [
+            "Swarm",
+            "Sniper"
+        ],
+        "learnset": [
+            "Poison Sting",
+            "String Shot"
+        ]
+    },
+    "Pidgey": {
+        "dex": 16,
+        "type1": "Normal",
+        "type2": "Flying",
+        "baseStats": {
+            "hp": 40,
+            "attack": 45,
+            "defense": 40,
+            "spAtk": 35,
+            "spDef": 35,
+            "speed": 56
+        },
+        "abilities": [
+            "Tangled Feet",
+            "Big Pecks"
+        ],
+        "learnset": [
+            "Tackle",
+            "Growl"
+        ]
+    },
+    "Pidgeotto": {
+        "dex": 17,
+        "type1": "Normal",
+        "type2": "Flying",
+        "baseStats": {
+            "hp": 63,
+            "attack": 60,
+            "defense": 55,
+            "spAtk": 50,
+            "spDef": 50,
+            "speed": 71
+        },
+        "abilities": [
+            "Tangled Feet",
+            "Big Pecks"
+        ],
+        "learnset": [
+            "Tackle",
+            "Growl"
+        ]
+    },
+    "Pidgeot": {
+        "dex": 18,
+        "type1": "Normal",
+        "type2": "Flying",
+        "baseStats": {
+            "hp": 83,
+            "attack": 80,
+            "defense": 75,
+            "spAtk": 70,
+            "spDef": 70,
+            "speed": 101
+        },
+        "abilities": [
+            "Tangled Feet",
+            "Big Pecks"
+        ],
+        "learnset": [
+            "Tackle",
+            "Growl"
+        ]
+    },
+    "Rattata": {
+        "dex": 19,
+        "type1": "Normal",
+        "type2": "",
+        "baseStats": {
+            "hp": 30,
+            "attack": 56,
+            "defense": 35,
+            "spAtk": 25,
+            "spDef": 35,
+            "speed": 72
+        },
+        "abilities": [
+            "Run Away",
+            "Guts",
+            "Hustle"
+        ],
+        "learnset": [
+            "Tackle"
+        ]
+    },
+    "Rattata-Alolan": {
+        "dex": 19,
+        "type1": "Dark",
+        "type2": "Normal",
+        "baseStats": {
+            "hp": 30,
+            "attack": 56,
+            "defense": 35,
+            "spAtk": 25,
+            "spDef": 35,
+            "speed": 72
+        },
+        "abilities": [
+            "Gluttony",
+            "Hustle",
+            "Thick Fat"
+        ],
+        "learnset": [
+            "Tackle"
+        ]
+    },
+    "Raticate": {
+        "dex": 20,
+        "type1": "Normal",
+        "type2": "",
+        "baseStats": {
+            "hp": 55,
+            "attack": 81,
+            "defense": 60,
+            "spAtk": 50,
+            "spDef": 70,
+            "speed": 97
+        },
+        "abilities": [
+            "Run Away",
+            "Guts",
+            "Hustle"
+        ],
+        "learnset": [
+            "Scary Face",
+            "Swords Dance",
+            "Tackle"
+        ]
+    },
+    "Raticate-Alolan": {
+        "dex": 20,
+        "type1": "Dark",
+        "type2": "Normal",
+        "baseStats": {
+            "hp": 75,
+            "attack": 71,
+            "defense": 70,
+            "spAtk": 40,
+            "spDef": 80,
+            "speed": 77
+        },
+        "abilities": [
+            "Gluttony",
+            "Hustle",
+            "Thick Fat"
+        ],
+        "learnset": [
+            "Scary Face",
+            "Swords Dance",
+            "Tackle"
+        ]
+    },
+    "Spearow": {
+        "dex": 21,
+        "type1": "Normal",
+        "type2": "Flying",
+        "baseStats": {
+            "hp": 40,
+            "attack": 60,
+            "defense": 30,
+            "spAtk": 31,
+            "spDef": 31,
+            "speed": 70
+        },
+        "abilities": [
+            "Keen Eye",
+            "Sniper"
+        ],
+        "learnset": [
+            "Peck"
+        ]
+    },
+    "Fearow": {
+        "dex": 22,
+        "type1": "Normal",
+        "type2": "Flying",
+        "baseStats": {
+            "hp": 65,
+            "attack": 90,
+            "defense": 65,
+            "spAtk": 61,
+            "spDef": 61,
+            "speed": 100
+        },
+        "abilities": [
+            "Keen Eye",
+            "Sniper"
+        ],
+        "learnset": [
+            "Drill Run",
+            "Pluck",
+            "Peck"
+        ]
+    },
+    "Ekans": {
+        "dex": 23,
+        "type1": "Poison",
+        "type2": "",
+        "baseStats": {
+            "hp": 35,
+            "attack": 60,
+            "defense": 44,
+            "spAtk": 40,
+            "spDef": 54,
+            "speed": 55
+        },
+        "abilities": [
+            "Intimidate",
+            "Shed Skin",
+            "Unnerve"
+        ],
+        "learnset": [
+            "Wrap"
+        ]
+    },
+    "Arbok": {
+        "dex": 24,
+        "type1": "Poison",
+        "type2": "",
+        "baseStats": {
+            "hp": 60,
+            "attack": 95,
+            "defense": 69,
+            "spAtk": 65,
+            "spDef": 79,
+            "speed": 80
+        },
+        "abilities": [
+            "Intimidate",
+            "Shed Skin",
+            "Unnerve"
+        ],
+        "learnset": [
+            "Wrap",
+            "Poison Sting"
+        ]
+    },
+    "Pikachu": {
+        "dex": 25,
+        "type1": "Electric",
+        "type2": "",
+        "baseStats": {
+            "hp": 35,
+            "attack": 55,
+            "defense": 40,
+            "spAtk": 50,
+            "spDef": 50,
+            "speed": 90
+        },
+        "abilities": [
+            "Static",
+            "Lightning Rod"
+        ],
+        "learnset": [
+            "Play Nice",
+            "Sweet Kiss",
+            "Nuzzle",
+            "Nasty Plot",
+            "Charm",
+            "Thunder Shock"
+        ]
+    },
+    "Raichu": {
+        "dex": 26,
+        "type1": "Electric",
+        "type2": "",
+        "baseStats": {
+            "hp": 60,
+            "attack": 90,
+            "defense": 55,
+            "spAtk": 90,
+            "spDef": 80,
+            "speed": 110
+        },
+        "abilities": [
+            "Static",
+            "Lightning Rod"
+        ],
+        "learnset": [
+            "Play Nice",
+            "Sweet Kiss",
+            "Nuzzle",
+            "Nasty Plot",
+            "Charm",
+            "Thunder Wave",
+            "Double Team",
+            "Electro Ball"
+        ]
+    },
+    "Raichu-Alolan": {
+        "dex": 26,
+        "type1": "Electric",
+        "type2": "Psychic",
+        "baseStats": {
+            "hp": 60,
+            "attack": 85,
+            "defense": 50,
+            "spAtk": 95,
+            "spDef": 85,
+            "speed": 110
+        },
+        "abilities": [
+            "Surge Surfer"
+        ],
+        "learnset": [
+            "Play Nice",
+            "Sweet Kiss",
+            "Nuzzle",
+            "Nasty Plot",
+            "Charm",
+            "Thunder Wave",
+            "Double Team",
+            "Electro Ball"
+        ]
+    },
+    "Sandshrew": {
+        "dex": 27,
+        "type1": "Ground",
+        "type2": "",
+        "baseStats": {
+            "hp": 50,
+            "attack": 75,
+            "defense": 85,
+            "spAtk": 20,
+            "spDef": 30,
+            "speed": 40
+        },
+        "abilities": [
+            "Sand Veil",
+            "Sand Rush"
+        ],
+        "learnset": [
+            "Scratch"
+        ]
+    },
+    "Sandshrew-Alolan": {
+        "dex": 27,
+        "type1": "Ice",
+        "type2": "Steel",
+        "baseStats": {
+            "hp": 50,
+            "attack": 75,
+            "defense": 90,
+            "spAtk": 10,
+            "spDef": 35,
+            "speed": 40
+        },
+        "abilities": [
+            "Snow Cloak",
+            "Slush Rush"
+        ],
+        "learnset": [
+            "Scratch"
+        ]
+    },
+    "Sandslash": {
+        "dex": 28,
+        "type1": "Ground",
+        "type2": "",
+        "baseStats": {
+            "hp": 75,
+            "attack": 100,
+            "defense": 110,
+            "spAtk": 45,
+            "spDef": 55,
+            "speed": 65
+        },
+        "abilities": [
+            "Sand Veil",
+            "Sand Rush"
+        ],
+        "learnset": [
+            "Crush Claw"
+        ]
+    },
+    "Sandslash-Alolan": {
+        "dex": 28,
+        "type1": "Ice",
+        "type2": "Steel",
+        "baseStats": {
+            "hp": 75,
+            "attack": 100,
+            "defense": 120,
+            "spAtk": 25,
+            "spDef": 65,
+            "speed": 65
+        },
+        "abilities": [
+            "Snow Cloak",
+            "Slush Rush"
+        ],
+        "learnset": [
+            "Icicle Crash"
+        ]
+    },
+    "Nidoran-Female": {
+        "dex": 29,
+        "type1": "Poison",
+        "type2": "",
+        "baseStats": {
+            "hp": 55,
+            "attack": 47,
+            "defense": 52,
+            "spAtk": 40,
+            "spDef": 40,
+            "speed": 41
+        },
+        "abilities": [
+            "Poison Point",
+            "Rivalry",
+            "Hustle"
+        ],
+        "learnset": [
+            "Growl",
+            "Poison Sting"
+        ]
+    },
+    "Nidorina": {
+        "dex": 30,
+        "type1": "Poison",
+        "type2": "",
+        "baseStats": {
+            "hp": 70,
+            "attack": 62,
+            "defense": 67,
+            "spAtk": 55,
+            "spDef": 55,
+            "speed": 56
+        },
+        "abilities": [
+            "Poison Point",
+            "Rivalry",
+            "Hustle"
+        ],
+        "learnset": [
+            "Growl",
+            "Poison Sting"
+        ]
     }
 }

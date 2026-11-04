@@ -8,7 +8,6 @@ import (
 
 func (p *Pokemon) ApplyStatus(status StatusCondition, bs battledata.BattleState) bool {
 	if p.Status != None {
-		fmt.Printf("It doesn't affect %v\n", p.Name)
 		return false
 	}
 

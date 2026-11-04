@@ -49,13 +49,6 @@ func main() {
 		ember,
 	}
 
-	ally.Level = 50
-	ally.Moves = []pokemondata.Move{
-		scratch,
-		ember,
-		pound,
-	}
-
 	if !wild.ValidateEVs() {
 		log.Fatalf("%v has invalid EVs\n", wild.Name)
 	}
@@ -65,6 +58,13 @@ func main() {
 	wild.HP = pokemondata.HPForumla(wild)
 	wild.MaxHP = wild.HP
 	wild.CalculateBattleStats()
+
+	ally.Level = 50
+	ally.Moves = []pokemondata.Move{
+		scratch,
+		ember,
+		pound,
+	}
 
 	if !ally.ValidateEVs() {
 		log.Fatalf("%v has invalid EVs\n", ally.Name)
