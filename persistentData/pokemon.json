@@ -740,5 +740,833 @@
             "Growl",
             "Poison Sting"
         ]
+    },
+    "Nidoqueen": {
+        "dex": 31,
+        "type1": "Poison",
+        "type2": "Ground",
+        "baseStats": {
+            "hp": 90,
+            "attack": 92,
+            "defense": 87,
+            "spAtk": 75,
+            "spDef": 85,
+            "speed": 26
+        },
+        "abilities": [
+            "Poison Point",
+            "Rivalry",
+            "Sheer Force"
+        ],
+        "learnset": [
+            "Superpower"
+        ]
+    },
+    "Nidoran-Male": {
+        "dex": 32,
+        "type1": "Poison",
+        "type2": "",
+        "baseStats": {
+            "hp": 46,
+            "attack": 57,
+            "defense": 40,
+            "spAtk": 40,
+            "spDef": 40,
+            "speed": 50
+        },
+        "abilities": [
+            "Poison Point",
+            "Rivalry",
+            "Hustle"
+        ],
+        "learnset": [
+            "Leer",
+            "Poison Sting"
+        ]
+    },
+    "Nidorino": {
+        "dex": 33,
+        "type1": "Poison",
+        "type2": "",
+        "baseStats": {
+            "hp": 61,
+            "attack": 72,
+            "defense": 57,
+            "spAtk": 55,
+            "spDef": 55,
+            "speed": 65
+        },
+        "abilities": [
+            "Poison Point",
+            "Rivalry",
+            "Hustle"
+        ],
+        "learnset": [
+            "Leer",
+            "Poison Sting"
+        ]
+    },
+    "Nidoking": {
+        "dex": 34,
+        "type1": "Poison",
+        "type2": "Ground",
+        "baseStats": {
+            "hp": 81,
+            "attack": 102,
+            "defense": 77,
+            "spAtk": 85,
+            "spDef": 75,
+            "speed": 85
+        },
+        "abilities": [
+            "Poison Point",
+            "Rivalry",
+            "Sheer Force"
+        ],
+        "learnset": [
+            "Megahorn"
+        ]
+    },
+    "Clefairy": {
+        "dex": 35,
+        "type1": "Fairy",
+        "type2": "",
+        "baseStats": {
+            "hp": 70,
+            "attack": 45,
+            "defense": 48,
+            "spAtk": 60,
+            "spDef": 65,
+            "speed": 35
+        },
+        "abilities": [
+            "Cute Charm",
+            "Magic Guard",
+            "Friend Guard"
+        ],
+        "learnset": [
+            "Sing",
+            "Sweet Kiss",
+            "Disarming Voice"
+        ]
+    },
+    "Clefable": {
+        "dex": 36,
+        "type1": "Fairy",
+        "type2": "",
+        "baseStats": {
+            "hp": 95,
+            "attack": 70,
+            "defense": 73,
+            "spAtk": 95,
+            "spDef": 90,
+            "speed": 60
+        },
+        "abilities": [
+            "Cute Charm",
+            "Magic Guard",
+            "Unaware"
+        ],
+        "learnset": [
+            "Metronome",
+            "Meteor Mash"
+        ]
+    },
+    "Vulpix": {
+        "dex": 37,
+        "type1": "Fire",
+        "type2": "",
+        "baseStats": {
+            "hp": 38,
+            "attack": 41,
+            "defense": 40,
+            "spAtk": 50,
+            "spDef": 65,
+            "speed": 65
+        },
+        "abilities": [
+            "Flash Fire",
+            "Drought"
+        ],
+        "learnset": [
+            "Ember"
+        ]
+    },
+    "Vulpix-Alolan": {
+        "dex": 37,
+        "type1": "Ice",
+        "type2": "",
+        "baseStats": {
+            "hp": 38,
+            "attack": 41,
+            "defense": 40,
+            "spAtk": 50,
+            "spDef": 65,
+            "speed": 65
+        },
+        "abilities": [
+            "Snow Cloak",
+            "Snow Warning"
+        ],
+        "learnset": [
+            "Powder Snow"
+        ]
+    },
+    "Ninetales": {
+        "dex": 38,
+        "type1": "Fire",
+        "type2": "",
+        "baseStats": {
+            "hp": 73,
+            "attack": 76,
+            "defense": 75,
+            "spAtk": 81,
+            "spDef": 100,
+            "speed": 100
+        },
+        "abilities": [
+            "Flash Fire",
+            "Drought"
+        ],
+        "learnset": [
+            "Growl",
+            "Poison Sting"
+        ]
+    },
+    "Ninetales-Alolan": {
+        "dex": 38,
+        "type1": "Ice",
+        "type2": "Fairy",
+        "baseStats": {
+            "hp": 73,
+            "attack": 67,
+            "defense": 75,
+            "spAtk": 81,
+            "spDef": 100,
+            "speed": 109
+        },
+        "abilities": [
+            "Snow Cloak",
+            "Snow Warning"
+        ],
+        "learnset": [
+            "Growl",
+            "Poison Sting"
+        ]
+    },
+    "Jigglypuff": {
+        "dex": 39,
+        "type1": "Normal",
+        "type2": "Fairy",
+        "baseStats": {
+            "hp": 115,
+            "attack": 45,
+            "defense": 20,
+            "spAtk": 45,
+            "spDef": 25,
+            "speed": 20
+        },
+        "abilities": [
+            "Cute Charm",
+            "Competitive",
+            "Friend Guard"
+        ],
+        "learnset": [
+            "Sweet Kiss",
+            "Disarming Voice"
+        ]
+    },
+    "Wigglytuff": {
+        "dex": 40,
+        "type1": "Normal",
+        "type2": "Fairy",
+        "baseStats": {
+            "hp": 140,
+            "attack": 70,
+            "defense": 45,
+            "spAtk": 85,
+            "spDef": 50,
+            "speed": 45
+        },
+        "abilities": [
+            "Cute Charm",
+            "Competitive",
+            "Frisk"
+        ],
+        "learnset": [
+            "Sweet Kiss",
+            "Disarming Voice"
+        ]
+    },
+    "Zubat": {
+        "dex": 41,
+        "type1": "Poison",
+        "type2": "Flying",
+        "baseStats": {
+            "hp": 40,
+            "attack": 45,
+            "defense": 35,
+            "spAtk": 30,
+            "spDef": 40,
+            "speed": 55
+        },
+        "abilities": [
+            "Inner Focus",
+            "Infiltrator"
+        ],
+        "learnset": [
+            "Supersonic",
+            "Absorb"
+        ]
+    },
+    "Golbat": {
+        "dex": 42,
+        "type1": "Poison",
+        "type2": "Flying",
+        "baseStats": {
+            "hp": 75,
+            "attack": 80,
+            "defense": 70,
+            "spAtk": 65,
+            "spDef": 75,
+            "speed": 90
+        },
+        "abilities": [
+            "Inner Focus",
+            "Infiltrator"
+        ],
+        "learnset": [
+            "Supersonic",
+            "Absorb"
+        ]
+    },
+    "Oddish": {
+        "dex": 43,
+        "type1": "Grass",
+        "type2": "Poison",
+        "baseStats": {
+            "hp": 45,
+            "attack": 50,
+            "defense": 55,
+            "spAtk": 75,
+            "spDef": 65,
+            "speed": 30
+        },
+        "abilities": [
+            "Chlorophyll",
+            "Run Away"
+        ],
+        "learnset": [
+            "Absorb"
+        ]
+    },
+    "Gloom": {
+        "dex": 44,
+        "type1": "Grass",
+        "type2": "Poison",
+        "baseStats": {
+            "hp": 60,
+            "attack": 65,
+            "defense": 70,
+            "spAtk": 85,
+            "spDef": 75,
+            "speed": 40
+        },
+        "abilities": [
+            "Chlorophyll",
+            "Stench"
+        ],
+        "learnset": [
+            "Absorb"
+        ]
+    },
+    "Vileplume": {
+        "dex": 45,
+        "type1": "Grass",
+        "type2": "Poison",
+        "baseStats": {
+            "hp": 75,
+            "attack": 80,
+            "defense": 85,
+            "spAtk": 110,
+            "spDef": 90,
+            "speed": 50
+        },
+        "abilities": [
+            "Chlorophyll",
+            "Effect Spore"
+        ],
+        "learnset": [
+            "Mega Drain"
+        ]
+    },
+    "Paras": {
+        "dex": 46,
+        "type1": "Bug",
+        "type2": "Grass",
+        "baseStats": {
+            "hp": 35,
+            "attack": 70,
+            "defense": 55,
+            "spAtk": 45,
+            "spDef": 55,
+            "speed": 25
+        },
+        "abilities": [
+            "Effect Spore",
+            "Dry Skin",
+            "Damp"
+        ],
+        "learnset": [
+            "Scratch"
+        ]
+    },
+    "Parasect": {
+        "dex": 47,
+        "type1": "Bug",
+        "type2": "Grass",
+        "baseStats": {
+            "hp": 60,
+            "attack": 95,
+            "defense": 80,
+            "spAtk": 60,
+            "spDef": 80,
+            "speed": 30
+        },
+        "abilities": [
+            "Effect Spore",
+            "Dry Skin",
+            "Damp"
+        ],
+        "learnset": [
+            "Cross Poison"
+        ]
+    },
+    "Venonat": {
+        "dex": 48,
+        "type1": "Bug",
+        "type2": "Poison",
+        "baseStats": {
+            "hp": 60,
+            "attack": 55,
+            "defense": 50,
+            "spAtk": 40,
+            "spDef": 55,
+            "speed": 45
+        },
+        "abilities": [
+            "Compound Eyes",
+            "Tinted Lens",
+            "Run Away"
+        ],
+        "learnset": [
+            "Tackle"
+        ]
+    },
+    "Venomoth": {
+        "dex": 49,
+        "type1": "Bug",
+        "type2": "Poison",
+        "baseStats": {
+            "hp": 70,
+            "attack": 65,
+            "defense": 60,
+            "spAtk": 90,
+            "spDef": 75,
+            "speed": 90
+        },
+        "abilities": [
+            "Shield Dust",
+            "Tinted Lens",
+            "Wonder Skin"
+        ],
+        "learnset": [
+            "Quiver Dance",
+            "Tackle"
+        ]
+    },
+    "Diglett": {
+        "dex": 50,
+        "type1": "Ground",
+        "type2": "",
+        "baseStats": {
+            "hp": 10,
+            "attack": 55,
+            "defense": 25,
+            "spAtk": 35,
+            "spDef": 45,
+            "speed": 95
+        },
+        "abilities": [
+            "Sand Veil",
+            "Arena Trap",
+            "Sand Force"
+        ],
+        "learnset": [
+            "Sand Attack",
+            "Scratch"
+        ]
+    },
+    "Diglett-Alolan": {
+        "dex": 50,
+        "type1": "Ground",
+        "type2": "Steel",
+        "baseStats": {
+            "hp": 10,
+            "attack": 55,
+            "defense": 30,
+            "spAtk": 35,
+            "spDef": 45,
+            "speed": 90
+        },
+        "abilities": [
+            "Sand Veil",
+            "Tangling Hair",
+            "Sand Force"
+        ],
+        "learnset": [
+            "Sand Attack",
+            "Metal Claw"
+        ]
+    },
+    "Dugtrio": {
+        "dex": 51,
+        "type1": "Ground",
+        "type2": "",
+        "baseStats": {
+            "hp": 35,
+            "attack": 100,
+            "defense": 50,
+            "spAtk": 50,
+            "spDef": 70,
+            "speed": 120
+        },
+        "abilities": [
+            "Sand Veil",
+            "Arena Trap",
+            "Sand Force"
+        ],
+        "learnset": [
+            "Night Slash"
+        ]
+    },
+    "Dugtrio-Alolan": {
+        "dex": 51,
+        "type1": "Ground",
+        "type2": "Steel",
+        "baseStats": {
+            "hp": 35,
+            "attack": 100,
+            "defense": 60,
+            "spAtk": 50,
+            "spDef": 70,
+            "speed": 110
+        },
+        "abilities": [
+            "Sand Veil",
+            "Tangling Hair",
+            "Sand Force"
+        ],
+        "learnset": [
+            "Night Slash"
+        ]
+    },
+    "Meowth": {
+        "dex": 52,
+        "type1": "Normal",
+        "type2": "",
+        "baseStats": {
+            "hp": 40,
+            "attack": 45,
+            "defense": 35,
+            "spAtk": 40,
+            "spDef": 40,
+            "speed": 90
+        },
+        "abilities": [
+            "Pickup",
+            "Technician",
+            "Unnerve"
+        ],
+        "learnset": [
+            "Fake Out"
+        ]
+    },
+    "Meowth-Alolan": {
+        "dex": 52,
+        "type1": "Dark",
+        "type2": "",
+        "baseStats": {
+            "hp": 40,
+            "attack": 35,
+            "defense": 35,
+            "spAtk": 50,
+            "spDef": 40,
+            "speed": 90
+        },
+        "abilities": [
+            "Pickup",
+            "Technician",
+            "Rattled"
+        ],
+        "learnset": [
+            "Fake Out"
+        ]
+    },
+    "Meowth-Galarian": {
+        "dex": 52,
+        "type1": "Steel",
+        "type2": "",
+        "baseStats": {
+            "hp": 50,
+            "attack": 65,
+            "defense": 55,
+            "spAtk": 40,
+            "spDef": 40,
+            "speed": 40
+        },
+        "abilities": [
+            "Pickup",
+            "Tough Claws",
+            "Unnerve"
+        ],
+        "learnset": [
+            "Fake Out"
+        ]
+    },
+    "Persian": {
+        "dex": 53,
+        "type1": "Normal",
+        "type2": "",
+        "baseStats": {
+            "hp": 65,
+            "attack": 70,
+            "defense": 60,
+            "spAtk": 65,
+            "spDef": 65,
+            "speed": 115
+        },
+        "abilities": [
+            "Limber",
+            "Technician",
+            "Unnerve"
+        ],
+        "learnset": [
+            "Switcheroo",
+            "Fake Out"
+        ]
+    },
+    "Persian-Alolan": {
+        "dex": 53,
+        "type1": "Ground",
+        "type2": "",
+        "baseStats": {
+            "hp": 65,
+            "attack": 60,
+            "defense": 60,
+            "spAtk": 75,
+            "spDef": 65,
+            "speed": 115
+        },
+        "abilities": [
+            "Fur Coat",
+            "Technician",
+            "Rattled"
+        ],
+        "learnset": [
+            "Quash",
+            "Switcheroo",
+            "Fake Out"
+        ]
+    },
+    "Psyduck": {
+        "dex": 54,
+        "type1": "Water",
+        "type2": "",
+        "baseStats": {
+            "hp": 50,
+            "attack": 52,
+            "defense": 48,
+            "spAtk": 65,
+            "spDef": 50,
+            "speed": 55
+        },
+        "abilities": [
+            "Damp",
+            "Cloud Nine",
+            "Swift Swim"
+        ],
+        "learnset": [
+            "Scratch"
+        ]
+    },
+    "Golduck": {
+        "dex": 55,
+        "type1": "Water",
+        "type2": "",
+        "baseStats": {
+            "hp": 80,
+            "attack": 82,
+            "defense": 78,
+            "spAtk": 95,
+            "spDef": 80,
+            "speed": 85
+        },
+        "abilities": [
+            "Damp",
+            "Cloud Nine",
+            "Swift Swim"
+        ],
+        "learnset": [
+            "Aqua Jet"
+        ]
+    },
+    "Mankey": {
+        "dex": 56,
+        "type1": "Fighting",
+        "type2": "",
+        "baseStats": {
+            "hp": 40,
+            "attack": 80,
+            "defense": 35,
+            "spAtk": 35,
+            "spDef": 45,
+            "speed": 70
+        },
+        "abilities": [
+            "Vital Spirit",
+            "Anger Point",
+            "Defiant"
+        ],
+        "learnset": [
+            "Covet"
+        ]
+    },
+    "Primeape": {
+        "dex": 57,
+        "type1": "Fighting",
+        "type2": "",
+        "baseStats": {
+            "hp": 65,
+            "attack": 105,
+            "defense": 60,
+            "spAtk": 60,
+            "spDef": 70,
+            "speed": 95
+        },
+        "abilities": [
+            "Vital Spirit",
+            "Anger Point",
+            "Defiant"
+        ],
+        "learnset": [
+            "Fling",
+            "Scratch"
+        ]
+    },
+    "Growlithe": {
+        "dex": 58,
+        "type1": "Fire",
+        "type2": "",
+        "baseStats": {
+            "hp": 55,
+            "attack": 70,
+            "defense": 45,
+            "spAtk": 70,
+            "spDef": 50,
+            "speed": 60
+        },
+        "abilities": [
+            "Intimidate",
+            "Flash Fire",
+            "Justified"
+        ],
+        "learnset": [
+            "Ember"
+        ]
+    },
+    "Growlithe-Hisuian": {
+        "dex": 58,
+        "type1": "Fire",
+        "type2": "Rock",
+        "baseStats": {
+            "hp": 60,
+            "attack": 75,
+            "defense": 45,
+            "spAtk": 65,
+            "spDef": 50,
+            "speed": 55
+        },
+        "abilities": [
+            "Intimidate",
+            "Flash Fire",
+            "Rock Head"
+        ],
+        "learnset": [
+            "Ember"
+        ]
+    },
+    "Arcanine": {
+        "dex": 59,
+        "type1": "Fire",
+        "type2": "",
+        "baseStats": {
+            "hp": 90,
+            "attack": 110,
+            "defense": 80,
+            "spAtk": 100,
+            "spDef": 80,
+            "speed": 95
+        },
+        "abilities": [
+            "Intimidate",
+            "Flash Fire",
+            "Justified"
+        ],
+        "learnset": [
+            "Flame Wheel"
+        ]
+    },
+    "Arcanine-Hisuian": {
+        "dex": 59,
+        "type1": "Fire",
+        "type2": "Rock",
+        "baseStats": {
+            "hp": 95,
+            "attack": 115,
+            "defense": 80,
+            "spAtk": 95,
+            "spDef": 80,
+            "speed": 90
+        },
+        "abilities": [
+            "Intimidate",
+            "Flash Fire",
+            "Rock Head"
+        ],
+        "learnset": [
+            "Flame Wheel"
+        ]
+    },
+    "Poliwag": {
+        "dex": 60,
+        "type1": "Water",
+        "type2": "",
+        "baseStats": {
+            "hp": 40,
+            "attack": 50,
+            "defense": 40,
+            "spAtk": 40,
+            "spDef": 40,
+            "speed": 90
+        },
+        "abilities": [
+            "Water Absorb",
+            "Damp",
+            "Swift Swim"
+        ],
+        "learnset": [
+            "Water Gun"
+        ]
     }
 }
