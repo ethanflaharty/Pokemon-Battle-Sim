@@ -1568,5 +1568,1184 @@
         "learnset": [
             "Water Gun"
         ]
+    },
+    "Poliwhirl": {
+        "dex": 61,
+        "type1": "Water",
+        "type2": "",
+        "baseStats": {
+            "hp": 65,
+            "attack": 65,
+            "defense": 65,
+            "spAtk": 50,
+            "spDef": 50,
+            "speed": 90
+        },
+        "abilities": [
+            "Water Absorb",
+            "Damp",
+            "Swift Swim"
+        ],
+        "learnset": [
+            "Water Gun"
+        ]
+    },
+    "Poliwrath": {
+        "dex": 62,
+        "type1": "Water",
+        "type2": "Fighting",
+        "baseStats": {
+            "hp": 90,
+            "attack": 95,
+            "defense": 95,
+            "spAtk": 70,
+            "spDef": 90,
+            "speed": 70
+        },
+        "abilities": [
+            "Water Absorb",
+            "Damp",
+            "Swift Swim"
+        ],
+        "learnset": [
+            "Bubble Beam"
+        ]
+    },
+    "Abra": {
+        "dex": 63,
+        "type1": "Psychic",
+        "type2": "",
+        "baseStats": {
+            "hp": 25,
+            "attack": 20,
+            "defense": 15,
+            "spAtk": 105,
+            "spDef": 55,
+            "speed": 90
+        },
+        "abilities": [
+            "Synchronize",
+            "Inner Focus",
+            "Magic Guard"
+        ],
+        "learnset": [
+            "Teleport"
+        ]
+    },
+    "Kadabra": {
+        "dex": 64,
+        "type1": "Psychic",
+        "type2": "",
+        "baseStats": {
+            "hp": 40,
+            "attack": 35,
+            "defense": 30,
+            "spAtk": 120,
+            "spDef": 70,
+            "speed": 105
+        },
+        "abilities": [
+            "Synchronize",
+            "Inner Focus",
+            "Magic Guard"
+        ],
+        "learnset": [
+            "Confusion"
+        ]
+    },
+    "Alakazam": {
+        "dex": 65,
+        "type1": "Psychic",
+        "type2": "",
+        "baseStats": {
+            "hp": 55,
+            "attack": 50,
+            "defense": 45,
+            "spAtk": 135,
+            "spDef": 95,
+            "speed": 120
+        },
+        "abilities": [
+            "Synchronize",
+            "Inner Focus",
+            "Magic Guard"
+        ],
+        "learnset": [
+            "Confusion"
+        ]
+    },
+    "Machop": {
+        "dex": 66,
+        "type1": "Fighting",
+        "type2": "",
+        "baseStats": {
+            "hp": 70,
+            "attack": 80,
+            "defense": 50,
+            "spAtk": 35,
+            "spDef": 35,
+            "speed": 35
+        },
+        "abilities": [
+            "Guts",
+            "No Guard",
+            "Steadfast"
+        ],
+        "learnset": [
+            "Leer",
+            "Rock Smash"
+        ]
+    },
+    "Machoke": {
+        "dex": 67,
+        "type1": "Fighting",
+        "type2": "",
+        "baseStats": {
+            "hp": 80,
+            "attack": 100,
+            "defense": 70,
+            "spAtk": 50,
+            "spDef": 60,
+            "speed": 45
+        },
+        "abilities": [
+            "Guts",
+            "No Guard",
+            "Steadfast"
+        ],
+        "learnset": [
+            "Leer",
+            "Rock Smash"
+        ]
+    },
+    "Machamp": {
+        "dex": 68,
+        "type1": "Fighting",
+        "type2": "",
+        "baseStats": {
+            "hp": 90,
+            "attack": 130,
+            "defense": 80,
+            "spAtk": 65,
+            "spDef": 85,
+            "speed": 55
+        },
+        "abilities": [
+            "Guts",
+            "No Guard",
+            "Steadfast"
+        ],
+        "learnset": [
+            "Leer",
+            "Rock Smash"
+        ]
+    },
+    "Bellsprout": {
+        "dex": 69,
+        "type1": "Grass",
+        "type2": "Poison",
+        "baseStats": {
+            "hp": 50,
+            "attack": 75,
+            "defense": 35,
+            "spAtk": 70,
+            "spDef": 30,
+            "speed": 40
+        },
+        "abilities": [
+            "Chlorophyll",
+            "Gluttony"
+        ],
+        "learnset": [
+            "Vine Whip"
+        ]
+    },
+    "Weepinbell": {
+        "dex": 70,
+        "type1": "Grass",
+        "type2": "Poison",
+        "baseStats": {
+            "hp": 65,
+            "attack": 90,
+            "defense": 50,
+            "spAtk": 85,
+            "spDef": 45,
+            "speed": 55
+        },
+        "abilities": [
+            "Chlorophyll",
+            "Gluttony"
+        ],
+        "learnset": [
+            "Vine Whip"
+        ]
+    },
+    "Victreebel": {
+        "dex": 71,
+        "type1": "Grass",
+        "type2": "Poison",
+        "baseStats": {
+            "hp": 80,
+            "attack": 105,
+            "defense": 65,
+            "spAtk": 100,
+            "spDef": 70,
+            "speed": 70
+        },
+        "abilities": [
+            "Chlorophyll",
+            "Gluttony"
+        ],
+        "learnset": [
+            "Vine Whip"
+        ]
+    },
+    "Tentacool": {
+        "dex": 72,
+        "type1": "Water",
+        "type2": "Poison",
+        "baseStats": {
+            "hp": 40,
+            "attack": 40,
+            "defense": 35,
+            "spAtk": 50,
+            "spDef": 100,
+            "speed": 70
+        },
+        "abilities": [
+            "Clear Body",
+            "Liquid Ooze",
+            "Rain Dish"
+        ],
+        "learnset": [
+            "Poison Sting"
+        ]
+    },
+    "Tentacruel": {
+        "dex": 73,
+        "type1": "Water",
+        "type2": "Poison",
+        "baseStats": {
+            "hp": 80,
+            "attack": 70,
+            "defense": 65,
+            "spAtk": 80,
+            "spDef": 120,
+            "speed": 100
+        },
+        "abilities": [
+            "Clear Body",
+            "Liquid Ooze",
+            "Rain Dish"
+        ],
+        "learnset": [
+            "Reflect Type",
+            "Poison Sting"
+        ]
+    },
+    "Geodude": {
+        "dex": 74,
+        "type1": "Rock",
+        "type2": "Ground",
+        "baseStats": {
+            "hp": 40,
+            "attack": 80,
+            "defense": 100,
+            "spAtk": 30,
+            "spDef": 30,
+            "speed": 20
+        },
+        "abilities": [
+            "Rock Head",
+            "Sturdy",
+            "Sand Veil"
+        ],
+        "learnset": [
+            "Tackle"
+        ]
+    },
+    "Geodude-Alolan": {
+        "dex": 74,
+        "type1": "Rock",
+        "type2": "Electric",
+        "baseStats": {
+            "hp": 40,
+            "attack": 80,
+            "defense": 100,
+            "spAtk": 30,
+            "spDef": 30,
+            "speed": 20
+        },
+        "abilities": [
+            "Magnet Pull",
+            "Sturdy",
+            "Galvanize"
+        ],
+        "learnset": [
+            "Tackle"
+        ]
+    },
+    "Graveler": {
+        "dex": 75,
+        "type1": "Rock",
+        "type2": "Ground",
+        "baseStats": {
+            "hp": 55,
+            "attack": 95,
+            "defense": 115,
+            "spAtk": 45,
+            "spDef": 45,
+            "speed": 35
+        },
+        "abilities": [
+            "Rock Head",
+            "Sturdy",
+            "Sand Veil"
+        ],
+        "learnset": [
+            "Tackle"
+        ]
+    },
+    "Graveler-Alolan": {
+        "dex": 75,
+        "type1": "Rock",
+        "type2": "Electric",
+        "baseStats": {
+            "hp": 55,
+            "attack": 95,
+            "defense": 115,
+            "spAtk": 45,
+            "spDef": 45,
+            "speed": 35
+        },
+        "abilities": [
+            "Magnet Pull",
+            "Sturdy",
+            "Galvanize"
+        ],
+        "learnset": [
+            "Tackle"
+        ]
+    },
+    "Golem": {
+        "dex": 76,
+        "type1": "Rock",
+        "type2": "Ground",
+        "baseStats": {
+            "hp": 80,
+            "attack": 110,
+            "defense": 130,
+            "spAtk": 55,
+            "spDef": 65,
+            "speed": 45
+        },
+        "abilities": [
+            "Rock Head",
+            "Sturdy",
+            "Sand Veil"
+        ],
+        "learnset": [
+            "Tackle"
+        ]
+    },
+    "Golem-Alolan": {
+        "dex": 76,
+        "type1": "Rock",
+        "type2": "Electric",
+        "baseStats": {
+            "hp": 80,
+            "attack": 110,
+            "defense": 130,
+            "spAtk": 55,
+            "spDef": 65,
+            "speed": 45
+        },
+        "abilities": [
+            "Magnet Pull",
+            "Sturdy",
+            "Galvanize"
+        ],
+        "learnset": [
+            "Tackle"
+        ]
+    },
+    "Ponyta": {
+        "dex": 77,
+        "type1": "Fire",
+        "type2": "",
+        "baseStats": {
+            "hp": 50,
+            "attack": 85,
+            "defense": 55,
+            "spAtk": 65,
+            "spDef": 65,
+            "speed": 90
+        },
+        "abilities": [
+            "Run Away",
+            "Flash Fire",
+            "Flame Body"
+        ],
+        "learnset": [
+            "Tackle"
+        ]
+    },
+    "Ponyta-Galarian": {
+        "dex": 77,
+        "type1": "Psychic",
+        "type2": "",
+        "baseStats": {
+            "hp": 50,
+            "attack": 85,
+            "defense": 55,
+            "spAtk": 65,
+            "spDef": 65,
+            "speed": 90
+        },
+        "abilities": [
+            "Run Away",
+            "Pastel Veil",
+            "Anticipation"
+        ],
+        "learnset": [
+            "Tackle"
+        ]
+    },
+    "Rapidash": {
+        "dex": 78,
+        "type1": "Fire",
+        "type2": "",
+        "baseStats": {
+            "hp": 65,
+            "attack": 100,
+            "defense": 70,
+            "spAtk": 80,
+            "spDef": 80,
+            "speed": 105
+        },
+        "abilities": [
+            "Run Away",
+            "Flash Fire",
+            "Flame Body"
+        ],
+        "learnset": [
+            "Smart Strike"
+        ]
+    },
+    "Rapidash-Galarian": {
+        "dex": 78,
+        "type1": "Psychic",
+        "type2": "Fairy",
+        "baseStats": {
+            "hp": 65,
+            "attack": 100,
+            "defense": 70,
+            "spAtk": 80,
+            "spDef": 80,
+            "speed": 105
+        },
+        "abilities": [
+            "Run Away",
+            "Pastel Veil",
+            "Anticipation"
+        ],
+        "learnset": [
+            "Psycho Cut"
+        ]
+    },
+    "Slowpoke": {
+        "dex": 79,
+        "type1": "Water",
+        "type2": "Psychic",
+        "baseStats": {
+            "hp": 90,
+            "attack": 65,
+            "defense": 65,
+            "spAtk": 40,
+            "spDef": 40,
+            "speed": 15
+        },
+        "abilities": [
+            "Oblivious",
+            "Own Tempo",
+            "Regenerator"
+        ],
+        "learnset": [
+            "Tackle"
+        ]
+    },
+    "Slowpoke-Galarian": {
+        "dex": 79,
+        "type1": "Psychic",
+        "type2": "",
+        "baseStats": {
+            "hp": 90,
+            "attack": 65,
+            "defense": 65,
+            "spAtk": 40,
+            "spDef": 40,
+            "speed": 15
+        },
+        "abilities": [
+            "Gluttony",
+            "Own Tempo",
+            "Regenerator"
+        ],
+        "learnset": [
+            "Tackle"
+        ]
+    },
+    "Slowbro": {
+        "dex": 80,
+        "type1": "Water",
+        "type2": "Psychic",
+        "baseStats": {
+            "hp": 95,
+            "attack": 75,
+            "defense": 110,
+            "spAtk": 100,
+            "spDef": 80,
+            "speed": 30
+        },
+        "abilities": [
+            "Oblivious",
+            "Own Tempo",
+            "Regenerator"
+        ],
+        "learnset": [
+            "Withdraw",
+            "Tackle"
+        ]
+    },
+    "Slowbro-Galarian": {
+        "dex": 80,
+        "type1": "Poison",
+        "type2": "Psychic",
+        "baseStats": {
+            "hp": 95,
+            "attack": 100,
+            "defense": 95,
+            "spAtk": 100,
+            "spDef": 70,
+            "speed": 30
+        },
+        "abilities": [
+            "Quick Draw",
+            "Own Tempo",
+            "Regenerator"
+        ],
+        "learnset": [
+            "Withdraw",
+            "Tackle"
+        ]
+    },
+    "Magnemite": {
+        "dex": 81,
+        "type1": "Electric",
+        "type2": "Steel",
+        "baseStats": {
+            "hp": 25,
+            "attack": 35,
+            "defense": 70,
+            "spAtk": 95,
+            "spDef": 55,
+            "speed": 45
+        },
+        "abilities": [
+            "Magnet Pull",
+            "Sturdy",
+            "Analytic"
+        ],
+        "learnset": [
+            "Thunder Shock"
+        ]
+    },
+    "Magneton": {
+        "dex": 82,
+        "type1": "Electric",
+        "type2": "Steel",
+        "baseStats": {
+            "hp": 50,
+            "attack": 60,
+            "defense": 95,
+            "spAtk": 120,
+            "spDef": 70,
+            "speed": 70
+        },
+        "abilities": [
+            "Magnet Pull",
+            "Sturdy",
+            "Analytic"
+        ],
+        "learnset": [
+            "Electric Terrain",
+            "Thunder Shock"
+        ]
+    },
+    "Farfetch'd": {
+        "dex": 83,
+        "type1": "Normal",
+        "type2": "Flying",
+        "baseStats": {
+            "hp": 52,
+            "attack": 90,
+            "defense": 55,
+            "spAtk": 58,
+            "spDef": 62,
+            "speed": 60
+        },
+        "abilities": [
+            "Keen Eye",
+            "Inner Focus",
+            "Defiant"
+        ],
+        "learnset": [
+            "Leer",
+            "Peck"
+        ]
+    },
+    "Farfetch'd-Galarian": {
+        "dex": 83,
+        "type1": "Fighting",
+        "type2": "",
+        "baseStats": {
+            "hp": 52,
+            "attack": 95,
+            "defense": 55,
+            "spAtk": 58,
+            "spDef": 62,
+            "speed": 55
+        },
+        "abilities": [
+            "Steadfast",
+            "Scrappy"
+        ],
+        "learnset": [
+            "Leer",
+            "Peck"
+        ]
+    },
+    "Doduo": {
+        "dex": 84,
+        "type1": "Normal",
+        "type2": "Flying",
+        "baseStats": {
+            "hp": 35,
+            "attack": 85,
+            "defense": 45,
+            "spAtk": 35,
+            "spDef": 35,
+            "speed": 75
+        },
+        "abilities": [
+            "Run Away",
+            "Early Bird",
+            "Tangled Feet"
+        ],
+        "learnset": [
+            "Peck"
+        ]
+    },
+    "Dodrio": {
+        "dex": 85,
+        "type1": "Normal",
+        "type2": "Flying",
+        "baseStats": {
+            "hp": 60,
+            "attack": 110,
+            "defense": 70,
+            "spAtk": 60,
+            "spDef": 60,
+            "speed": 110
+        },
+        "abilities": [
+            "Run Away",
+            "Early Bird",
+            "Tangled Feet"
+        ],
+        "learnset": [
+            "Peck"
+        ]
+    },
+    "Seel": {
+        "dex": 86,
+        "type1": "Water",
+        "type2": "",
+        "baseStats": {
+            "hp": 65,
+            "attack": 45,
+            "defense": 55,
+            "spAtk": 45,
+            "spDef": 70,
+            "speed": 45
+        },
+        "abilities": [
+            "Thick Fat",
+            "Hydration",
+            "Ice Body"
+        ],
+        "learnset": [
+            "Headbutt"
+        ]
+    },
+    "Dewgong": {
+        "dex": 87,
+        "type1": "Water",
+        "type2": "Ice",
+        "baseStats": {
+            "hp": 90,
+            "attack": 70,
+            "defense": 80,
+            "spAtk": 70,
+            "spDef": 95,
+            "speed": 70
+        },
+        "abilities": [
+            "Thick Fat",
+            "Hydration",
+            "Ice Body"
+        ],
+        "learnset": [
+            "Headbutt"
+        ]
+    },
+    "Grimer": {
+        "dex": 88,
+        "type1": "Poison",
+        "type2": "",
+        "baseStats": {
+            "hp": 80,
+            "attack": 80,
+            "defense": 50,
+            "spAtk": 40,
+            "spDef": 50,
+            "speed": 25
+        },
+        "abilities": [
+            "Stench",
+            "Sticky Hold",
+            "Poison Touch"
+        ],
+        "learnset": [
+            "Pound"
+        ]
+    },
+    "Grimer-Alolan": {
+        "dex": 88,
+        "type1": "Poison",
+        "type2": "Dark",
+        "baseStats": {
+            "hp": 80,
+            "attack": 80,
+            "defense": 50,
+            "spAtk": 40,
+            "spDef": 50,
+            "speed": 25
+        },
+        "abilities": [
+            "Poison Touch",
+            "Gluttony",
+            "Power of Alchemy"
+        ],
+        "learnset": [
+            "Pound"
+        ]
+    },
+    "Muk": {
+        "dex": 89,
+        "type1": "Poison",
+        "type2": "",
+        "baseStats": {
+            "hp": 105,
+            "attack": 105,
+            "defense": 75,
+            "spAtk": 65,
+            "spDef": 100,
+            "speed": 50
+        },
+        "abilities": [
+            "Stench",
+            "Sticky Hold",
+            "Poison Touch"
+        ],
+        "learnset": [
+            "Pound"
+        ]
+    },
+    "Muk-Alolan": {
+        "dex": 89,
+        "type1": "Poison",
+        "type2": "Dark",
+        "baseStats": {
+            "hp": 105,
+            "attack": 105,
+            "defense": 75,
+            "spAtk": 65,
+            "spDef": 100,
+            "speed": 50
+        },
+        "abilities": [
+            "Poison Touch",
+            "Gluttony",
+            "Power of Alchemy"
+        ],
+        "learnset": [
+            "Pound"
+        ]
+    },
+    "Shellder": {
+        "dex": 90,
+        "type1": "Water",
+        "type2": "",
+        "baseStats": {
+            "hp": 30,
+            "attack": 65,
+            "defense": 100,
+            "spAtk": 45,
+            "spDef": 25,
+            "speed": 40
+        },
+        "abilities": [
+            "Shell Armor",
+            "Skill Link",
+            "Overcoat"
+        ],
+        "learnset": [
+            "Tackle"
+        ]
+    },
+    "Cloyster": {
+        "dex": 91,
+        "type1": "Water",
+        "type2": "Ice",
+        "baseStats": {
+            "hp": 50,
+            "attack": 95,
+            "defense": 180,
+            "spAtk": 85,
+            "spDef": 45,
+            "speed": 70
+        },
+        "abilities": [
+            "Shell Armor",
+            "Skill Link",
+            "Overcoat"
+        ],
+        "learnset": [
+            "Icicle Crash"
+        ]
+    },
+    "Gastly": {
+        "dex": 92,
+        "type1": "Ghost",
+        "type2": "Poison",
+        "baseStats": {
+            "hp": 30,
+            "attack": 35,
+            "defense": 30,
+            "spAtk": 100,
+            "spDef": 35,
+            "speed": 80
+        },
+        "abilities": [
+            "Levitate"
+        ],
+        "learnset": [
+            "Lick"
+        ]
+    },
+    "Haunter": {
+        "dex": 93,
+        "type1": "Ghost",
+        "type2": "Poison",
+        "baseStats": {
+            "hp": 45,
+            "attack": 50,
+            "defense": 45,
+            "spAtk": 115,
+            "spDef": 55,
+            "speed": 95
+        },
+        "abilities": [
+            "Levitate"
+        ],
+        "learnset": [
+            "Lick"
+        ]
+    },
+    "Gengar": {
+        "dex": 94,
+        "type1": "Ghost",
+        "type2": "Poison",
+        "baseStats": {
+            "hp": 60,
+            "attack": 65,
+            "defense": 60,
+            "spAtk": 130,
+            "spDef": 75,
+            "speed": 110
+        },
+        "abilities": [
+            "Cursed Body"
+        ],
+        "learnset": [
+            "Shadow Punch"
+        ]
+    },
+    "Onix": {
+        "dex": 95,
+        "type1": "Rock",
+        "type2": "Ground",
+        "baseStats": {
+            "hp": 35,
+            "attack": 45,
+            "defense": 160,
+            "spAtk": 30,
+            "spDef": 45,
+            "speed": 70
+        },
+        "abilities": [
+            "Rock Head",
+            "Sturdy",
+            "Weak Armor"
+        ],
+        "learnset": [
+            "Rock Blast"
+        ]
+    },
+    "Drowzee": {
+        "dex": 96,
+        "type1": "Psychic",
+        "type2": "",
+        "baseStats": {
+            "hp": 60,
+            "attack": 48,
+            "defense": 45,
+            "spAtk": 43,
+            "spDef": 90,
+            "speed": 42
+        },
+        "abilities": [
+            "Insomnia",
+            "Forewarn",
+            "Inner Focus"
+        ],
+        "learnset": [
+            "Pound"
+        ]
+    },
+    "Hypno": {
+        "dex": 97,
+        "type1": "Psychic",
+        "type2": "",
+        "baseStats": {
+            "hp": 85,
+            "attack": 73,
+            "defense": 70,
+            "spAtk": 73,
+            "spDef": 115,
+            "speed": 67
+        },
+        "abilities": [
+            "Insomnia",
+            "Forewarn",
+            "Inner Focus"
+        ],
+        "learnset": [
+            "Switcheroo",
+            "Pound"
+        ]
+    },
+    "Krabby": {
+        "dex": 98,
+        "type1": "Water",
+        "type2": "",
+        "baseStats": {
+            "hp": 30,
+            "attack": 105,
+            "defense": 90,
+            "spAtk": 25,
+            "spDef": 25,
+            "speed": 50
+        },
+        "abilities": [
+            "Hyper Cutter",
+            "Shell Armor",
+            "Sheer Force"
+        ],
+        "learnset": [
+            "Water Gun"
+        ]
+    },
+    "Kingler": {
+        "dex": 99,
+        "type1": "Water",
+        "type2": "",
+        "baseStats": {
+            "hp": 55,
+            "attack": 130,
+            "defense": 115,
+            "spAtk": 50,
+            "spDef": 50,
+            "speed": 75
+        },
+        "abilities": [
+            "Hyper Cutter",
+            "Shell Armor",
+            "Sheer Force"
+        ],
+        "learnset": [
+            "Wide Guard",
+            "Hammer Arm"
+        ]
+    },
+    "Voltorb": {
+        "dex": 100,
+        "type1": "Electric",
+        "type2": "",
+        "baseStats": {
+            "hp": 40,
+            "attack": 30,
+            "defense": 50,
+            "spAtk": 55,
+            "spDef": 55,
+            "speed": 100
+        },
+        "abilities": [
+            "Soundproof",
+            "Static",
+            "Aftermath"
+        ],
+        "learnset": [
+            "Charge",
+            "Tackle"
+        ]
+    },
+    "Voltorb-Hisuian": {
+        "dex": 100,
+        "type1": "Electric",
+        "type2": "Grass",
+        "baseStats": {
+            "hp": 40,
+            "attack": 30,
+            "defense": 50,
+            "spAtk": 55,
+            "spDef": 55,
+            "speed": 100
+        },
+        "abilities": [
+            "Soundproof",
+            "Static",
+            "Aftermath"
+        ],
+        "learnset": [
+            "Charge",
+            "Tackle"
+        ]
+    },
+    "Electrode": {
+        "dex": 101,
+        "type1": "Electric",
+        "type2": "",
+        "baseStats": {
+            "hp": 60,
+            "attack": 50,
+            "defense": 70,
+            "spAtk": 80,
+            "spDef": 80,
+            "speed": 150
+        },
+        "abilities": [
+            "Soundproof",
+            "Static",
+            "Aftermath"
+        ],
+        "learnset": [
+            "Magnetic Flux",
+            "Charge",
+            "Tackle"
+        ]
+    },
+    "Electrode-Hisuian": {
+        "dex": 101,
+        "type1": "Electric",
+        "type2": "Grass",
+        "baseStats": {
+            "hp": 60,
+            "attack": 50,
+            "defense": 70,
+            "spAtk": 80,
+            "spDef": 80,
+            "speed": 150
+        },
+        "abilities": [
+            "Soundproof",
+            "Static",
+            "Aftermath"
+        ],
+        "learnset": [
+            "Charge",
+            "Tackle"
+        ]
+    },
+    "Exeggcute": {
+        "dex": 102,
+        "type1": "Grass",
+        "type2": "Psychic",
+        "baseStats": {
+            "hp": 60,
+            "attack": 40,
+            "defense": 80,
+            "spAtk": 60,
+            "spDef": 45,
+            "speed": 40
+        },
+        "abilities": [
+            "Chlorophyll",
+            "Harvest"
+        ],
+        "learnset": [
+            "Absorb"
+        ]
+    },
+    "Exeggutor": {
+        "dex": 103,
+        "type1": "Grass",
+        "type2": "Psychic",
+        "baseStats": {
+            "hp": 95,
+            "attack": 95,
+            "defense": 85,
+            "spAtk": 125,
+            "spDef": 75,
+            "speed": 55
+        },
+        "abilities": [
+            "Chlorophyll",
+            "Harvest"
+        ],
+        "learnset": [
+            "Seed Bomb"
+        ]
+    },
+    "Exeggutor-Alolan": {
+        "dex": 103,
+        "type1": "Grass",
+        "type2": "Dragon",
+        "baseStats": {
+            "hp": 95,
+            "attack": 105,
+            "defense": 85,
+            "spAtk": 125,
+            "spDef": 75,
+            "speed": 45
+        },
+        "abilities": [
+            "Frisk",
+            "Harvest"
+        ],
+        "learnset": [
+            "Seed Bomb"
+        ]
     }
 }
